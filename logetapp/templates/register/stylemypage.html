@@ -1,0 +1,38 @@
+{% extends "register/base.html" %}
+{% load static %}
+
+{% block header %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1>受検者詳細</h1>
+    <h2>{{ message }}</h2>
+    <p><a href="{% url 'logetapp:stylemytest' object.pk %}">結果を見る</a></p>
+    <table class="type1">
+        <thead>
+        <tr>
+            <th>ユーザー名</th>
+            <th>検体ID</th>
+            <th>検体pass</th>
+            <th>結果</th>
+            <th>受検者名</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>{{ object.username }}</td>
+            <td>{{ object.styletestid }}</td>
+            <td>{{ object.styletestpass }}</td>
+            <td>{{ object.styleansno }}</td>
+            <td>{{ object.styletestername }}</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <hr>
+
+    <h5><a href="{% url 'logetapp:list' %}">一覧へ</a></h5>
+</div>
+{% endblock %}

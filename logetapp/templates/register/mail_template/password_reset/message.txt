@@ -1,0 +1,6 @@
+【遺伝子革命/フローラ革命】
+
+下記URLよりサイトにアクセスの上、パスワードの再設定を行ってください。
+
+再設定用URL
+{{ protocol}}://{{ domain }}{% url 'logetapp:password_reset_confirm' uid token %}

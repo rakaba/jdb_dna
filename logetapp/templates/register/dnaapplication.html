@@ -1,0 +1,24 @@
+{% extends "register/base_store.html" %}
+{% load static %}
+
+{% block header %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/mystyle.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/mdb.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/mdb.lite.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/mdb.lite.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/mdb.min.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <button class="btn btn-primary" style="width:100%; font-size:150%; margin-bottom:1em;">検査申込</button>
+    <form action="{% url 'logetapp:dnaapplication' user.pk %}" method="POST" style="width:95%; margin:auto;">
+        {% csrf_token %}
+        <table class="table">
+        {{ form.as_table }}
+        </table>
+        <center><button class="btn btn-outline-primary waves-effect" type="submit" style="width:50%;">送信</button></center>
+    </form>
+</div>
+{% endblock %}

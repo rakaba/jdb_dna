@@ -1,0 +1,2581 @@
+{% extends "register/base.html" %}
+{% load static %}
+
+{% block header %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/style_sp.css' %}">
+{% endblock %}
+
+{% block content %}
+<!-- ヘッダーここから -->
+<div id="header">
+	<div id="header_main">
+		<h1 style="color: #333333;">Report & Advice</h1>
+		<p>- ＤＮＡ検査・解析結果 -</p>
+	</div>
+	<div id="header_sub">
+
+	</div>
+</div>
+<!-- ヘッダーここまで -->
+<!-- 遺伝的体質ここから -->
+<section>
+	<div id="dna_constitution">
+		<h2 class="your_dna" style="background: #FF6666; border-bottom: 7px solid #ff9999; padding: 25px; border-radius: 2px; font-size: 1.8em; color: #FFFFFF; font-weight: bold;">遺伝的体質</h2>
+	</div>
+</section>
+
+<!-- 遺伝的リスクここから -->
+<section>
+	<div class="dna_main taishitsu">
+		<div id="constitution_main_inner_01">
+			<h2 class="syncer-acdn ttl_h1 taishitsu-contents-name" data-target="syncer-acdn-02" data-name="+">遺伝的リスク</h2>
+			<div class="slidetoggle" id="syncer-acdn-02" style="display:none;">
+				<p class="description inbox-sentence">３つの遺伝的リスクの高さから総合的に判断したあなたの遺伝的体質です。</p>
+				<div class="dna_risk">
+					<div class="risk_area cf">
+						<p class="risk_name">糖代謝リスク：</p>
+						<p class="risk_level_3"><span class="red">高い</span></p>
+					</div>
+					<div class="risk_area cf">
+						<p class="risk_name">たんぱく質リスク：</p>
+						<p class="risk_level_3"><span class="red">高い</span></p>
+					</div>
+					<div class="risk_area cf">
+						<p class="risk_name">脂質代謝リスク：</p>
+						<p class="risk_level_2"><span class="orange">やや高い</span></p>
+					</div>
+				</div>
+				<p class="description_title border-image-red">遺伝的体質総合コメント</p>
+				<p class="description inbox-sentence">
+					あなたは、３つの遺伝的リスクすべての対策が必要な遺伝的体質です。<br />食生活を見直す場合は、まずは糖質を減らすことから始めましょう。脂質も減らすことが望ましいですが、たんぱく質はしっかりと食べ、たんぱく質不足にならないように気をつけましょう。<br />特にお腹周りに脂肪がつきやすく、筋肉もつきにくいので全身がぷよぷよとした体型になりやすいです。<br />運動を行う場合は、有酸素運動を多めに行い、筋肉トレーニングは軽めの重さで回数を多めに設定することがおすすめです。<br />体重が減りやすいですが、リバウンドの危険性も高い遺伝的体質ですので、目標体重に達した後も太りにくいライフスタイルを継続しましょう。
+				</p>
+		<div id="constitution_main_inner_02">
+			<h2 class="description_title border-image-red">それぞれの遺伝的リスクの解説</h2>
+				<div class="dna_risk">
+					<p>
+						<a class="syncer-acdn risk_area_flex" data-target="syncer-acdn-risk-ad-c">
+							<div class="risk_area cf">
+								<p class="risk_name risk_name_underline"><i class="fa fa-caret-right" aria-hidden="true"></i> 糖代謝リスク：</p>
+								<p class="risk_level_3"><span class="red">高い</span></p>
+							</div>
+						</a>
+					</p>
+					<p id="syncer-acdn-risk-ad-c" class="description inbox-sentence" style="display:none; margin-top: 5px; font-size: 16px;">
+						糖代謝リスクが高く、炭水化物や甘いものなどを食べると太りやすい遺伝的体質です。<br />糖質で太りやすいので、ダイエットや肥満予防を行う時は、まずは食生活を見直し、糖質を減らす事から始めると良いでしょう。<br />しかし、お腹が空き血糖値が下がると、イライラし、つい間食をしてしまう傾向がありますので、食べる量を減らす場合は注意が必要です。<br />お腹まわりから太りやすく、痩せ始めても最後までお腹まわりが気になる方が多いので、お腹まわりの脂肪燃焼、筋肉量増加を促す運動を行いましょう。<br />体重変化が現れやすく、ダイエットの効果を数字として実感しやすいですが、ダイエットを止めてしまうとリバウンドをする可能性が高い遺伝的体質でもあります。ダイエット終了後も太りにくい食生活や運動を継続する事が特に大切なタイプです。
+					</p>
+					<p>
+						<a class="syncer-acdn risk_area_flex" data-target="syncer-acdn-risk-ad-p">
+							<div class="risk_area cf">
+								<p class="risk_name risk_name_underline"><i class="fa fa-caret-right" aria-hidden="true"></i> たんぱく質リスク：</p>
+								<p class="risk_level_3"><span class="red">高い</span></p>
+							</div>
+						</a>
+					</p>
+					<p id="syncer-acdn-risk-ad-p" class="description inbox-sentence" style="display:none; margin-top: 5px; font-size: 16px;">
+						たんぱく質リスクが高く、十分にたんぱく質を摂取しなければ、筋肉不足による肥満になりやすい遺伝的体質です。<br />遺伝子の影響で基礎代謝が上がりますので、太りにくく、子どもの頃や若い頃はほっそりとしている方も多いです。「いくら食べても太らない」という経験をした事があるかもしれません。<br />しかし、筋肉がつきにくく基礎代謝が上がりにくいので、加齢による基礎代謝減少に伴い、急激に太る危険性もあります。<br />また、一度太ると痩せにくく、ダイエットが難しい遺伝的体質です。<br />野菜などのあっさりとした食事を好む傾向もありますので、意識してたんぱく質を摂取し、筋肉量を増やす運動を積極的に取り入れましょう。<br />まだ体型が気にならない方も、太る前から筋肉量を増やしたり、食生活を見直す事をおすすめします。
+					</p>
+					<p>
+						<a class="syncer-acdn risk_area_flex" data-target="syncer-acdn-risk-ad-f">
+							<div class="risk_area cf">
+								<p class="risk_name risk_name_underline"><i class="fa fa-caret-right" aria-hidden="true"></i> 脂質代謝リスク：</p>
+								<p class="risk_level_2"><span class="orange">やや高い</span></p>
+							</div>
+						</a>
+					</p>
+					<p id="syncer-acdn-risk-ad-f" class="description inbox-sentence" style="display:none; margin-top: 5px; font-size: 16px;">
+						脂質代謝リスクがやや高く、揚げ物やクリームなどを食べると太りやすい遺伝的体質です。<br />脂質で太りやすいので、ダイエットや肥満予防を行う時は、まずは食生活を見直し、脂質を減らす事から始めると良いでしょう。<br />摂取した脂質が脂肪として蓄積されやすく、特に下半身に皮下脂肪がつきやすい傾向があります。むくみやすい遺伝的体質でもあり、ヒップや太ももなどの見た目が気になる場合が多いです。下半身を引き締める運動、セルライト対策を行いましょう。<br />また、からだが冷えやすく、特に女性は体温を維持するために皮下脂肪を蓄えようとする作用がありますので、冷えにも注意が必要です。<br />食事や運動、ダイエットプログラムは、まずは脂質を減らし、からだを冷やさない工夫から取り入れましょう。
+					</p>
+				</div>
+			</div>
+		<div id="constitution_main_inner_03">
+				<h2 class="description_title border-image-red">
+					<span class="sub_title">もっと知りたい！</span><br />
+					ダイエットに関連する遺伝的リスク
+				</h2>
+				<div class="dna_risk">
+					<a class="syncer-acdn" data-target="syncer-acdn-risk-c">
+						<div class="risk_area cf">
+							<p class="risk_name risk_name_underline" style="width: 100%;"><i class="fa fa-caret-right" aria-hidden="true"></i> 糖代謝リスクとは？</p>
+						</div>
+					</a>
+				<div id="syncer-acdn-risk-c" style="display:none;">
+					<p class="description inbox-sentence" style="font-size: 16px; margin-top: 5px;">
+						「糖代謝リスク」とは、炭水化物や甘いものなどの糖質の代謝に関する遺伝的リスクです。
+					</p>
+					<h3 class="risk-back-red">
+						糖代謝リスクが高い人の特徴
+					</h3>
+					<ul>
+						<li style="font-size: 16px; list-style: disc; margin-left: 1em;">糖質を食べると脂肪を蓄積しやすく、太りやすい。</li>
+						<li style="font-size: 16px; list-style: disc; margin-left: 1em;">食事の量を基に戻すとリバウンドしやすい。</li>
+						<li style="font-size: 16px; list-style: disc; margin-left: 1em;">お腹まわりに脂肪がつきやすい。</li>
+						<li style="font-size: 16px; list-style: disc; margin-left: 1em;">走る、泳ぐ、などの有酸素運動が効果的。</li>
+						<li style="font-size: 16px; list-style: disc; margin-left: 1em;">食事制限で体重が落ちやすい。</li>
+					</ul>
+					<h3 class="risk-back-red">
+						リスクが高い人のその他の特徴
+					</h3>
+					<ul>
+						<li class="inbox-sentence" style="font-size: 16px;">
+							<p style="color: #993366; margin-bottom: .3em; font-weight: bold;"><i class="fa fa-heart" aria-hidden="true"></i> 性格①</p>
+							大雑把で明るく、マイペース。温厚な性格の人が多いと言われています。
+						</li>
+						<li class="inbox-sentence" style="font-size: 16px;">
+							<p style="color: #993366; margin-bottom: .3em; font-weight: bold;"><i class="fa fa-heart" aria-hidden="true"></i> 性格②</p>
+							お腹が空くとイライラしがちで、食べ物の誘惑に負けやすい傾向があります。
+						</li>
+						<li class="inbox-sentence" style="font-size: 16px;">
+							<p style="color: #993366; margin-bottom: .3em; font-weight: bold;"><i class="fa fa-meh-o" aria-hidden="true"></i> お肌のトラブル</p>
+							お肌の皮膚が薄く、乾燥肌になりがちです。また、ほっぺたは柔らかい人が多いです。
+						</li>
+						<li class="inbox-sentence" style="font-size: 16px;">
+						    <p style="color: #993366; margin-bottom: .3em; font-weight: bold;"><i class="fa fa-venus" aria-hidden="true"></i> 女性の特徴</p>
+							バストが豊かな人が多く、ウエストをくびれさせることで、美しいスタイルを目指せます。
+						</li>
+					</ul>
+				</div>
+				<a class="syncer-acdn" data-target="syncer-acdn-risk-f">
+					<div class="risk_area cf">
+						<p class="risk_name risk_name_underline" style="width: 100%;"><i class="fa fa-caret-right" aria-hidden="true"></i> たんぱく質リスクとは？</p>
+					</div>
+				</a>
+				<div id="syncer-acdn-risk-f" style="display:none;">
+					<p class="description inbox-sentence" style="font-size: 16px; margin-top: 5px;">
+						「たんぱく質リスク」とは、たんぱく質の吸収と筋肉のつきやすさに関する遺伝的リスクです。
+					</p>
+					<h3 class="risk-back-red">
+						たんぱく質リスクが高い人の特徴
+					</h3>
+					<ul>
+						<li style="font-size: 16px; list-style: disc; margin-left: 1em;">筋肉がつきにくく、分解されやすい。</li>
+						<li style="font-size: 16px; list-style: disc; margin-left: 1em;">脂肪もつきにくいが、一度脂肪がつくと落ちにくい。</li>
+						<li style="font-size: 16px; list-style: disc; margin-left: 1em;">食事制限や激しい有酸素運動は逆効果。</li>
+						<li style="font-size: 16px; list-style: disc; margin-left: 1em;">ダイエット中は特に筋肉トレーニングが大切。</li>
+						<li style="font-size: 16px; list-style: disc; margin-left: 1em;">食事や間食からたんぱく質をしっかりととった方が良い。</li>
+					</ul>
+					<h3 class="risk-back-red">
+						リスクが高い人のその他の特徴
+					</h3>
+					<ul>
+						<li class="inbox-sentence" style="font-size: 16px;">
+							<p style="color: #993366; margin-bottom: .3em; font-weight: bold;"><i class="fa fa-heart" aria-hidden="true"></i> 性格</p>
+							完璧主義で、神経質、几帳面な性格の人が多いと言われています。
+						</li>
+						<li class="inbox-sentence" style="font-size: 16px;">
+							<p style="color: #993366; margin-bottom: .3em; font-weight: bold;"><i class="fa fa-meh-o" aria-hidden="true"></i> お肌のトラブル</p>
+							お肌に肉がつきにくく、こけているように見えたり、シワができやすかったりします。
+						</li>
+						<li class="inbox-sentence" style="font-size: 16px;">
+							<p style="color: #993366; margin-bottom: .3em; font-weight: bold;"><i class="fa fa-clock-o" aria-hidden="true"></i> 生活リズム</p>
+							寝起きが悪く朝が苦手です。午前中は調子が上がらない傾向があります。
+						</li>
+						<li class="inbox-sentence" style="font-size: 16px;">
+						    <p style="color: #993366; margin-bottom: .3em; font-weight: bold;"><i class="fa fa-heartbeat" aria-hidden="true"></i> 体調</p>
+							比較的疲れやすく、風邪や体調不良などで寝込んでしまいがちです。
+						</li>
+					</ul>
+				</div>
+				<a class="syncer-acdn" data-target="syncer-acdn-risk-p">
+					<div class="risk_area cf">
+						<p class="risk_name risk_name_underline" style="width: 100%;"><i class="fa fa-caret-right" aria-hidden="true"></i> 脂質代謝リスクとは？</p>
+					</div>
+				</a>
+				<div id="syncer-acdn-risk-p" style="display:none;">
+					<p class="description inbox-sentence" style="font-size: 16px; margin-top: 5px;">
+						「脂質代謝リスク」とは、揚げ物やクリームなどの脂質の代謝に関する遺伝的リスクです。
+					</p>
+					<h3 class="risk-back-red">脂質代謝リスクが高い人の特徴</h3>
+					<ul>
+						<li style="font-size: 16px; list-style: disc; margin-left: 1em;">揚げ物やバターなどの脂質で太りやすい。</li>
+						<li style="font-size: 16px; list-style: disc; margin-left: 1em;">下半身に脂肪がつきやすく、むくみやすいので、ヒップや太ももが気になりやすい。</li>
+						<li style="font-size: 16px; list-style: disc; margin-left: 1em;">食事制限だけでは痩せにくく、運動が大切。</li>
+						<li style="font-size: 16px; list-style: disc; margin-left: 1em;">からだが硬くなりやすい。</li>
+						<li style="font-size: 16px; list-style: disc; margin-left: 1em;">筋トレと有酸素運動、ストレッチをバランスよく行うと良い。</li>
+					</ul>
+					<h3 class="risk-back-red">リスクが高い人のその他の特徴</h3>
+					<ul>
+						<li class="inbox-sentence" style="font-size: 16px;">
+							<p style="color: #993366; margin-bottom: .3em; font-weight: bold;"><i class="fa fa-heart" aria-hidden="true"></i> 性格</p>
+							負けず嫌いで、一度決めたらやり抜き、頑固な部分もある人が多いと言われています。
+						</li>
+						<li class="inbox-sentence" style="font-size: 16px;">
+						    <p style="color: #993366; margin-bottom: .3em; font-weight: bold;"><i class="fa fa-meh-o" aria-hidden="true"></i> お肌のトラブル</p>
+							ニキビや吹き出物などのお肌トラブルが起こりやすい人が多いです。
+						</li>
+						<li class="inbox-sentence" style="font-size: 16px;">
+						    <p style="color: #993366; margin-bottom: .3em; font-weight: bold;"><i class="fa fa-heartbeat" aria-hidden="true"></i> むくみ</p>
+							下半身や首のあたりがむくみやすい傾向があります。
+						</li>
+						<li class="inbox-sentence" style="font-size: 16px;">
+							<p style="color: #993366; margin-bottom: .3em; font-weight: bold;"><i class="fa fa-heartbeat" aria-hidden="true"></i> 冷え</p>
+							からだが冷えやすい人が多く、からだが冷えると、皮下脂肪を蓄積しやすくなります。
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- 遺伝的リスクここまで -->
+
+<!-- 太りやすさ危険度ここから -->
+<section>
+	<div class="dna_main taishitsu">
+		<div id="main_inner">
+			<h1 class="ttl_h1 syncer-acdn taishitsu-contents-name" data-target="syncer-acdn-fatriskpoint" data-name="+">太りやすさ危険度</h1>
+			<div class="slidetoggle" id="syncer-acdn-fatriskpoint" style="display:none;"><br />
+			<h2 class="serif border-image-red">１０段階中<p style="font-size:150%;">【
+				9
+			】</p></h2>
+				<div id="main_mono">
+				<div id="main_mono_inner">
+						<p class="sentence-margin inbox-sentence">
+							あなたの遺伝的な太りやすさ危険度は、10 段階中「９」です。<br />他の遺伝子タイプの方と比較して太りやすいと言え、すべての遺伝的リスク対策が必要です。<br />急激なダイエットでは体調を崩したり、リバウンドする危険性もありますので、無理なく長い目でダイエットを行うことがおすすめです。
+						</p>
+				</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- 太りやすさ危険度ここまで -->
+<!-- 太り方の特徴ここから -->
+<section>
+	<div class="dna_main taishitsu">
+		<div id="main_inner">
+			<h1 class="ttl_h1 syncer-acdn taishitsu-contents-name" data-target="syncer-acdn-fattype" data-name="+">太り方の特徴</h1>
+			<div class="slidetoggle" id="syncer-acdn-fattype" style="display:none;"><br />
+			<h2 class="serif border-image-red" style="margin-bottom: 20px;"><p>
+				全身ぷよぷよ筋肉不足
+			</p></h2>
+				<div id="main_pink">
+				<div id="main_pink_inner">
+					<img src="images/chara_1.png" class="fattype">
+						<p class="inbox-sentence">
+							あなたの遺伝的な太り方の特徴は、<br />「全身ぷよぷよ筋肉不足」タイプです。<br /><br />まずは下半身からお腹まわり、そして全身に脂肪がついていきやすいです。<br />筋肉がつきにくくたるみやすいので、油断すると全体的にぷよぷよとした体型になりやすいです。
+						</p>
+				</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- 太り方の特徴ここまで -->
+<!-- 基礎代謝ここから -->
+<section>
+	<div class="dna_main taishitsu">
+		<div id="main_inner">
+			<h1 class="ttl_h1 syncer-acdn taishitsu-contents-name" data-target="syncer-acdn-kisotaisha" data-name="+">１日あたりの基礎代謝の増減</h1>
+			<div class="slidetoggle" id="syncer-acdn-kisotaisha" style="display:none;"><br />
+			<h2 class="serif border-image-red">
+			<p style="font-size: 1.5em;">
+				-100
+				kcal
+			</p></h2>
+				<div id="main_orange">
+				<div id="main_orange_inner">
+						<p class="sentence-margin inbox-sentence">
+							基礎代謝は、体組成計で測ったり、身長と体重から基礎代謝を求めることができますが、あなたの場合、遺伝子の影響で、求めた数値よりも100kcal 減らすと実際の数値に近づきます。つまり、毎日100kcal 分太りやすい、ということです。
+							<center>
+							<img src="images/kisotaisha_sp.jpg" alt="" class="switch">
+							</center>
+						</p>
+				</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- 基礎代謝ここまで -->
+<!-- 体重変化ここから -->
+<section>
+	<div class="dna_main taishitsu">
+		<div id="main_inner">
+			<h1 class="ttl_h1 syncer-acdn taishitsu-contents-name" data-target="syncer-acdn-graph" data-name="+">理想の体重変化</h1>
+			<div class="slidetoggle" id="syncer-acdn-graph" style="display:none;"><br />
+			<h2 class="serif border-image-red"><p>
+				上下しながら減っていく
+			</p></h2>
+				<div id="main_green">
+				<div id="main_green_inner">
+						<p class="inbox-sentence">
+							<img src="images/graph_c.png" class="graph-img">
+							あなたは、他の遺伝子タイプの方と比較すると体重変化が大きく、乱高下しやすい遺伝的体質です。<br />できるだけ毎日体重を測り、毎回の変化ではなく、俯瞰で見たときに体重が下がっていくことが理想の変化と言えます。
+						</p>
+				</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- 体重変化ここまで -->
+<!-- 優先順位ここから -->
+<section>
+	<div class="dna_main taishitsu">
+		<div id="main_inner">
+			<h1 class="ttl_h1 syncer-acdn taishitsu-contents-name" data-target="syncer-acdn-fatrisk-ranking" data-name="+">遺伝的リスク対策優先順位</h1>
+			<div class="slidetoggle" id="syncer-acdn-fatrisk-ranking" style="display:none;"><br />
+			<h2 class="serif border-image-red"><p>
+				糖代謝リスク ＞ たんぱく質リスク ＞ 脂質代謝リスク
+			</p></h2>
+				<div id="main_blue">
+				<div id="main_blue_inner">
+						<p class="inbox-sentence">
+							糖代謝リスク対策を最優先に取り入れましょう！<br />たんぱく質リスク対策、脂質代謝リスク対策も必要ですので、できる範囲で取り入れましょう。
+						</p>
+				</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- 優先順位ここまで -->
+<!-- 遺伝的体質ここまで -->
+<!-- 食生活アドバイスここから -->
+<section>
+	<div class="ad">
+		<h1 class="ttl_h1 your_dna" style="background: #66cc99; border-bottom: 7px solid #99cc99; padding: 25px; border-radius: 2px; font-size: 1.8em; color: #FFFFFF; font-weight: bold;">食生活アドバイス</h1>
+	</div>
+</section>
+<!-- 食生活タイプここから -->
+<section>
+	<div class="dna_main shokuji">
+		<div id="main_inner">
+			<h1 class="ttl_h1 syncer-acdn shokuji-contents-name" data-target="syncer-acdn-foodtype" data-name="+">食生活タイプ</h1>
+			<div class="slidetoggle" id="syncer-acdn-foodtype" style="display:none;"><br />
+				<h2 class="serif shokuseikatu-type"><p>
+					糖質ＯＦＦ・高たんぱく質・脂質控えめタイプ
+				</p></h2>
+				<div id="main_mono">
+					<div id="main_mono_inner">
+						<p class="inbox-sentence">
+							まずは、炭水化物や甘いものなどの糖質から減らすようにしましょう！<br />しかし、ご飯など糖質を多く含む主食を減らした分、脂質が多いおかずをたくさん食べることはＮＧです。<br />脂質が少なく、たんぱく質を多く含むおかずをしっかりと食べることを意識しましょう！
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- 食生活タイプここまで -->
+<!-- アドバイスランキングここから -->
+<section>
+	<div class="dna_main shokuji">
+		<div id="main_inner">
+			<h1 class="ttl_h1 syncer-acdn shokuji-contents-name" data-target="syncer-acdn-foodtype-ranking" data-name="+">食生活アドバイスランキング</h1>
+			<div class="slidetoggle" id="syncer-acdn-foodtype-ranking" style="display:none;"><br />
+				<p class="border-image-green" style="line-height:200%; font-size:1.2em;">
+				楽に効率よく理想の体型に近づくために、<br>ランキングが高いものから取り入れましょう！
+				</p>
+			  <div id="main_pink">
+				<div id="main_pink_inner">
+					<dl class="main_pink serif">
+						<a class="syncer-acdn ranking-wrapper-a ranking" data-target="syncer-acdn-foodtype-ranking-1">
+							<div class="ranking-wrapper-a-imgwrapper">
+							 <img src="images/ranking_1.png" class="ranking-image-1 ranking-wrapper-a-imgwrapper-img1">
+							</div>
+							<h2 class="adviceranking-underline ranking-wrapper-a-h2-1">
+								まずは糖質を減らしましょう！
+							</h2>
+						</a>
+					</dl>
+					<a id="syncer-acdn-foodtype-ranking-1" style="display:none;">
+						<div class="inbox">
+							<p class="inbox-sentence">
+								あなたは糖代謝リスク対策を最優先で行うことで効率よく理想の体型に近づくことができます。たんぱく質リスク対策や脂質代謝リスク対策を行っても高い効果は期待できませんので後回しにしましょう！<br />現代食は糖質が多く含まれているものが多く、知らず知らずのうちに糖質を摂りすぎてしまいがちです。まずはパンやご飯などを少し残したり、ビールや日本酒を焼酎に変えたりと、糖質を減らすことから始めましょう！<br />日本肥満学会では、糖質：脂質：たんぱく質＝60%：25%：15%を奨励しています。極端に糖質を減らすのではなく、このバランスから少し糖質を減らすことがあなたに適したバランスです。
+							</p>
+							<div class="food-advice-inbox"><center>
+								<img src="images/food_best1_c.png">
+							</center></div>
+							<h2 class="serif" style="font-size: 1.5em;"><font color="#ca416b">－ＷＨＹ－</font></h2>
+							<p class="inbox-sentence">
+								あなたと同じ遺伝子タイプの方は、血糖値の増減に敏感で血糖値が下がるとイライラしやすい傾向があります。<br />まずは血糖値の急激な増加を抑えるようなダイエット法を取り入れることがおすすめです。<br />また、食事量を減らすことで、体重が変化しやすいので、間食を減らしたり、満腹感を感じやすい食生活を目指しましょう！
+							</p>
+							<br /><br />
+							<h2 class="serif" style="font-size: 1.5em;"><font color="#ca416b">－POINT－</font></h2>
+							<p class="inbox-sentence">
+								糖質を減らすことはおすすめですが、減らしすぎには注意しましょう！<br />糖質は体のエネルギー源ですので、極端に減らすと体調が悪くなる危険性もあります。<br />適度に減らすことを意識しましょう！
+							</p>
+							<br /><br />
+
+							<h2 class="serif" style="font-size: 1.2em; margin-bottom: 15px;"><font color="#ca416b">−それ以外の
+							糖代謝リスク
+							対策はこちら−</font></h2>
+								<h2 class="serif text-back-green">１回の食べる量を減らし、決まった時間に食べる。</h2><img src="images/food_best1_c_small1.png" class="food-meansure-img"><p class="inbox-sentence">血糖値の増減に敏感で、血糖値が下がるとイライラしやすいです。<br />食べる量を減らすとお腹が空いて間食につながりやすいので、無理に減らさず、決まった時刻に食べることを目指しましょう！</p><br /><br /><h2 class="serif text-back-green">食べる前にお水を一杯飲む。</h2><img src="images/food_best1_c_small2.png" class="food-meansure-img"><p class="inbox-sentence">お水を飲むと血糖値の急激な上昇を抑え、満腹感を感じやすくなります。<br />あなたと同じ遺伝子タイプの方は、血糖値の増減に注意が必要で、食べる量を減らすと痩せやすいので、取り入れましょう！</p><br /><br /><h2 class="serif text-back-green">薄めの味付けにする。</h2><img src="images/food_best1_c_small3.png" class="food-meansure-img"><p class="inbox-sentence">濃い味付けのおかずの場合、ご飯などの糖質をたくさん食べてしまう傾向があります。<br />少し味付けを薄くするだけでも十分糖代謝リスク対策につながります！</p><br /><br /><h2 class="serif text-back-green">ＧＩ値が低いものから食べる。</h2><img src="images/food_best1_c_small4.png" class="food-meansure-img"><p class="inbox-sentence">血糖値の増減に特に注意が必要な遺伝的体質です。<br />ＧＩ値が低いものから食べることで血糖値の増減を抑えることができます。</p><br /><br />
+
+							<h2 class="serif" style="font-size: 1.2em; margin-bottom: 15px;"><font color="#ca416b">−
+							たんぱく質リスク
+							対策も必要です−</font></h2>
+								<h2 class="serif text-back-green">お肉はよく噛んで食べる。</h2><img src="images/food_best1_p_small1.png" class="food-meansure-img"><p class="inbox-sentence">お肉を食べて、たんぱく質を摂取することはとてもおすすめです。<br />しかし、お肉は消化に良くなく、あなたと同じ遺伝子タイプの方は、胃腸が弱い傾向がありますので、よく噛んで食べるようにしましょう！</p><br /><br /><h2 class="serif text-back-green">あっさりとしたものが食べたいときはお魚を。</h2><img src="images/food_best1_p_small2.png" class="food-meansure-img"><p class="inbox-sentence">あなたと同じ遺伝子タイプの方は、野菜などあっさりとした食べ物を好む傾向があります。<br />たんぱく質不足になりやすいので、あっさりとしたものが食べたくなったら白身魚などがおすすめです。</p><br /><br /><h2 class="serif text-back-green">間食にはナッツやヨーグルトを。</h2><img src="images/food_best1_p_small3.png" class="food-meansure-img"><p class="inbox-sentence">食事だけではなく、食事と食事の間に間食を食べてたんぱく質を補いましょう！<br />ナッツやヨーグルトを食べたり、プロテインを飲みましょう。</p><br /><br /><h2 class="serif text-back-green">食事の時間が空きすぎないように。</h2><img src="images/food_best1_p_small4.png" class="food-meansure-img"><p class="inbox-sentence">あなたと同じ遺伝子タイプの方は、空腹に強く、一食抜いても平気な傾向があります。<br />食事を忘れて長時間経っていた、という場合、筋肉が減っていることがありますので注意しましょう！</p><br /><br />
+
+
+
+							<h2 class="serif" style="font-size: 1.2em; margin-bottom: 15px;"><font color="#ca416b">−
+							脂質代謝リスク
+							対策も必要です−</font></h2>
+								<h2 class="serif text-back-green">揚げ物や脂身、クリームを減らす。</h2><img src="images/food_best1_f_small1.png" class="food-meansure-img"><p class="inbox-sentence">天ぷらの衣を少し避けたり、お肉の脂身を落としたり、脂質を減らすように心がけましょう！<br />ホイップクリームやチーズ、マーガリンにも脂質は多く含まれています。</p><br /><br /><h2 class="serif text-back-green">茹でる、焼く、などの調理法を。</h2><img src="images/food_best1_f_small2.png" class="food-meansure-img"><p class="inbox-sentence">調理法を工夫することで脂質を減らすこともできます！<br />お肉を鉄板ではなく網で焼くだけでも脂質を減らすことができるので、簡単なものから取り入れましょう！</p><br /><br /><h2 class="serif text-back-green">調味料にも注意！</h2><img src="images/food_best1_f_small3.png" class="food-meansure-img"><p class="inbox-sentence">マヨネーズやドレッシングにも脂質が多く含まれているものがあります。<br />野菜サラダが脂質だらけになっていませんか？メニューだけではなく調味料にも気をつけましょう！</p><br /><br /><h2 class="serif text-back-green">ダイエットフードにも注意！</h2><img src="images/food_best1_f_small4.png" class="food-meansure-img"><p class="inbox-sentence">ダイエットフードやアンチエイジングフードとして人気が高いチーズやナッツには脂質が多く含まれます。<br />話題になった食品などは、脂質の量が多いかどうかを確認した上で取り入れましょう！</p><br /><br />
+
+						</div>
+					</a>
+				</div>
+<!--1位ここまで-->
+
+<!--2位ここから-->
+				<div id="main_pink_inner">
+					<dl class="main_pink serif">
+						<a class="syncer-acdn ranking" data-target="syncer-acdn-foodtype-ranking-2">
+							<div class="ranking-wrapper-a-imgwrapper">
+							 <img src="images/ranking_2.png" class="ranking-image-2 ranking-wrapper-a-imgwrapper-img2">
+							</div>
+							<h2 class="adviceranking-underline ranking-wrapper-a-h2-2">
+								はじめはＧＩ値の低いものから！
+							</h2>
+						</a>
+					</dl>
+					<a id="syncer-acdn-foodtype-ranking-2" style="display:none;">
+						<div class="inbox">
+							<p class="inbox-sentence">
+								食事のときは、GI値が低いものから食べましょう。<br />GI値とは、血糖値を上昇させる効果がどれくらいあるか、を示す数値で高いほど血糖値が上がりやすくなります。<br />また、甘いものを食べたくなったときは、すぐに食べるのではなく、お水を飲みましょう。
+							</p>
+							<br />
+							<h2 class="serif" style="font-size: 1.5em;"><font color="#ca416b">－ＷＨＹ－</font></h2>
+							<p class="inbox-sentence">
+								あなたと同じ遺伝子タイプの方は、血糖値の増減に敏感な遺伝的体質です。<br />血糖値が下がるとイライラし、すぐに甘いものを食べたくなる傾向があります。その結果、太りやすい食べ物を食べてしまいますので、血糖値の増減が大きくならないような食生活を目指しましょう！<br />
+							</p>
+							<br />
+							<center>
+							<img src="images/food_best2_c.png">
+							</center>
+						</div>
+					</a>
+				</div>
+<!--2位ここまで-->
+
+<!--3位ここから-->
+				<div id="main_pink_inner">
+					<dl class="main_pink serif">
+						<a class="syncer-acdn ranking" data-target="syncer-acdn-foodtype-ranking-3">
+							<div class="ranking-wrapper-a-imgwrapper">
+							 <img src="images/ranking_3.png" class="ranking-image-3 ranking-wrapper-a-imgwrapper-img3">
+							</div>
+							<h2 class="adviceranking-underline ranking-wrapper-a-h2-3">
+								ダイエット中でもしっかりと食事を！
+							</h2>
+						</a>
+					</dl>
+					<a id="syncer-acdn-foodtype-ranking-3" style="display:none;">
+						<div class="inbox">
+							<p class="inbox-sentence">
+								たんぱく質を中心に、しっかりと食事をとっていきましょう。「○○ダイエット」などに代表される単品ダイエットや、糖質制限ダイエットなどは、あなたには適していません。<br />ダイエット中でも食べる量を減らすことを意識せず、たんぱく質を減らさないように心がけましょう。
+							</p>
+							<br />
+							<center>
+							<img src="images/food_best2_p.png">
+							</center>
+						</div>
+					</a>
+				</div>
+<!--3位ここまで-->
+
+
+				<div id="main_pink_inner">
+					<dl class="main_pink serif">
+						<a class="syncer-acdn ranking" data-target="syncer-acdn-foodtype-ranking-4">
+							<div class="ranking-wrapper-a-imgwrapper">
+							 <img src="images/ranking_4.png" class="ranking-image-other ranking-wrapper-a-imgwrapper-imgother">
+							</div>
+							<h2 class="adviceranking-underline ranking-wrapper-a-h2-other">
+								甘いフルーツの食べすぎに注意！
+							</h2>
+						</a>
+					</dl>
+					<a id="syncer-acdn-foodtype-ranking-4" style="display:none;">
+						<div class="inbox">
+							<p class="inbox-sentence">
+								フルーツはビタミンやポリフェノールなど多くの栄養素を含んでおり、健康に良いものが多いです。<br />食事をフルーツに置き換える、「フルーツダイエット」も人気があります。<br />しかし、甘いフルーツやドライフルーツには糖質がたくさん含まれている場合があります。<br />糖質で太りやすいので甘いフルーツは食べすぎないように注意しましょう！<br />
+							</p>
+							<br />
+						</div>
+					</a>
+				</div>
+
+
+
+				<div id="main_pink_inner">
+					<dl class="main_pink serif">
+						<a class="syncer-acdn ranking" data-target="syncer-acdn-foodtype-ranking-5">
+							<div class="ranking-wrapper-a-imgwrapper">
+							 <img src="images/ranking_5.png" class="ranking-image-other ranking-wrapper-a-imgwrapper-imgother">
+							</div>
+							<h2 class="adviceranking-underline ranking-wrapper-a-h2-other">
+								胃腸に優しい食べ方を！
+							</h2>
+						</a>
+					</dl>
+					<a id="syncer-acdn-foodtype-ranking-5" style="display:none;">
+						<div class="inbox">
+							<p class="inbox-sentence">
+								油が多かったり、消化しにくいものを食べたときは、食べ合わせを意識して、なるべく胃腸に負担がかからないようにしましょう。<br />口の中でしっかりかんでから飲み込むようにすると、胃腸への負担も少なくなります。<br />食べ合わせが難しい場合、整腸剤を持ち歩くようにしたり、脂っこいものや刺激の強いものをなるべく避けるようにして、少しでも負担を軽くするとよいでしょう。
+							</p>
+							<br />
+						</div>
+					</a>
+				</div>
+
+
+
+				<div id="main_pink_inner">
+					<dl class="main_pink serif">
+						<a class="syncer-acdn ranking" data-target="syncer-acdn-foodtype-ranking-6">
+							<div class="ranking-wrapper-a-imgwrapper">
+							 <img src="images/ranking_6.png" class="ranking-image-other ranking-wrapper-a-imgwrapper-imgother">
+							</div>
+							<h2 class="adviceranking-underline ranking-wrapper-a-h2-other">
+								からだが温まる食生活を！
+							</h2>
+						</a>
+					</dl>
+					<a id="syncer-acdn-foodtype-ranking-6" style="display:none;">
+						<div class="inbox">
+							<p class="inbox-sentence">
+								あなたは、からだの冷えに注意が必要な遺伝的体質です。<br />食事の時には、温かいものや、からだを温めるメニューを積極的に選ぶようにしましょう。<br />料理自体も、食べずに長い時間置いておくと冷めてしまいます。なるべく温かいうちに、出来立てを食べるようにすれば、からだも温まりますし、料理もおいしく食事が楽しくなりますので、一石二鳥です。
+							</p>
+							<br />
+						</div>
+					</a>
+				</div>
+
+
+
+				<div id="main_pink_inner">
+					<dl class="main_pink serif">
+						<a class="syncer-acdn ranking" data-target="syncer-acdn-foodtype-ranking-7">
+							<div class="ranking-wrapper-a-imgwrapper">
+							 <img src="images/ranking_7.png" class="ranking-image-other ranking-wrapper-a-imgwrapper-imgother">
+							</div>
+							<h2 class="adviceranking-underline ranking-wrapper-a-h2-other">
+								味つけやお酒の選び方にも一工夫！
+							</h2>
+						</a>
+					</dl>
+					<a id="syncer-acdn-foodtype-ranking-7" style="display:none;">
+						<div class="inbox">
+							<p class="inbox-sentence">
+								食品だけではなく、お酒や調味料も遺伝的体質に適した選び方をしましょう。<br />お酒をよく飲む方は、醸造酒（ビール、日本酒、ワインなど）を避け、蒸留酒（焼酎、ウィスキー、ブランデーなど）や糖質ゼロ発泡酒などに変えるだけでも違いが出てきます。<br />調味料の選び方にも注意が必要です。トマトケチャップやコンソメは糖質が多く含まれています。マヨネーズは比較的糖質が少ない調味料ですが、脂質が多く含まれます。マヨネーズや脂質が多いドレッシングは少なめに使う事を心がけましょう。<br />ブラックペッパーやニンニク、唐辛子など、からだを温めて代謝を上げる作用がある成分がおすすめです。
+							</p>
+							<br />
+						</div>
+					</a>
+				</div>
+
+
+<!--
+				<div id="main_pink_inner">
+					<dl class="main_pink serif">
+						<a class="syncer-acdn ranking" data-target="syncer-acdn-foodtype-ranking-8">
+							<div class="ranking-wrapper-a-imgwrapper">
+							 <img src="images/ranking_8.png" class="ranking-image-other ranking-wrapper-a-imgwrapper-imgother">
+							</div>
+							<h2 class="adviceranking-underline ranking-wrapper-a-h2-other">
+								#N/A
+							</h2>
+						</a>
+					</dl>
+					<a id="syncer-acdn-foodtype-ranking-8" style="display:none;">
+						<div class="inbox">
+							<p class="inbox-sentence">
+								#N/A
+							</p>
+							<br />
+						</div>
+					</a>
+				</div>
+-->
+			  </div><!--.main_pink-->
+			</div><!--.slidetoggle-->
+		</div><!--.main_inner-->
+	</div><!--.dna_main shokuji-->
+</section>
+<!-- アドバイスランキングここまで -->
+
+<!-- 食事ダイエットランキングここから -->
+<section>
+	<div class="dna_main shokuji">
+		<div id="main_inner">
+			<h1 class="ttl_h1 syncer-acdn shokuji-contents-name" data-target="syncer-acdn-fooddiet-ranking" data-name="+">食事ダイエットランキング
+			</h1>
+			<div class="slidetoggle" id="syncer-acdn-fooddiet-ranking" style="display:none;"><br />
+				<div id="main_pink">
+
+				<!--1位全体ここから-->
+				<div id="main_pink_inner">
+
+				<!--1位のタイトルここから-->
+					<dl class="main_pink serif">
+						<a class="syncer-acdn ranking" data-target="syncer-acdn-fooddiet-ranking-1">
+							<div class="ranking-wrapper-a-imgwrapper">
+							 <img src="images/ranking_1.png" class="ranking-image-1 ranking-wrapper-a-imgwrapper-img1">
+							</div>
+							<h2 class="adviceranking-underline ranking-wrapper-a-h2-1">
+							糖質ＯＦＦダイエット
+							</h2>
+						</a>
+					</dl>
+				<!--1位のタイトルここまで-->
+
+					<a id="syncer-acdn-fooddiet-ranking-1" style="display:none;">
+
+						<!--ここから個別内容-->
+
+						<section class="shokuji-diet-wrapper">
+
+						<!--一言メモここから-->
+							<div class="shokuji-diet-recommend-wrapper">
+								<h3>
+								"糖代謝リスクが高いので、
+特におすすめです。"
+								</h3>
+							</div>
+						<!--一言メモここまで-->
+
+						<!--個別内容共通ここから-->
+						<p class="diet-point-top-sentence">ご飯やパンなどの炭水化物や果物など、糖質が含まれる食べ物を減らすダイエット法です。糖質を摂取すると、インスリンが分泌され、ブドウ糖が血管の外に追い出されます。そのフブドウ糖が細胞に取り込まれ、その一部が脂肪として蓄積されてしまうのです。糖質を減らすことで、インスリンの分泌が抑えられ、余分な糖質が脂肪に取り込まれるのを防ぐことができます。</p><h2 class="shokujidiet-text-backcolor">糖質OFFダイエットのポイント</h2><div class="diet-point-wrapper"><div class="diet-point-inbox"><h3 class="shokuji-diet-border-orange"><span>ご飯・パン・麺類</span>に注意！</h3><p>特に主食は要注意です。気を抜いてしまうと、白米やパン、麺類など、糖質のオンパレードになってしまいます。まずは、主食を減らすところから始めましょう。おかわりをしてしまっていた人は一杯で我慢、お茶碗一杯だった人は、少なめに盛り付けま しょう。</p></div><!--.diet-point-inbox--><div class="diet-point-inbox"><h3 class="shokuji-diet-border-orange"><span>GI値</span>が低いものを！</h3><p>GI値（グリセミックインデックス値）が低いものを選ぶと、糖がおだやかに取り込まれ、血糖値の上昇もゆるやかになるため、インスリンも分泌しすぎることなく、速やかに吸収されます。できるだけ、GI値が低いものを選ぶようにしましょう。</p></div><!--.diet-point-inbox--><div class="diet-point-inbox"><h3 class="shokuji-diet-border-orange">慣れてきたら<span>1日50g以下</span>に！</h3><p>糖質OFFダイエットに慣れてきた方は、1日の糖質の量を50g以下にできるようにしてみましょう。ただし、初心者の方には、なかなか難しい数字です。本格的に糖質OFFダイエットに挑戦したい場合は、ぜひチャレンジしてみてください！</p></div><!--.diet-point-inbox--><div class="diet-point-inbox"><h3 class="shokuji-diet-border-orange"><span>おかず</span>でお腹を膨らまそう！</h3><p>糖質を減らすということは、何が何でも全て食べない！ということではありません。先におかずでお腹を満たすようにすると、摂る糖質の量も自然と少なくなり、栄養も偏ることが少なくなります。</p></div><!--.diet-point-inbox--></div><!--.diet-point-wrapper--><div class="shokuji-diet-rightpage-top-wrapper"><h2>GI値の低い食品を選ぶようにしましょう</h2><h3>糖質を減らすことはもちろんですが、<br>選ぶときにはGI値の低いものを選びましょう。</h3><p>糖質の量やGI値を知らなくても大丈夫!迷ったら、白いものよりも茶色いもの(白米より玄米など)、お酒だと醸造酒よりも蒸留酒を選ぶようにすることがポイントです!</p><img src="images/26/shokuji_diet_no6_01.jpg" class=""></div><div class="shokuji-diet-rightpage-bottom-wrapper"><h2>糖質が少ないメニューに<br>チャレンジ</h2><h3>糖質OFFの食品をうまく使えば、美味しく、<br>ストレスを溜めることなくダイエットできます。</h3><div class="shokuji-diet-rightpage-recipe-wrapper"><!--料理レシピ　右ページ下部バージョン--><p class="recipe-name">おからハンバーグ</p><img src="images/26/shokuji_diet_no6_02.png" class=""><p class="recipe-zairyou-backcolor"><span>材料（2人分）</span></p><p class="recipe-zairyou">おから：100g、鶏ひき肉：150g、卵：1個、長ネギのみじん切り：10cm程度、ショウガのみじん切り：大さじ2杯</p><p class="recipe-process-backcolor"><span>調理法</span></p><ul class="recipe-process"><li class="recipe-process-number">①</li><li class="recipe-process-text">おからと鶏ひき肉、卵を粘りが出るまでしっかりと混ぜ合わせます。</li></ul><ul class="recipe-process"><li class="recipe-process-number">②</li><li class="recipe-process-text">粘りが出て来た頃に長ネギとショウガのみじん切りを加え、更によく混ぜます。</li></ul><ul class="recipe-process"><li class="recipe-process-number">③</li><li class="recipe-process-text">しっかりまとまってきたら小判型に成型します。</li></ul><ul class="recipe-process"><li class="recipe-process-number">④</li><li class="recipe-process-text">フライパンにお好みの油をひき、おからハンバーグを焼いていきます。</li></ul><ul class="recipe-process"><li class="recipe-process-number">⑤</li><li class="recipe-process-text">両面色よく焼けたら、お皿に盛りつけ、お好きなトッピングをどうぞ♪</li></ul></div><p class="recipe-bottom-p-color">ソースや付け合せも一工夫</p><p class="recipe-bottom-p">スーパーでは、ケチャップも低糖質のものが売っています。また、ポン酢を使って和風に仕上げれば、糖質減らすことができます！一緒に食べる主食を、玄米や全粒粉パンにすれば、お腹も満たしながら、美味しくダイエットができるので、無理なく続けることができます。</p></div><!--.shokuji-diet-rightpage-bottom-wrapper--><div class="shokuji-diet-faq-wrapper"><p class="shokuji-diet-faq-faq">FAQ</p><div class="shokuji-diet-faq-q-wrapper"><p class="shokuji-diet-faq-title-before">Q:</p><p class="shokuji-diet-faq-title">糖質をオフにすると、からだの中はどうなるの？</p></div><div class="shokuji-diet-faq-a-wrapper"><p class="shokuji-diet-faq-sentence-before">A:</p><p class="shokuji-diet-faq-sentence">糖質が分解されると、最終的にブドウ糖と呼ばれる物質に変化します。そのブドウ糖は、脳が使う唯一のエネルギー源とされてきました。しかし、体内に食べ物からのブドウ糖がなくなっても、肝臓でブドウ糖が作り出され、それが続くと「ケトン体」と呼ばれる、脳がエネルギーとして使える物質を生成することが分かってきました。</p></div></div><!--.shokuji-diet-faq-wrapper--><div class="shokuji-diet-faq-wrapper"><p class="shokuji-diet-faq-faq">FAQ</p><div class="shokuji-diet-faq-q-wrapper"><p class="shokuji-diet-faq-title-before">Q:</p><p class="shokuji-diet-faq-title">玄米だとたくさん食べても大丈夫なの？</p></div><div class="shokuji-diet-faq-a-wrapper"><p class="shokuji-diet-faq-sentence-before">A:</p><p class="shokuji-diet-faq-sentence">玄米は、白米に比べて糖質の割合が少ないことで知られており、今まで食べていた白米と同じ量を食べても、糖質を減らすことが出来るので、非常にダイエットには効果的です。しかし、低糖質だからと言って、食べすぎは禁物。玄米に変えてすぐの間はたくさん食べても良いですが、徐々に減らす努力をしていきましょう。</p></div></div><!--.shokuji-diet-faq-wrapper-->
+						<!--個別内容共通ここまで-->
+
+						</section>
+					</a>
+				</div><!--main_pink_inner-->
+				<!--1位全体ここまで-->
+
+				<!--2位全体ここから-->
+				<div id="main_pink_inner">
+
+				<!--2位のタイトルここから-->
+					<dl class="main_pink serif">
+						<a class="syncer-acdn ranking" data-target="syncer-acdn-fooddiet-ranking-2">
+							<div class="ranking-wrapper-a-imgwrapper">
+							 <img src="images/ranking_2.png" class="ranking-image-2 ranking-wrapper-a-imgwrapper-img2">
+							</div>
+							<h2 class="adviceranking-underline ranking-wrapper-a-h2-2">
+							たんぱく質ダイエット
+							</h2>
+						</a>
+					</dl>
+				<!--2位のタイトルここまで-->
+
+					<a id="syncer-acdn-fooddiet-ranking-2" style="display:none;">
+
+						<!--ここから個別内容-->
+
+						<section class="shokuji-diet-wrapper">
+
+						<!--一言メモここから-->
+							<div class="shokuji-diet-recommend-wrapper">
+								<h3>
+								"たんぱく質リスクが高いので、
+おすすめです。"
+								</h3>
+							</div>
+						<!--一言メモここまで-->
+
+						<!--個別内容共通ここから-->
+						<p class="diet-point-top-sentence">たんぱく質をしっかりと摂取し、筋肉量を増やすことで、基礎代謝を上げるダイエット法です。基礎代謝が上がると、太りにくい体になるので、リバウンドも防ぐことができます。特に女性は、筋肉を増やしても簡単にはムキムキとした体型にはなりくにので、安心して筋肉をつけるようにしましょう。<br>※食事をプロテインに置き換える方法とは異なります。</p><h2 class="shokujidiet-text-backcolor">たんぱく質ダイエットのポイント</h2><div class="diet-point-wrapper"><div class="diet-point-inbox"><h3 class="shokuji-diet-border-orange"><span>間食でも</span>たんぱく質を補給!</h3><p>食事だけではなく、間食でうまく補うことができれば、よりダイエットに効果的です。「食べると太る」と思い込みがちですが、たんぱく質ダイエットでは、ゆで卵やナッツ、ヨーグルトを食べたり、プロテインを飲んだりしましょう！</p></div><!--.diet-point-inbox--><div class="diet-point-inbox"><h3 class="shokuji-diet-border-orange">髪や爪...<span>美容にもGood！</span></h3><p>髪の毛、爪、お肌は美しさが現れるパーツ。これらは全てたんぱく質によってできています。たんぱく質を十分に摂取することで、髪の毛がパサつく、肌が乾燥する。爪がもろくなるなどのトラブルを防ぐことも期待できます！</p></div><!--.diet-point-inbox--><div class="diet-point-inbox"><h3 class="shokuji-diet-border-orange"><span>筋肉量UP</span>に注目しましょう！</h3><p>筋肉は脂肪よりも重いので、一時的には体重が増えてしまうかもしれません。しかし、筋肉量が増えることで、ボディにメリハリがつき、美しく見えます。また、基礎代謝もアップして、痩せやすい体になるので、体重よりも筋肉量に注目しましょう！</p></div><!--.diet-point-inbox--><div class="diet-point-inbox"><h3 class="shokuji-diet-border-orange"><span>肉・魚・卵・大豆製品・乳製品</span></h3><p>上記のたんぱく質を、意識して食べるようにしましょう。食材は偏りすぎないようにすることがポイントです。また脂質をとりすぎないようにするためにも、プロテインのサプリメントをうまく活用するなど、バランスよく摂取していきましょう。</p></div><!--.diet-point-inbox--></div><!--.diet-point-wrapper--><div class="shokuji-diet-rightpage-top-wrapper"><h2>おすすめタイムスケジュール</h2><h3>食間や寝る前など、小腹が空いたときに<br>積極的に摂るようにしましょう。</h3><p>たんぱく質は、一食での吸収量に限度があります。（一食あたり約20〜30g）ですので、一食でまとめるのではなく、間食をうまく使って、バランスよく摂っていきましょう。</p><img src="images/shokuji_diet_protein.jpg" class=""></div><div class="shokuji-diet-rightpage-bottom-wrapper"><h2>筋肉トレーニングも<br>上手に組み合わせましょう！</h2><h3>遺伝的体質に適した<br>筋肉トレーニングを取り入れましょう</h3><p>「筋トレ」というと、ムキムキした体型になってしまうのでは...？と思っているあなた。女性であれば、そんな必要はほとんどありません。たんぱく質ダイエットに筋肉トレーニングを取り入れることで、女性らしいボディに近づいていきます。解析結果レポートブックを参考に、遺伝的体質に適した筋トレを取り入れましょう！</p><div class="shokuji-diet-rightpage-bottom-img-text-wrapper"><!--画像とテキストが並んでるとき※不要の場合は削除--><p class="img-text-wrapper-top-p">いろいろな筋トレの仕方があります！</p><p class="img-text-wrapper-bottom-p">多くの方が持っている「筋トレ」のイメージは、重いダンベルを苦しそうに持ち上げている姿...<br>ではないですか？もちろんそういった筋トレもありますが、軽いものを何回も持ち上げたりするものから、時間で区切ったスピーディーなものまで、種類はいろいろあります！<br>    手軽にできますので、あなたに適したメニューを取り入れましょう！</p><img src="images/shokuji_diet_kintore.png"></div></div><!--.shokuji-diet-rightpage-bottom-wrapper--><div class="shokuji-diet-faq-wrapper"><p class="shokuji-diet-faq-faq">FAQ</p><div class="shokuji-diet-faq-q-wrapper"><p class="shokuji-diet-faq-title-before">Q:</p><p class="shokuji-diet-faq-title">プロテインって太るんじゃないの？</p></div><div class="shokuji-diet-faq-a-wrapper"><p class="shokuji-diet-faq-sentence-before">A:</p><p class="shokuji-diet-faq-sentence">これは全くの誤解です。プロテインの主な栄養素は、たんぱく質。これは筋肉を作るために必要な栄養素です。食べる量とタイミングさえ間違わなければ、ダイエットの大きな味方となります。プロテインは、太る心配をせずに、寝る前やお腹が空いた時に飲みましょう！</p></div></div><!--.shokuji-diet-faq-wrapper--><div class="shokuji-diet-faq-wrapper"><p class="shokuji-diet-faq-faq">FAQ</p><div class="shokuji-diet-faq-q-wrapper"><p class="shokuji-diet-faq-title-before">Q:</p><p class="shokuji-diet-faq-title">どの食品もたんぱく質の吸収率は同じなの？</p></div><div class="shokuji-diet-faq-a-wrapper"><p class="shokuji-diet-faq-sentence-before">A:</p><p class="shokuji-diet-faq-sentence">食品によって、たんぱく質の吸収率は異なります。肉をはじめとする動物性たんぱく質はほぼ全て吸収されるのに対し、大豆などの植物性たんぱく質の吸収率は７〜８割程度です。食品を選ぶ際には、栄養成分表示に書かれているたんぱく質のグラム数だけを見るのではなく、その食品が動物性か植物性かにも注目しましょう。</p></div></div><!--.shokuji-diet-faq-wrapper-->
+						<!--個別内容共通ここまで-->
+
+						</section>
+					</a>
+				</div><!--main_pink_inner-->
+				<!--2位全体ここまで-->
+
+				<!--3位全体ここから-->
+				<div id="main_pink_inner">
+
+				<!--3位のタイトルここから-->
+					<dl class="main_pink serif">
+						<a class="syncer-acdn ranking" data-target="syncer-acdn-fooddiet-ranking-3">
+							<div class="ranking-wrapper-a-imgwrapper">
+							 <img src="images/ranking_3.png" class="ranking-image-3 ranking-wrapper-a-imgwrapper-img3">
+							</div>
+							<h2 class="adviceranking-underline ranking-wrapper-a-h2-3">
+							低脂質ダイエット
+							</h2>
+						</a>
+					</dl>
+				<!--3位のタイトルここまで-->
+
+					<a id="syncer-acdn-fooddiet-ranking-3" style="display:none;">
+
+						<!--ここから個別内容-->
+
+						<section class="shokuji-diet-wrapper">
+
+						<!--一言メモここから-->
+							<div class="shokuji-diet-recommend-wrapper">
+								<h3>
+								"脂質代謝リスクが
+やや高いので、おすすめです。"
+								</h3>
+							</div>
+						<!--一言メモここまで-->
+
+						<!--個別内容共通ここから-->
+						<p class="diet-point-top-sentence">脂質は1グラムで9kcal（糖質の約2倍以上！）あり、脂質を減らすことで、大幅に摂取カロリーを抑えることができ、ダイエット効果が期待できます。また、低脂質はたんぱく質ダイエットと相性がいいため、低脂質高たんぱく食品を摂るようにすると、より一層の効果が期待できます。</p><h2 class="shokujidiet-text-backcolor">低脂質ダイエットのポイント</h2><div class="diet-point-wrapper"><div class="diet-point-inbox"><h3 class="shokuji-diet-border-orange">油は<span>大さじ1杯まで</span></h3><p>油は、大さじ1杯で約15グラム。それだけで約135kcalもあるんです！ついつい使いすぎてしまうのが、調理時の油。料理するときには、計量スプーンを使って、油の使いすぎを防ぎましょう。</p></div><!--.diet-point-inbox--><div class="diet-point-inbox"><h3 class="shokuji-diet-border-orange"><span>油を使わない</span>器具を</h3><p>テフロン加工やフッ素加工のフライパンを使えば、油は少量でも大丈夫。スチーム式のオーブンレンジを使ったり、蒸し料理・茹で料理を上手に取り入れ、脂質の摂取量を減らしましょう。</p></div><!--.diet-point-inbox--><div class="diet-point-inbox"><h3 class="shokuji-diet-border-orange"><span>オリーブオイル</span>がおすすめ</h3><p>オリーブオイルは、主成分がオレイン酸。これにより、コレステロールを減らす効果が期待できます。特にエキストラバージンオリーブオイルはオリーブの果実がもつ風味を味あわことができ、味わい深い料理に仕上がります。</p></div><!--.diet-point-inbox--><div class="diet-point-inbox"><h3 class="shokuji-diet-border-orange">食材は<span>大きめにカット</span></h3><p>食材は大きくカットすることで、表面積が小さくなります。それにより、余計な油に吸収をへらすことができるので、余計な脂質を摂らずに済むのです。また、自然と噛む回数も多くなるので、満腹感を得ることもできます。</p></div><!--.diet-point-inbox--></div><!--.diet-point-wrapper--><div class="shokuji-diet-rightpage-top-wrapper"><h2>低脂質な食材、調理法にチェンジ！</h2><h3>食材をチェンジするだけでも、<br>脂質量が大幅に減ります！</h3><p>今まで何気なく使っていた食材を、脂肪が少ないものに変える。それだけで大きな効果が期待できます。<br>まずは、おかず一品の中の食材の一つをチェンジ。慣れてきたら、脂質を使わない調理法にまでチェンジしていきましょう。</p><img src="images/26/shokuji_diet_no2_01.jpg" class=""></div><div class="shokuji-diet-rightpage-bottom-wrapper"><h2>低脂質なダイエットメニューに<br>チャレンジ</h2><h3>調理法を低脂質なものに。<br>それだけで脂質を大幅カット</h3><p>調理法を、油を使わない煮物や蒸し料理にして調理しましょう。それだけで、体に取り込まれる脂質は少なくなります。特に煮物は、和食の代表的な調理法で、バリエーションも盛りだくさん。お料理のレパートリーも広がります。</p><div class="shokuji-diet-rightpage-recipe-wrapper"><!--料理レシピ　右ページ下部バージョン--><p class="recipe-name">鶏ムネ肉とナスのピリ辛味噌煮</p><img src="images/26/shokuji_diet_no2_02.png" class=""><p class="recipe-zairyou-backcolor"><span>材料（3人分）</span></p><p class="recipe-zairyou">鶏ムネ肉：300g、ナス：３本、鶏がらスープ：250cc、砂糖・塩・醤油・味噌：大さじ1、豆板醤：小さじ1</p><p class="recipe-process-backcolor"><span>調理法</span></p><ul class="recipe-process"><li class="recipe-process-number">①</li><li class="recipe-process-text">事前に鶏がらスープ（250cc）・砂糖・塩・醤油（各大さじ1）を混ぜ合わせておく。</li></ul><ul class="recipe-process"><li class="recipe-process-number">②</li><li class="recipe-process-text">鍋に輪切りにしたナスを入れ、①のスープと共に煮る。<br></li></ul><ul class="recipe-process"><li class="recipe-process-number">③</li><li class="recipe-process-text">ナスにある程度火が通れば、一口大のそぎ切りにして、片栗粉をまぶしておいたむね肉を入れる。<br></li></ul><ul class="recipe-process"><li class="recipe-process-number">④</li><li class="recipe-process-text">味噌（大さじ1）を豆板醤（小さじ1）を煮汁で溶いて鍋に加え、一煮立ちしたらごま油を加えて出来上がり！</li></ul></div><p class="recipe-bottom-p-color">低脂質にお手軽アレンジ</p><p class="recipe-bottom-p">今まで炒めていたりした料理を、煮物に変えてみましょう。<br>ダシは味付け次第では、中華風にも和風にも変化できるので、様々なバリーションで食事を楽しめます。</p></div><!--.shokuji-diet-rightpage-bottom-wrapper--><div class="shokuji-diet-faq-wrapper"><p class="shokuji-diet-faq-faq">FAQ</p><div class="shokuji-diet-faq-q-wrapper"><p class="shokuji-diet-faq-title-before">Q:</p><p class="shokuji-diet-faq-title">どれくらい脂質を減らせばいいですか？</p></div><div class="shokuji-diet-faq-a-wrapper"><p class="shokuji-diet-faq-sentence-before">A:</p><p class="shokuji-diet-faq-sentence">脂質も体にとっては必要なものですし、一気に減らすことは難しいところ。まずは「油分10%カット」から始めてみましょう。油を使った揚げ物や炒め物を10%だけ残してみる。お肉についている脂身を、お肉全体の10%分残してみる。慣れてきたら、徐々にそのカットの割合を増やしていけばOKです。</p></div></div><!--.shokuji-diet-faq-wrapper--><div class="shokuji-diet-faq-wrapper"><p class="shokuji-diet-faq-faq">FAQ</p><div class="shokuji-diet-faq-q-wrapper"><p class="shokuji-diet-faq-title-before">Q:</p><p class="shokuji-diet-faq-title">脂質を極端に減らすと、お肌や健康に悪いのでは？</p></div><div class="shokuji-diet-faq-a-wrapper"><p class="shokuji-diet-faq-sentence-before">A:</p><p class="shokuji-diet-faq-sentence">現代の食生活では、脂質はとり過ぎないくらい十分に含まれています。ですので、気になる油を避けたとしても、必要最低限の油分は摂取できますのでご心配なく！まずは、日常の食事からいくら脂質を摂取しているのか、と意識するとことから始めてみましょう。できるところから徐々に減らしていけばいいのです。</p></div></div><!--.shokuji-diet-faq-wrapper-->
+						<!--個別内容共通ここまで-->
+
+						</section>
+					</a>
+				</div><!--main_pink_inner-->
+				<!--3位全体ここまで-->
+
+				<!--4位全体ここから-->
+				<div id="main_pink_inner">
+
+				<!--4位のタイトルここから-->
+					<dl class="main_pink serif">
+						<a class="syncer-acdn ranking" data-target="syncer-acdn-fooddiet-ranking-4">
+							<div class="ranking-wrapper-a-imgwrapper">
+							 <img src="images/ranking_4.png" class="ranking-image-other ranking-wrapper-a-imgwrapper-imgother">
+							</div>
+							<h2 class="adviceranking-underline ranking-wrapper-a-h2-other">
+							スープダイエット
+							</h2>
+						</a>
+					</dl>
+				<!--4位のタイトルここまで-->
+
+					<a id="syncer-acdn-fooddiet-ranking-4" style="display:none;">
+
+						<!--ここから個別内容-->
+
+						<section class="shokuji-diet-wrapper">
+
+						<!--一言メモここから-->
+							<div class="shokuji-diet-recommend-wrapper">
+								<h3>
+								"体が冷えやすい遺伝的体質ですので、
+おすすめです。"
+								</h3>
+							</div>
+						<!--一言メモここまで-->
+
+						<!--個別内容共通ここから-->
+						<p class="diet-point-top-sentence">スープダイエットとは、野菜で作った脂肪燃焼スープを1週間飲むダイエット法です。もともとは肥満の心臓病患者を手術適応レベルまでに、減量させることを目的にした食事療法です。体を温めることもできるので、冷えやすい遺伝的体質な方には、おすすめのダイエット法です。</p><h2 class="shokujidiet-text-backcolor">スープダイエットのポイント</h2><div class="diet-point-wrapper"><div class="diet-point-inbox"><h3 class="shokuji-diet-border-orange">食べる<span>時刻は気にしない</span>！</h3><p>スープは好きなタイミングで食べましょう！<br>よくある「午後6時以降は食べない」等のダイエットは、ストレスがたまり、結局失敗しがち。お腹が空いたら、夜遅くに食べてもOKなのが、このスープダイエットの魅力の一つです。</p></div><!--.diet-point-inbox--><div class="diet-point-inbox"><h3 class="shokuji-diet-border-orange"><span>好きなだけ</span>食べてもOK！</h3><p>食べるほどに代謝が良くなって脂肪が燃えるとされているので、好きなだけ食べてもOKです。なので、空腹からくるストレスに悩まされることがなく、お腹が減ってついつい間食...というダイエットのよくある失敗も防ぐことができます。</p></div><!--.diet-point-inbox--><div class="diet-point-inbox"><h3 class="shokuji-diet-border-orange">具材のアレンジで<span>飽きにくい</span>！</h3><p>具材は、基本的に野菜であれば、なんでもOK。キャベツや玉ねぎ、セロリなど様々な具材でスープを彩ることができます。ベースのスープの味を変えることで、いろんな風味を楽しめることができ、飽きずに続けることができるのです。</p></div><!--.diet-point-inbox--><div class="diet-point-inbox"><h3 class="shokuji-diet-border-orange"><span>誰でも簡単</span>、シンプル調理！</h3><p>好きな野菜を食べやすい大きさに切って、スープの素と一緒に大きな鍋に入れます。そこに水を入れて、野菜が柔らかくなるまで煮込みましょう。あとは塩こしょうで味を整えるだけ。簡単な調理法なので、気軽に挑戦できます。</p></div><!--.diet-point-inbox--></div><!--.diet-point-wrapper--><div class="shokuji-diet-rightpage-top-wrapper"><h2>基本的なスープレシピはこちら</h2><h3>まずは基本となるスープを作ってみましょう。<br>ここから味も変えられます</h3><p>スープダイエットの大きな魅力は、アレンジを行うことで、味を180度変えることができることです。毎日違う味のスープを楽しみことができるので、飽きずに続けることができます。</p><div class="shokuji-diet-rightpage-top-recipe-wrapper"><!--料理レシピ 右ページ上部パージョン--><p class="recipe-zairyou-backcolor"><span>用意するもの</span></p><p class="recipe-zairyou">玉ねぎ：3個、パプリカ(ピーマン)：1個、セロリ(太め)：1本、キャベツ：半玉、ホールトマト：1缶、チキンスープの素：1個</p><p class="recipe-process-backcolor"><span>調理法</span></p><ul class="recipe-process"><li class="recipe-process-number">①</li><li class="recipe-process-text">玉ねぎ、パプリカ、セロリ、キャベツをそれぞれ一口大に(サイコロ状)に切ります。</li></ul><ul class="recipe-process"><li class="recipe-process-number">②</li><li class="recipe-process-text">スープの素とトマト缶を一緒に大きな鍋に入れ、先ほど切った野菜も入れます。<br></li></ul><ul class="recipe-process"><li class="recipe-process-number">③</li><li class="recipe-process-text">材料がひたひたになるくらい水を入れて野菜が柔らかくなるまで10以上煮込みます。<br></li></ul><ul class="recipe-process"><li class="recipe-process-number">④</li><li class="recipe-process-text">塩やこしょうで、味を整えれば完成です！</li></ul></div></div><div class="shokuji-diet-rightpage-bottom-wrapper"><h2>味に飽きてきたら...<br>ちょい足しアレンジ</h2><h3>風味が変わるだけで別の料理に変身！<br>スープならではのお手軽アレンジ</h3><p>黒酢とラー油でサンラータン風に、ナンプラーとラー油とレモンでトムヤムクン風になど、バリエーションは広がります。</p><img src="images/26/shokuji_diet_no3_01.png" class=""><h2 style="margin-top: 2em;">鶏肉でしっかりたんぱく質補給！</h2><h3>基本のスープに鶏肉を追加して、<br>たんぱく質を補いましょう！</h3><p>基本のスープだけだと、どうしてもたんぱく質が不足しがちになってしまいます。死亡が少なくスープによく合う鶏のむね肉を入れてみたり、食間にプロテインなどのサプリメントを摂るなどで、たんぱく質を補ってあげるのがよいでしょう。<br>鶏肉やソーセージなどをスープに入れると、たんぱく質が摂れるだけでなく風味も変わってくるので、おすすめです。</p></div><!--.shokuji-diet-rightpage-bottom-wrapper--><div class="shokuji-diet-faq-wrapper"><p class="shokuji-diet-faq-faq">FAQ</p><div class="shokuji-diet-faq-q-wrapper"><p class="shokuji-diet-faq-title-before">Q:</p><p class="shokuji-diet-faq-title">スープは自己流で、なんでもいいの？</p></div><div class="shokuji-diet-faq-a-wrapper"><p class="shokuji-diet-faq-sentence-before">A:</p><p class="shokuji-diet-faq-sentence">もともとは、沖縄の医師が考察した方法で、体に取り入れるカロリーより多くのカロリーを燃焼させることで減量していく方法です。ですので、自己流に頼りすぎるのではなく、より詳しいプログラムなどは、専門書を参考に作っていくようにしましょう。</p></div></div><!--.shokuji-diet-faq-wrapper--><div class="shokuji-diet-faq-wrapper"><p class="shokuji-diet-faq-faq">FAQ</p><div class="shokuji-diet-faq-q-wrapper"><p class="shokuji-diet-faq-title-before">Q:</p><p class="shokuji-diet-faq-title">スープにお肉を入れると、太りそうな気がするんだけど...？</p></div><div class="shokuji-diet-faq-a-wrapper"><p class="shokuji-diet-faq-sentence-before">A:</p><p class="shokuji-diet-faq-sentence">気になる場合は鶏肉がおすすめです。鶏肉は脂分が少なくたんぱく質が多く含まれています。たんぱく質は、筋肉を作る時に必要な栄養素です。そのたんぱく質が不足して、筋肉量が減ってしますと、一見良さそうに思えても、リバウンドしやすい体になってしまいます。</p></div></div><!--.shokuji-diet-faq-wrapper-->
+						<!--個別内容共通ここまで-->
+
+						</section>
+					</a>
+				</div><!--main_pink_inner-->
+				<!--4位全体ここまで-->
+
+				<!--5位全体ここから-->
+				<div id="main_pink_inner">
+
+				<!--5位のタイトルここから-->
+					<dl class="main_pink serif">
+						<a class="syncer-acdn ranking" data-target="syncer-acdn-fooddiet-ranking-5">
+							<div class="ranking-wrapper-a-imgwrapper">
+							 <img src="images/ranking_5.png" class="ranking-image-other ranking-wrapper-a-imgwrapper-imgother">
+							</div>
+							<h2 class="adviceranking-underline ranking-wrapper-a-h2-other">
+							レコーディングダイエット
+							</h2>
+						</a>
+					</dl>
+				<!--5位のタイトルここまで-->
+
+					<a id="syncer-acdn-fooddiet-ranking-5" style="display:none;">
+
+						<!--ここから個別内容-->
+
+						<section class="shokuji-diet-wrapper">
+
+						<!--一言メモここから-->
+							<div class="shokuji-diet-recommend-wrapper">
+								<h3>
+								"あまり数値の変化に振り回されないように
+注意が必要です。"
+								</h3>
+							</div>
+						<!--一言メモここまで-->
+
+						<!--個別内容共通ここから-->
+						<p class="diet-point-top-sentence">「レコーディング」とは「記録」という意味。レコーディングダイエットとは、その日の体重や体脂肪率から、その日に食べたもの、そのカロリーまでを「記録する」ダイエットです。記録することで、自分が今、どれくらい食べているのか、何を食べているのか、いつ食べているのかを自覚することができるので、何をどう減らせばいいか分かり、効率よくダイエットできるのです。</p><h2 class="shokujidiet-text-backcolor">レコーディングダイエットのポイント</h2><div class="diet-point-wrapper"><div class="diet-point-inbox"><h3 class="shokuji-diet-border-orange"><span>「記録する」</span>それだけでOK！</h3><p>朝起きてから寝るまでの間、様々なものを食べたり飲んだりしています。そんな無意識で食べていたものを記録することで、自分が好んで食べてしまうの傾向が分かるので、痩せやすい習慣を見つけやすくなります 。</p></div><!--.diet-point-inbox--><div class="diet-point-inbox"><h3 class="shokuji-diet-border-orange"><span>数値</span>を記録し変化を見よう！</h3><p>あまり実感がなくても体は確かに変化しています。その変化を体重や体脂肪率などの数値として記録していくことで、モチベーションの維持ややり方の修正を行うことができます！</p></div><!--.diet-point-inbox--><div class="diet-point-inbox"><h3 class="shokuji-diet-border-orange"><span>1日の歩数</span>は簡単に分かります。</h3><p>どれくらい運動したかを知り、記録することは意外と難しいもの。運動量を記録するときは「1日の歩数」がおすすめです！万歩計もありますが、最近ではスマホアプリなどで簡単に分かりますので、是非記録してみましょう！</p></div><!--.diet-point-inbox--><div class="diet-point-inbox"><h3 class="shokuji-diet-border-orange"><span>アプリ</span>で楽しみながら！</h3><p>最近では楽しくレコーディングダイエットができるアプリがたくさん出ています。無料のものも多いので、お手軽に挑戦でき、カレンダー機能と一緒に使えば、レコーディングダイエットを習慣にすることができます。</p></div><!--.diet-point-inbox--></div><!--.diet-point-wrapper--><div class="shokuji-diet-rightpage-top-wrapper"><h2>主な食べ物・運動のカロリー換算表</h2><h3>慣れてきたら、<br>カロリーも記録してみましょう。</h3><p>成人男性の場合は、食べ物の1日1500kcalまで、成人女性の場合は、1日1250kcalを目安にしてみましょう。運動のカロリーも知っておくと、食べる物を選ぶ時にとっても便利です。</p><div style="background: #FFFFFF; padding: 7px;"><img src="images/26/shokuji_diet_no5_01.png" class=""><p style="text-align: center; font-size: 1.5em; margin-top: .5em; color: #FF0000; font-weight: bold;">その基礎代謝、あってる？</p><p>レコーディングダイエットが習慣化してくると、徐々にレベルが高いことにも挑戦しましょう！摂取カロリーと消費カロリーを計算しながらダイエットをすることで、計画を立てやすなります。しかし、計算のもととなる基礎代謝は、遺伝子の影響で増減します！解析結果レポートブックに記載しておりますので参考にしてください！</p><p style="text-align: center; font-size: 1.5em; margin-top: 1em; color: #FF0000; font-weight: bold;">はじめから無理はしないで！</p><p>レコーディングダイエットで、初めからカロリー計算までやろうとすると、めんどくさくなって挫折してしまいます。初めは食べた物を記録するだけでOK！慣れてきてから、徐々にカロリー計算に入ってきましょう。</p></div></div><div class="shokuji-diet-rightpage-bottom-wrapper"><h2>おすすめなレコーディングの仕方</h2><h3>ノートでも手帳でもなんでも構いません。<br>記録を取ることに意味があるのです。</h3><p>朝ごはんやお昼ご飯を、何時に何を食べたのか。間食に何を飲んで、何を食べたのか。欠かさず記録しましょう。</p><img src="images/26/shokuji_diet_no5_02.png" style="margin-bottom: 1.5em;" class=""></div><!--.shokuji-diet-rightpage-bottom-wrapper--><div class="shokuji-diet-faq-wrapper"><p class="shokuji-diet-faq-faq">FAQ</p><div class="shokuji-diet-faq-q-wrapper"><p class="shokuji-diet-faq-title-before">Q:</p><p class="shokuji-diet-faq-title">なんで記録するだけでダイエットになるの？</p></div><div class="shokuji-diet-faq-a-wrapper"><p class="shokuji-diet-faq-sentence-before">A:</p><p class="shokuji-diet-faq-sentence">ダイエットがうまくいかない人は、自分が1日に何を、どのタイミングで、どれくらい食べているか、知らない人が多いです。ですので、体重や食べた物を記録するだけで、自分が何をどれぐらい食べているか、認識することができます。自分が何を食べているかが分かると、太ってしまう原因となる食べ物が分かるので、自然と意識が高まり、ダイエットできるというわけなんです。</p></div></div><!--.shokuji-diet-faq-wrapper--><div class="shokuji-diet-faq-wrapper"><p class="shokuji-diet-faq-faq">FAQ</p><div class="shokuji-diet-faq-q-wrapper"><p class="shokuji-diet-faq-title-before">Q:</p><p class="shokuji-diet-faq-title">カロリー換算を全部するのは大変なんだけど...。</p></div><div class="shokuji-diet-faq-a-wrapper"><p class="shokuji-diet-faq-sentence-before">A:</p><p class="shokuji-diet-faq-sentence">カロリー換算は、全部しなくても大丈夫！まずは、自分が「1日に何を食べてるか」を知ることが一番大事なのです。なので、初めは自分の体重を毎日記録するところから初めてみましょう。体重が記録できるようになると、体重が増えた時に、自分が何を食べたのかが気になってきます。そうすることで、自然と食べものに意識が向かうようになります。カロリー換算は、そこまで慣れてきてからでいいでしょう。</p></div></div><!--.shokuji-diet-faq-wrapper-->
+						<!--個別内容共通ここまで-->
+
+						</section>
+					</a>
+				</div><!--main_pink_inner-->
+				<!--5位全体ここまで-->
+
+				<!--6位全体ここから-->
+				<div id="main_pink_inner">
+
+				<!--6位のタイトルここから-->
+					<dl class="main_pink serif">
+						<a class="syncer-acdn ranking" data-target="syncer-acdn-fooddiet-ranking-6">
+							<div class="ranking-wrapper-a-imgwrapper">
+							 <img src="images/ranking_6.png" class="ranking-image-other ranking-wrapper-a-imgwrapper-imgother">
+							</div>
+							<h2 class="adviceranking-underline ranking-wrapper-a-h2-other">
+							フルーツダイエット
+							</h2>
+						</a>
+					</dl>
+				<!--6位のタイトルここまで-->
+
+					<a id="syncer-acdn-fooddiet-ranking-6" style="display:none;">
+
+						<!--ここから個別内容-->
+
+						<section class="shokuji-diet-wrapper">
+
+						<!--一言メモここから-->
+							<div class="shokuji-diet-recommend-wrapper">
+								<h3>
+								"糖質が多く含まれる食材や
+ドライフルーツは避けましょう。"
+								</h3>
+							</div>
+						<!--一言メモここまで-->
+
+						<!--個別内容共通ここから-->
+						<p class="diet-point-top-sentence">フルーツには、酵素、ビタミン、ミネラル、抗酸化成分ちと、ダイエットと美容に欠かせない栄養素がたっぷり含まれています。1日1食をフルーツに置き換えたり、毎日ひとつ食べることで、デトックスや糖質・脂質の吸収を抑制、また、摂取量の軽減にもつながります。</p><h2 class="shokujidiet-text-backcolor">フルーツダイエットのポイント</h2><div class="diet-point-wrapper"><div class="diet-point-inbox"><h3 class="shokuji-diet-border-orange">リンゴで<span>アンチエイジング！</span></h3><p>リンゴポリフェノールという成分があり、血液中の中性脂肪が増えるのを抑えてくれます。<br>便秘改善、アンチエイジングにも高い効果が期待できるフルーツです！</p></div><!--.diet-point-inbox--><div class="diet-point-inbox"><h3 class="shokuji-diet-border-orange">バナナで<span>お腹すっきり！</span></h3><p>1本あたり(可食部 100g)たったの約86kcal! 主食との置き換えに最適です。食物繊維が豊富なので、便秘にも効果抜群。バナナには解熱効果が あるとされており、さらにカリウムを含んでいるので、高血圧の人にもおすすめです。</p></div><!--.diet-point-inbox--><div class="diet-point-inbox"><h3 class="shokuji-diet-border-orange">グレープフルーツで<span>脂肪燃焼！</span></h3><p>グレープフルーツの香りには脂肪燃焼、苦味には食欲減退の効果があります。クエン酸も豊富なので疲労回復にも効果抜群。どの季節でも簡単に手に入れることができ、毎日ダイエットを続けていくには、特におすすめできるフルーツです 。</p></div><!--.diet-point-inbox--><div class="diet-point-inbox"><h3 class="shokuji-diet-border-orange">キウイで<span>疲労回復！</span></h3><p>ビタミンCとクエン酸が豊富であり、風邪予防効果や疲労回復効果があります。また、消化吸収を助けるタンパク質分解酵素を含んでいるのでお肉との相性が抜群！便秘解消効果もあるので、女性の味方のフルーツです 。</p></div><!--.diet-point-inbox--></div><!--.diet-point-wrapper--><div class="shokuji-diet-rightpage-top-wrapper"><h2>フルーツたっぷりスムージーで手軽に！</h2><h3>フルーツや野菜がたっぷり入ったスムージーで、<br>おいしく時間も節約。</h3><p>牛乳や豆乳、ヨーグルトや氷といっしょに好きなフルーツを入れて、ミキサーのスイッチをオン！簡単に作れるのも、スムージーの魅力のひとつです。甘みが足りない時は、はちみつを入れるのがおすすめ。ただし、入れすぎには注意が必要です 。</p><div class="shokuji-diet-rightpage-top-recipe-wrapper"><!--料理レシピ 右ページ上部パージョン--><p class="recipe-name">グリーンスムージー</p><img src="images/26/shokuji_diet_no4_01.png" class=""><p class="recipe-zairyou-backcolor"><span>材料（1人分）</span></p><p class="recipe-zairyou">小松菜：1株(約50g)、バナナ：1本、キウイ：1個、水：50cc、プレーンヨーグルト：50g、はちみつ：小さじ1杯</p><p class="recipe-process-backcolor"><span>調理法</span></p><ul class="recipe-process"><li class="recipe-process-number">①</li><li class="recipe-process-text">小松菜、バナナ、キウイはミキサーに入りやすいサイズに切っておく。</li></ul><ul class="recipe-process"><li class="recipe-process-number">②</li><li class="recipe-process-text">バナナ、キウイ、ヨーグルト、はちみつをミキサーに入れて混ぜ合わせる。</li></ul><ul class="recipe-process"><li class="recipe-process-number">③</li><li class="recipe-process-text">さらに小松菜と水を入れて滑らかになるまでミキサーで混ぜ合わせて出来上がり！</li></ul><p><span style="color: #FF0000; font-weight: bold;">作り方のコツ</span><br>はちみつはお好みで調節してください。</p><p style="text-align: center; font-size: 1.5em; margin-top: 1.5em; color: #FF0000; font-weight: bold;">冷凍フルーツもおすすめ！</p><p>スーパーの冷凍食品コーナにある冷凍フルーツを使えば、シャーベット状のシェイクのような飲みごたえになり、一味違ったおいしさを楽しむことができます!</p></div></div><div class="shokuji-diet-rightpage-bottom-wrapper"><h2>主食をフルーツに置き換えましょう！</h2><h3>主食をフルーツに置き換えるだけでも、<br>ダイエット効果が期待できます！</h3><p>主食であるお米やパンに比べて、フルーツはカロリーが少なく、少量でもお腹いっぱいになります。また、食物繊維も豊富なので、お腹の調子もよくなり一石二鳥です！</p><img src="images/26/shokuji_diet_no4_02.png" style="margin-top: 1em;" class=""><img src="images/26/shokuji_diet_no4_03.png" class=""><img src="images/26/shokuji_diet_no4_04.png" style="margin-bottom: 1.5em;" class=""></div><!--.shokuji-diet-rightpage-bottom-wrapper--><div class="shokuji-diet-faq-wrapper"><p class="shokuji-diet-faq-faq">FAQ</p><div class="shokuji-diet-faq-q-wrapper"><p class="shokuji-diet-faq-title-before">Q:</p><p class="shokuji-diet-faq-title">フルーツだったら、なんでも食べていいの？</p></div><div class="shokuji-diet-faq-a-wrapper"><p class="shokuji-diet-faq-sentence-before">A:</p><p class="shokuji-diet-faq-sentence">フルーツにも糖質が含まれています。なので、大量にそればかり食べてしまうと、カロリーを多く取りすぎてしまう結果になってしまい、なかなかダイエットが成功しないことも。1日1食をフルーツに置き換える、主食の代わりにフルーツを一つ食べる、などのルールをしっかり決めてフルーツダイエットに取り組んでいきましょう。</p></div></div><!--.shokuji-diet-faq-wrapper--><div class="shokuji-diet-faq-wrapper"><p class="shokuji-diet-faq-faq">FAQ</p><div class="shokuji-diet-faq-q-wrapper"><p class="shokuji-diet-faq-title-before">Q:</p><p class="shokuji-diet-faq-title">毎日フルーツだけ食べてるんですが、大丈夫ですか?</p></div><div class="shokuji-diet-faq-a-wrapper"><p class="shokuji-diet-faq-sentence-before">A:</p><p class="shokuji-diet-faq-sentence">人間には、たんぱく質をはじめとする様々な種類の栄養素が必要です。ですので、1日の全食をフルーツのみに置き換えたり、フルーツしか食べない生活を長期間続けると、健康状態を損なう恐れがあります。食事の置き換えは1日2食までにしたり、主食を置き換えるだけにしたりと、過度になりすぎないよう注意しましょう。</p></div></div><!--.shokuji-diet-faq-wrapper-->
+						<!--個別内容共通ここまで-->
+
+						</section>
+					</a>
+				</div><!--main_pink_inner-->
+				<!--6位全体ここまで-->
+
+				</div><!--main_pink-->
+			  </div><!--slidetoggle-->
+			</div><!--main_inner-->
+		</div><!--dna_main shokuji-->
+</section>
+<!-- 食事ダイエットランキングここまで -->
+
+<!--おすすめ食材ランキングここから-->
+<section>
+	<div class="dna_main shokuji">
+		<div id="main_inner">
+			<h1 class="ttl_h1 syncer-acdn shokuji-contents-name" data-target="syncer-acdn-food-osusume" data-name="+">おすすめ食材ランキング
+			</h1>
+			<div class="slidetoggle" id="syncer-acdn-food-osusume" style="display:none;">
+				<div id="main_orange">
+	<!-- 肉類ここから -->
+				<div id="main_orange_inner">
+					<dl class="main_orange serif">
+						<a class="syncer-acdn ranking" data-target="syncer-acdn-food-osusume-meet">
+							<div class="ranking-wrapper-a-imgwrapper">
+						     <img src="images/meet.png" class="ranking-wrapper-a-imgwrapper-img2">
+						    </div>
+							<h2 class="osusume-shokuzai-h2">肉類</h2>
+						</a>
+					</dl>
+					<a class="food-arrange-a" id="syncer-acdn-food-osusume-meet" style="display:none;">
+					<!--牛肉ここから-->
+					<div id="main_pink_inner">
+					<br>
+					 <h2 class="serif border-image-green">
+					  <p>牛肉</p>
+					 </h2>
+						<p class="sentence-margin inbox-sentence">
+						牛肉は、良質で豊富なたんぱく質を含み、鉄分や亜鉛などのミネラルも豊富な食材です。国産牛と輸入牛ではカロリーに大きな違いがあり、それは国産牛は一般的に脂肪分が多く、輸入肉は脂肪分が少なく赤身が多いためです。カロリーを気にする場合は、外国産の牛肉が理想的かもしれません。
+						</p>
+						<table class="shokuzai-table">
+							<tr class="headline">
+								<th scope="row" class="shokuhinmei">食品名</th>
+								<td>エネルギー<br />(kcal)</td>
+								<td>糖質<br />(g)</td>
+								<td>たんぱく質<br />(g)</td>
+								<td>脂質<br />(g)</td>
+							</tr>
+							<tr><th scope='row' class='table-color-red shokuzaimei'>牛肉ひき肉</th><td>294</td><td>0.1</td><td>18</td><td>23.2</td></tr><tr><th scope='row' class='shokuzaimei'>牛肉舌</th><td>270</td><td>0.1</td><td>15.4</td><td>21.8</td></tr><tr><th scope='row' class='shokuzaimei'>牛肉かたロース</th><td>412</td><td>0.3</td><td>13.8</td><td>37.5</td></tr><tr><th scope='row' class='shokuzaimei'>牛肉サーロイン</th><td>499</td><td>0.4</td><td>11.8</td><td>47.6</td></tr><tr><th scope='row' class='shokuzaimei'>牛肉ヒレ</th><td>233</td><td>0.6</td><td>19.6</td><td>15.8</td></tr><tr><th scope='row' class='shokuzaimei'>牛肉もも</th><td>211</td><td>0.8</td><td>22.4</td><td>12</td></tr><tr><th scope='row' class='shokuzaimei'>牛肉レバー</th><td>133</td><td>3.7</td><td>19.7</td><td>3.8</td></tr>
+						</table>
+					</div>
+					<!--牛肉ここまで-->
+
+					<!--豚肉ここから-->
+					<div id="main_pink_inner">
+					<h2 class="serif border-image-green">
+					  <p>豚肉</p>
+					</h2>
+						<p class="sentence-margin inbox-sentence">
+						豚肉は、良質なたんぱく質が豊富で、ビタミンＢ１を多く含む食材です。<br />ビタミンＢ１は、糖質の代謝に関与して、エネルギーを作り出す働きがあり、疲れを改善してくれる栄養素です。ソテーやトンカツなどの揚げ物、しゃぶしゃぶなどの幅広い料理に用いられます。
+						</p>
+						<table class="shokuzai-table">
+							<tr class="headline">
+								<th scope="row" class="shokuhinmei">食品名</th>
+								<td>エネルギー<br />(kcal)</td>
+								<td>糖質<br />(g)</td>
+								<td>たんぱく質<br />(g)</td>
+								<td>脂質<br />(g)</td>
+							</tr>
+							<tr><th scope='row' class='table-color-red shokuzaimei'>豚肉ひき肉</th><td>265</td><td>0.1</td><td>18.3</td><td>20.1</td></tr><tr><th scope='row' class='shokuzaimei'>豚肉かたロース</th><td>234</td><td>0.2</td><td>17.7</td><td>16.5</td></tr><tr><th scope='row' class='shokuzaimei'>ベーコン</th><td>423</td><td>0.2</td><td>12.9</td><td>39.1</td></tr><tr><th scope='row' class='shokuzaimei'>豚肉もも</th><td>189</td><td>0.3</td><td>20.6</td><td>10.3</td></tr><tr><th scope='row' class='shokuzaimei'>豚肉ヒレ</th><td>135</td><td>0.4</td><td>21.6</td><td>4.6</td></tr><tr><th scope='row' class='shokuzaimei'>豚肉ばら</th><td>355</td><td>0.4</td><td>15.1</td><td>30.9</td></tr><tr><th scope='row' class='shokuzaimei'>豚肉レバー</th><td>129</td><td>2.6</td><td>20.5</td><td>3.5</td></tr><tr><th scope='row' class='shokuzaimei'>焼き豚</th><td>173</td><td>5.2</td><td>19.5</td><td>8.3</td></tr>
+						</table>
+					</div>
+					<!--豚肉ここまで-->
+
+					<!--鶏肉ここから-->
+					<div id="main_pink_inner">
+					<h2 class="serif border-image-green">
+					  <p>鶏肉</p>
+					 </h2>
+						<p class="sentence-margin inbox-sentence">
+						鶏肉は、良質なたんぱく質を含み、牛肉や豚肉などと比較して脂肪分が少ない食材です。肉類の中でも消化が良く、ダイエット中や筋力アップを目指す人には理想的な食材といえます。特に、鶏肉のささみはほとんど脂肪分を含まず、減量中の人によく食されています。
+						</p>
+						<table class="shokuzai-table">
+							<tr class="headline">
+								<th scope="row" class="shokuhinmei">食品名</th>
+								<td>エネルギー<br />(kcal)</td>
+								<td>糖質<br />(g)</td>
+								<td>たんぱく質<br />(g)</td>
+								<td>脂質<br />(g)</td>
+							</tr>
+							<tr><th scope='row' class='table-color-red shokuzaimei'>鶏肉ささみ</th><td>105</td><td>0.1</td><td>23.7</td><td>0.5</td></tr><tr><th scope='row' class='shokuzaimei'>鶏肉もも</th><td>211</td><td>0.1</td><td>17.3</td><td>14.6</td></tr><tr><th scope='row' class='shokuzaimei'>鶏肉むね</th><td>203</td><td>0.2</td><td>20.6</td><td>12.3</td></tr>
+						</table>
+					</div>
+					<!--鶏肉ここまで-->
+
+					<!--その他の肉類ここから-->
+					<div id="main_pink_inner">
+					<h2 class="serif border-image-green" style="margin-bottom: 20px;">
+					  <p>その他の肉類</p>
+					 </h2>
+						<table class="shokuzai-table">
+							<tr class="headline">
+								<th scope="row" class="shokuhinmei">食品名</th>
+								<td>エネルギー<br />(kcal)</td>
+								<td>糖質<br />(g)</td>
+								<td>たんぱく質<br />(g)</td>
+								<td>脂質<br />(g)</td>
+							</tr>
+							<tr><th scope='row' class='table-color-red shokuzaimei'>鴨肉</th><td>129</td><td>0.1</td><td>23.8</td><td>3</td></tr><tr><th scope='row' class='shokuzaimei'>ラム肉</th><td>217</td><td>0.1</td><td>19.1</td><td>14.5</td></tr><tr><th scope='row' class='shokuzaimei'>くじら肉</th><td>107</td><td>0.2</td><td>24.6</td><td>0.5</td></tr><tr><th scope='row' class='shokuzaimei'>馬肉</th><td>111</td><td>0.3</td><td>20.2</td><td>2.6</td></tr><tr><th scope='row' class='shokuzaimei'>ソーセージ</th><td>305</td><td>3.9</td><td>13.2</td><td>24.9</td></tr>
+						</table>
+					</div>
+					<!--その他の肉類ここまで-->
+
+					</a><!--syncer-acdn-food-osusume-meet-->
+				</div><!--main_orange_inner-->
+	<!-- 肉類ここまで -->
+	<!-- 穀物類ここから -->
+				<div id="main_orange_inner">
+					<dl class="main_orange serif">
+						<a class="syncer-acdn ranking" data-target="syncer-acdn-food-osusume-grain">
+							<div class="ranking-wrapper-a-imgwrapper">
+						     <img src="images/kome.png" class="ranking-wrapper-a-imgwrapper-img2">
+						    </div>
+							<h2 class="osusume-shokuzai-h2">穀物類</h2>
+						</a>
+					</dl>
+					<a class="food-arrange-a" id="syncer-acdn-food-osusume-grain" style="display:none;">
+					<div id="main_orange_inner">
+					<br>
+					<h2 class="serif border-image-green">
+					  <p>米</p>
+					 </h2>
+						<p class="sentence-margin inbox-sentence">
+						米は、日本に稲作が伝わってから現在まで日本人の重要なエネルギー源です。一般的には、精白米が最も多く食され、他にも、玄米、発芽玄米、胚芽米などの形でも食べられています。体調が悪い時や、消化能力が落ちいているときには、お粥（おかゆ）という白米を煮て柔らかくした形で食されることもあります。米には、もち米といった種類もあり、お餅や赤飯などに用いられます。
+						</p>
+						<table class="shokuzai-table">
+							<tr class="headline">
+								<th scope="row" class="shokuhinmei">食品名</th>
+								<td>エネルギー<br />(kcal)</td>
+								<td>糖質<br />(g)</td>
+								<td>たんぱく質<br />(g)</td>
+								<td>脂質<br />(g)</td>
+							</tr>
+							<tr><th scope='row' class='table-color-red shokuzaimei'>おかゆ</th><td>72</td><td>15.8</td><td>1.2</td><td>0.1</td></tr><tr><th scope='row' class='shokuzaimei'>白米</th><td>149</td><td>31.8</td><td>2.7</td><td>0.6</td></tr><tr><th scope='row' class='shokuzaimei'>玄白米</th><td>166</td><td>35.7</td><td>2.9</td><td>1.1</td></tr><tr><th scope='row' class='shokuzaimei'>赤飯</th><td>188</td><td>42.5</td><td>3.8</td><td>0.3</td></tr><tr><th scope='row' class='shokuzaimei'>餅（もち）</th><td>236</td><td>50.4</td><td>4.4</td><td>0.9</td></tr>
+						</table>
+					</div>
+					<div id="main_orange_inner">
+					<h2 class="serif border-image-green">
+					  <p>パン</p>
+					 </h2>
+						<p class="sentence-margin inbox-sentence">
+						パンは小麦粉、またはライ麦粉などに水、酵母（イースト）、塩などを加えた生地を発酵させて焼いて作る食品です。欧米では古くから食されていましたが、日本は食文化の欧米化とともに消費量が増加しました。
+						</p>
+						<table class="shokuzai-table">
+							<tr class="headline">
+								<th scope="row" class="shokuhinmei">食品名</th>
+								<td>エネルギー<br />(kcal)</td>
+								<td>糖質<br />(g)</td>
+								<td>たんぱく質<br />(g)</td>
+								<td>脂質<br />(g)</td>
+							</tr>
+							<tr><th scope='row' class='table-color-red shokuzaimei'>クロワッサン</th><td>449</td><td>44</td><td>8</td><td>26.9</td></tr><tr><th scope='row' class='shokuzaimei'>ナン</th><td>263</td><td>47.7</td><td>10.4</td><td>3.5</td></tr><tr><th scope='row' class='shokuzaimei'>食パン</th><td>260</td><td>48</td><td>8.4</td><td>3.8</td></tr><tr><th scope='row' class='shokuzaimei'>フランスパン</th><td>280</td><td>57.6</td><td>9.5</td><td>1.4</td></tr>
+						</table>
+					</div>
+					<div id="main_orange_inner">
+					<h2 class="serif border-image-green">
+					  <p>いも類</p>
+					 </h2>
+						<p class="sentence-margin inbox-sentence">
+						日本で食されているいも類にはいくつかの種類がありますが、最も消費量が多いのはじゃがいもです。じゃがいもは、糖質のほとんどがでんぷん質で、ビタミンＢ１やビタミンＣの含有量が多く、熱を加えても損失が少ない性質があります。いも類は食物繊維が多いことから、便秘解消に有効な健康食として親しまれています。
+						</p>
+						<table class="shokuzai-table">
+							<tr class="headline">
+								<th scope="row" class="shokuhinmei">食品名</th>
+								<td>エネルギー<br />(kcal)</td>
+								<td>糖質<br />(g)</td>
+								<td>たんぱく質<br />(g)</td>
+								<td>脂質<br />(g)</td>
+							</tr>
+							<tr><th scope='row' class='table-color-red shokuzaimei'>さといも</th><td>61</td><td>12.4</td><td>2.7</td><td>0.3</td></tr><tr><th scope='row' class='shokuzaimei'>じゃがいも</th><td>78</td><td>16.9</td><td>2.1</td><td>0.3</td></tr><tr><th scope='row' class='shokuzaimei'>やまいも</th><td>101</td><td>20.4</td><td>4.3</td><td>0.6</td></tr><tr><th scope='row' class='shokuzaimei'>さつまいも</th><td>124</td><td>28.8</td><td>1.3</td><td>0.3</td></tr><tr><th scope='row' class='shokuzaimei'>フライドポテト</th><td>238</td><td>32.5</td><td>2.9</td><td>10.7</td></tr>
+						</table>
+					</div>
+					<div id="main_orange_inner">
+					<h2 class="serif border-image-green">
+					  <p>豆類</p>
+					 </h2>
+						<p class="sentence-margin inbox-sentence">
+						豆類は、たんぱく質、脂質を豊富に含んだ栄養価の高い食品です。
+						</p>
+						<table class="shokuzai-table">
+							<tr class="headline">
+								<th scope="row" class="shokuhinmei">食品名</th>
+								<td>エネルギー<br />(kcal)</td>
+								<td>糖質<br />(g)</td>
+								<td>たんぱく質<br />(g)</td>
+								<td>脂質<br />(g)</td>
+							</tr>
+							<tr><th scope='row' class='table-color-red shokuzaimei'>豆腐[木綿]</th><td>77</td><td>0.8</td><td>6.8</td><td>5</td></tr><tr><th scope='row' class='shokuzaimei'>がんもどき</th><td>229</td><td>1.7</td><td>15.4</td><td>17.9</td></tr><tr><th scope='row' class='shokuzaimei'>豆腐[絹ごし]</th><td>58</td><td>1.7</td><td>5</td><td>3.3</td></tr><tr><th scope='row' class='shokuzaimei'>油揚げ</th><td>389</td><td>2.6</td><td>18.7</td><td>33.6</td></tr><tr><th scope='row' class='shokuzaimei'>高野豆腐</th><td>530</td><td>5.8</td><td>49.8</td><td>33.5</td></tr><tr><th scope='row' class='shokuzaimei'>納豆</th><td>200</td><td>9.8</td><td>16.5</td><td>10</td></tr><tr><th scope='row' class='shokuzaimei'>そら豆[乾燥]</th><td>348</td><td>50.1</td><td>26</td><td>2</td></tr><tr><th scope='row' class='shokuzaimei'>えんどう豆[乾燥]</th><td>352</td><td>54.4</td><td>21.7</td><td>2.3</td></tr>
+						</table>
+					</div>
+					</a>
+				</div>
+	<!-- 穀物類ここまで -->
+	<!-- 魚介類ここから -->
+				<div id="main_orange_inner">
+					<dl class="main_orange serif">
+						<a class="syncer-acdn ranking" data-target="syncer-acdn-food-osusume-fish">
+							<div class="ranking-wrapper-a-imgwrapper">
+						     <img src="images/fish.png" class="ranking-wrapper-a-imgwrapper-img2">
+						    </div>
+							<h2 class="osusume-shokuzai-h2">魚介類</h2>
+						</a>
+					</dl>
+					<a class="food-arrange-a" id="syncer-acdn-food-osusume-fish" style="display:none;">
+					<div id="main_green_inner">
+					<br>
+					<h2 class="serif border-image-green">
+					  <p>魚類</p>
+					 </h2>
+						<p class="sentence-margin inbox-sentence">
+						魚類は、牛肉や豚肉などと比較して脂肪分が少なく、全体的にたんぱく質の割合が高い食材です。種類によってはＤＨＡ（ドコサヘキサエン酸）やＥＰＡ（イコサペンタエン酸）という不飽和脂肪酸が多く含まれ、血液サラサラ効果や脳の老化防止効果などがあり、健康食として好まれています。
+						</p>
+						<table class="shokuzai-table">
+							<tr class="headline">
+								<th scope="row" class="shokuhinmei">食品名</th>
+								<td>エネルギー<br />(kcal)</td>
+								<td>糖質<br />(g)</td>
+								<td>たんぱく質<br />(g)</td>
+								<td>脂質<br />(g)</td>
+							</tr>
+							<tr><th scope='row' class='table-color-red shokuzaimei'>まぐろ[赤身]</th><td>134</td><td>0.1</td><td>28.4</td><td>1.5</td></tr><tr><th scope='row' class='shokuzaimei'>鰹（かつお）</th><td>128</td><td>0.1</td><td>25.9</td><td>2.1</td></tr><tr><th scope='row' class='shokuzaimei'>ししゃも</th><td>180</td><td>0.1</td><td>22.2</td><td>9</td></tr><tr><th scope='row' class='shokuzaimei'>鰤（ぶり）</th><td>258</td><td>0.1</td><td>21.9</td><td>17.2</td></tr><tr><th scope='row' class='shokuzaimei'>まぐろ[脂身]</th><td>323</td><td>0.1</td><td>21.6</td><td>24.9</td></tr><tr><th scope='row' class='shokuzaimei'>かんぱち</th><td>130</td><td>0.1</td><td>21.1</td><td>4.3</td></tr><tr><th scope='row' class='shokuzaimei'>鮭（さけ）</th><td>168</td><td>0.1</td><td>20.8</td><td>8.3</td></tr><tr><th scope='row' class='shokuzaimei'>秋刀魚（さんま）</th><td>241</td><td>0.1</td><td>20.6</td><td>16.2</td></tr><tr><th scope='row' class='shokuzaimei'>鯖（さば）</th><td>238</td><td>0.1</td><td>19.7</td><td>16.6</td></tr><tr><th scope='row' class='shokuzaimei'>鰯（いわし）</th><td>212</td><td>0.1</td><td>19.1</td><td>13.7</td></tr><tr><th scope='row' class='shokuzaimei'>鯛（たい）</th><td>113</td><td>0.1</td><td>19.1</td><td>3.5</td></tr><tr><th scope='row' class='shokuzaimei'>鯵（あじ）</th><td>143</td><td>0.1</td><td>18.6</td><td>6.8</td></tr><tr><th scope='row' class='shokuzaimei'>きんめだい</th><td>161</td><td>0.1</td><td>17.9</td><td>9.1</td></tr><tr><th scope='row' class='shokuzaimei'>あなご</th><td>162</td><td>0.1</td><td>17.4</td><td>9.4</td></tr><tr><th scope='row' class='shokuzaimei'>鰻（うなぎ）</th><td>271</td><td>0.1</td><td>16.3</td><td>21.4</td></tr><tr><th scope='row' class='shokuzaimei'>鱈（たら）</th><td>71</td><td>0.1</td><td>15.6</td><td>0.5</td></tr><tr><th scope='row' class='shokuzaimei'>ふぐ</th><td>86</td><td>0.3</td><td>19.4</td><td>0.4</td></tr>
+						</table>
+					</div>
+					<div id="main_green_inner">
+					<h2 class="serif border-image-green">
+					  <p>貝類</p>
+					 </h2>
+						<p class="sentence-margin inbox-sentence">
+						貝類は、魚類と比較して脂肪分が少なく、水分が多くてたんぱく質の割合も少ないですが、ビタミンやミネラルを豊富に含んでいます。あさりなどは、カルシウム、鉄分、亜鉛などのミネラルの含有量が高いことで知られています。貝類は加工食品などにも多く使用され、幅広い形で食されています。
+						</p>
+						<table class="shokuzai-table">
+							<tr class="headline">
+								<th scope="row" class="shokuhinmei">食品名</th>
+								<td>エネルギー<br />(kcal)</td>
+								<td>糖質<br />(g)</td>
+								<td>たんぱく質<br />(g)</td>
+								<td>脂質<br />(g)</td>
+							</tr>
+							<tr><th scope='row' class='table-color-red shokuzaimei'>鮑（あわび）</th><td>62</td><td>0.5</td><td>13.1</td><td>0.5</td></tr><tr><th scope='row' class='shokuzaimei'>あさり貝</th><td>48</td><td>1.1</td><td>8.5</td><td>1.1</td></tr><tr><th scope='row' class='shokuzaimei'>ほたて貝</th><td>76</td><td>1.7</td><td>13.4</td><td>1.1</td></tr><tr><th scope='row' class='shokuzaimei'>はまぐり</th><td>60</td><td>1.9</td><td>10.3</td><td>0.8</td></tr><tr><th scope='row' class='shokuzaimei'>牡蠣（かき）</th><td>78</td><td>5</td><td>9.7</td><td>1.8</td></tr>
+						</table>
+					</div>
+					<div id="main_green_inner">
+					<h2 class="serif border-image-green">
+					  <p>甲殻類</p>
+					 </h2>
+						<p class="sentence-margin inbox-sentence">
+						甲殻類は、主にカニやエビを代表とする生き物をいいます。カニ類は、良質なたんぱく質を含み、脂肪分が少なく、独特のうま味成分が多い特徴があります。エビ類は良質なたんぱく質を含み、殻に豊富に含まれる動物性食物繊維であるキチンが特徴です。
+						</p>
+						<table class="shokuzai-table">
+							<tr class="headline">
+								<th scope="row" class="shokuhinmei">食品名</th>
+								<td>エネルギー<br />(kcal)</td>
+								<td>糖質<br />(g)</td>
+								<td>たんぱく質<br />(g)</td>
+								<td>脂質<br />(g)</td>
+							</tr>
+							<tr><th scope='row' class='table-color-red shokuzaimei'>くるまえび</th><td>99</td><td>0.1</td><td>21.7</td><td>0.5</td></tr><tr><th scope='row' class='shokuzaimei'>いせえび</th><td>93</td><td>0.1</td><td>20.8</td><td>0.4</td></tr><tr><th scope='row' class='shokuzaimei'>あまえび</th><td>74</td><td>0.1</td><td>17.2</td><td>0.4</td></tr><tr><th scope='row' class='shokuzaimei'>ずわいがに</th><td>66</td><td>0.1</td><td>14.4</td><td>0.4</td></tr><tr><th scope='row' class='shokuzaimei'>毛がに</th><td>84</td><td>0.2</td><td>18</td><td>0.4</td></tr><tr><th scope='row' class='shokuzaimei'>たらばがに</th><td>80</td><td>0.4</td><td>16</td><td>1.2</td></tr>
+						</table>
+					</div>
+					<div id="main_green_inner">
+					<h2 class="serif border-image-green" style="margin-bottom: 20px;">
+					  <p>その他の魚介類</p>
+					 </h2>
+						<table class="shokuzai-table">
+							<tr class="headline">
+								<th scope="row" class="shokuhinmei">食品名</th>
+								<td>エネルギー<br />(kcal)</td>
+								<td>糖質<br />(g)</td>
+								<td>たんぱく質<br />(g)</td>
+								<td>脂質<br />(g)</td>
+							</tr>
+							<tr><th scope='row' class='table-color-red shokuzaimei'>イクラ</th><td>139</td><td>0.1</td><td>22.6</td><td>4.6</td></tr><tr><th scope='row' class='shokuzaimei'>まだこ</th><td>78</td><td>0.1</td><td>16.7</td><td>0.8</td></tr><tr><th scope='row' class='shokuzaimei'>するめいか</th><td>78</td><td>0.1</td><td>15.6</td><td>1</td></tr><tr><th scope='row' class='shokuzaimei'>ほたるいか</th><td>85</td><td>0.2</td><td>11.9</td><td>3.7</td></tr><tr><th scope='row' class='shokuzaimei'>いかのするめ</th><td>334</td><td>0.3</td><td>68.3</td><td>4.5</td></tr><tr><th scope='row' class='shokuzaimei'>うに</th><td>148</td><td>2</td><td>15.8</td><td>8.5</td></tr>
+						</table>
+					</div>
+					<div id="main_green_inner">
+					<h2 class="serif border-image-green" style="margin-bottom: 20px;">
+					  <p>魚介類の加工品</p>
+					 </h2>
+						<table class="shokuzai-table">
+							<tr class="headline">
+								<th scope="row" class="shokuhinmei">食品名</th>
+								<td>エネルギー<br />(kcal)</td>
+								<td>糖質<br />(g)</td>
+								<td>たんぱく質<br />(g)</td>
+								<td>脂質<br />(g)</td>
+							</tr>
+							<tr><th scope='row' class='table-color-red shokuzaimei'>つみれ</th><td>114</td><td>6.5</td><td>12.1</td><td>4.4</td></tr><tr><th scope='row' class='shokuzaimei'>かまぼこ</th><td>94</td><td>9.6</td><td>12.1</td><td>0.8</td></tr><tr><th scope='row' class='shokuzaimei'>なると</th><td>81</td><td>11.7</td><td>7.5</td><td>0.5</td></tr><tr><th scope='row' class='shokuzaimei'>竹輪（ちくわ）</th><td>125</td><td>13.4</td><td>12.3</td><td>2</td></tr><tr><th scope='row' class='shokuzaimei'>さつま揚げ</th><td>140</td><td>14</td><td>12.6</td><td>3.8</td></tr>
+						</table>
+					</div>
+
+					</a>
+				</div>
+	<!-- 魚介類ここまで -->
+
+	<!-- その他ここから -->
+				<div id="main_orange_inner">
+					<dl class="main_orange serif">
+						<a class="syncer-acdn ranking" data-target="syncer-acdn-food-osusume-other">
+							<div class="ranking-wrapper-a-imgwrapper">
+						     <img src="images/yasai.png" class="ranking-wrapper-a-imgwrapper-img2">
+						    </div>
+							<h2 class="osusume-shokuzai-h2">その他</h2>
+						</a>
+					</dl>
+					<a class="food-arrange-a" id="syncer-acdn-food-osusume-other" style="display:none;">
+					<div id="main_blue_inner">
+					<br>
+					<h2 class="serif border-image-green">
+					  <p>野菜</p>
+					 </h2>
+						<p class="sentence-margin inbox-sentence">
+						野菜はカロリーが低く、酵素や食物繊維などの栄養素を豊富に含んでおり、ダイエットの強い味方です。生野菜は、ビタミンや酵素を多く吸収できる反面、体を冷やしやすいというデメリットもあります。温野菜は、全体のかさが減ることで食物繊維を多く摂取できますが、加熱することでビタミンが壊れたり、酵素が死んでしまうと言われています。
+						</p>
+						<table class="shokuzai-table">
+							<tr class="headline">
+								<th scope="row" class="shokuhinmei">食品名</th>
+								<td>エネルギー<br />(kcal)</td>
+								<td>糖質<br />(g)</td>
+								<td>たんぱく質<br />(g)</td>
+								<td>脂質<br />(g)</td>
+							</tr>
+							<tr><th scope='row' class='table-color-red shokuzaimei'>きゅうり</th><td>11</td><td>1.7</td><td>1.1</td><td>0.1</td></tr><tr><th scope='row' class='shokuzaimei'>はくさい</th><td>13</td><td>1.8</td><td>1.2</td><td>0.1</td></tr><tr><th scope='row' class='shokuzaimei'>もやし</th><td>38</td><td>2.4</td><td>3.8</td><td>1.6</td></tr><tr><th scope='row' class='shokuzaimei'>アスパラガス</th><td>21</td><td>2.9</td><td>2.5</td><td>0.1</td></tr><tr><th scope='row' class='shokuzaimei'>レタス</th><td>13</td><td>2.9</td><td>0.7</td><td>0.1</td></tr><tr><th scope='row' class='shokuzaimei'>大根[葉]</th><td>22</td><td>3.2</td><td>2.2</td><td>0.2</td></tr><tr><th scope='row' class='shokuzaimei'>トマト</th><td>17</td><td>3.4</td><td>0.8</td><td>0.2</td></tr><tr><th scope='row' class='shokuzaimei'>なす</th><td>19</td><td>3.5</td><td>1.2</td><td>0.2</td></tr><tr><th scope='row' class='shokuzaimei'>大根</th><td>19</td><td>3.5</td><td>0.9</td><td>0.2</td></tr><tr><th scope='row' class='shokuzaimei'>ほうれんそう</th><td>26</td><td>3.9</td><td>3.4</td><td>0.3</td></tr><tr><th scope='row' class='shokuzaimei'>ゴーヤ（苦瓜）</th><td>18</td><td>4</td><td>1.1</td><td>0.1</td></tr><tr><th scope='row' class='shokuzaimei'>たけのこ</th><td>27</td><td>4.4</td><td>3.7</td><td>0.2</td></tr><tr><th scope='row' class='shokuzaimei'>かぶ</th><td>20</td><td>4.6</td><td>2.4</td><td>0.1</td></tr><tr><th scope='row' class='shokuzaimei'>キャベツ</th><td>25</td><td>4.8</td><td>1.5</td><td>0.1</td></tr><tr><th scope='row' class='shokuzaimei'>人参（にんじん）</th><td>34</td><td>6.4</td><td>1.3</td><td>0.3</td></tr><tr><th scope='row' class='shokuzaimei'>ブロッコリー</th><td>44</td><td>6.8</td><td>6</td><td>0.2</td></tr><tr><th scope='row' class='shokuzaimei'>ミニトマト</th><td>30</td><td>7.3</td><td>1.2</td><td>0.2</td></tr><tr><th scope='row' class='shokuzaimei'>玉ねぎ</th><td>36</td><td>7.7</td><td>1.1</td><td>0.2</td></tr><tr><th scope='row' class='shokuzaimei'>かぼちゃ</th><td>37</td><td>7.8</td><td>1.4</td><td>0.1</td></tr><tr><th scope='row' class='shokuzaimei'>れんこん</th><td>67</td><td>15.2</td><td>2.2</td><td>0.1</td></tr><tr><th scope='row' class='shokuzaimei'>ごぼう</th><td>77</td><td>16.3</td><td>2.9</td><td>0.2</td></tr><tr><th scope='row' class='shokuzaimei'>とうもろこし</th><td>93</td><td>16.9</td><td>3.7</td><td>1.8</td></tr><tr><th scope='row' class='shokuzaimei'>切干し大根[乾燥]</th><td>280</td><td>67.6</td><td>5.8</td><td>0.6</td></tr>
+						</table>
+					</div>
+					<div id="main_blue_inner">
+					<h2 class="serif border-image-green">
+					  <p>果物</p>
+					 </h2>
+						<p class="sentence-margin inbox-sentence">
+						フルーツにはそれぞれ違った個性と効果がありますが、水分や食物繊維を多く含み、満腹感や便秘の解消につながるものが多いです。また、バナナやメロン、キウイなどカリウムを含む果物も多く、利尿作用によるむくみの解消や余分な脂肪を分解して水に溶けさせるという効果も期待できます。
+						</p>
+						<table class="shokuzai-table">
+							<tr class="headline">
+								<th scope="row" class="shokuhinmei">食品名</th>
+								<td>エネルギー<br />(kcal)</td>
+								<td>糖質<br />(g)</td>
+								<td>たんぱく質<br />(g)</td>
+								<td>脂質<br />(g)</td>
+							</tr>
+							<tr><th scope='row' class='table-color-red shokuzaimei'>アボカド</th><td>188</td><td>6.3</td><td>2.6</td><td>18.8</td></tr><tr><th scope='row' class='shokuzaimei'>いちご</th><td>36</td><td>7.6</td><td>1</td><td>0.3</td></tr><tr><th scope='row' class='shokuzaimei'>すいか</th><td>32</td><td>8</td><td>0.8</td><td>0.1</td></tr><tr><th scope='row' class='shokuzaimei'>グレープフルーツ</th><td>37</td><td>9</td><td>0.9</td><td>0.2</td></tr><tr><th scope='row' class='shokuzaimei'>桃</th><td>38</td><td>9.3</td><td>0.7</td><td>0.2</td></tr><tr><th scope='row' class='shokuzaimei'>パパイア</th><td>39</td><td>9.6</td><td>0.6</td><td>0.3</td></tr><tr><th scope='row' class='shokuzaimei'>オレンジ</th><td>40</td><td>9.9</td><td>1.1</td><td>0.1</td></tr><tr><th scope='row' class='shokuzaimei'>梨（なし）</th><td>41</td><td>10.2</td><td>0.3</td><td>0.2</td></tr><tr><th scope='row' class='shokuzaimei'>メロン</th><td>44</td><td>10.8</td><td>1.1</td><td>0.2</td></tr><tr><th scope='row' class='shokuzaimei'>みかん</th><td>45</td><td>11</td><td>0.9</td><td>0.2</td></tr><tr><th scope='row' class='shokuzaimei'>キウイフルーツ</th><td>57</td><td>12.6</td><td>1.1</td><td>0.5</td></tr><tr><th scope='row' class='shokuzaimei'>ブルーベリー</th><td>50</td><td>13</td><td>0.6</td><td>0.1</td></tr><tr><th scope='row' class='shokuzaimei'>りんご</th><td>51</td><td>13.2</td><td>0.3</td><td>0.2</td></tr><tr><th scope='row' class='shokuzaimei'>ぶどう</th><td>57</td><td>14.5</td><td>0.6</td><td>0.3</td></tr><tr><th scope='row' class='shokuzaimei'>さくらんぼ</th><td>61</td><td>15.4</td><td>1.1</td><td>0.3</td></tr><tr><th scope='row' class='shokuzaimei'>パインアップル</th><td>59</td><td>15.4</td><td>0.5</td><td>0.2</td></tr><tr><th scope='row' class='shokuzaimei'>柿（かき）</th><td>61</td><td>15.6</td><td>0.5</td><td>0.3</td></tr><tr><th scope='row' class='shokuzaimei'>マンゴー</th><td>65</td><td>17</td><td>0.7</td><td>0.1</td></tr><tr><th scope='row' class='shokuzaimei'>バナナ</th><td>88</td><td>22.7</td><td>1.2</td><td>0.2</td></tr>
+						</table>
+					</div>
+					<div id="main_blue_inner">
+					<h2 class="serif border-image-green">
+					  <p>きのこ</p>
+					 </h2>
+						<p class="sentence-margin inbox-sentence">
+						きのこの多くは、きのこ特有の成分であるキノコキトサンを豊富に含みます。キノコキトサンは、脂肪を分解し中性脂肪を減少させる、血液内の糖質やコレステロールを減らす、水に溶けない性質を持っており、摂取した油分を包み込み、腸内での吸収を妨げて体外に排出するなど、ダイエットや肥満予防に効果が期待できる成分です。
+						</p>
+						<table class="shokuzai-table">
+							<tr class="headline">
+								<th scope="row" class="shokuhinmei">食品名</th>
+								<td>エネルギー<br />(kcal)</td>
+								<td>糖質<br />(g)</td>
+								<td>たんぱく質<br />(g)</td>
+								<td>脂質<br />(g)</td>
+							</tr>
+							<tr><th scope='row' class='table-color-red shokuzaimei'>まいたけ</th><td>22</td><td>2.2</td><td>3.1</td><td>0.3</td></tr><tr><th scope='row' class='shokuzaimei'>マッシュルーム</th><td>12</td><td>2.2</td><td>3</td><td>0.4</td></tr><tr><th scope='row' class='shokuzaimei'>椎茸（しいたけ）</th><td>19</td><td>5</td><td>3.1</td><td>0.5</td></tr><tr><th scope='row' class='shokuzaimei'>しめじ</th><td>19</td><td>5.1</td><td>2.8</td><td>0.2</td></tr><tr><th scope='row' class='shokuzaimei'>なめこ</th><td>16</td><td>5.3</td><td>1.8</td><td>0.3</td></tr><tr><th scope='row' class='shokuzaimei'>えのき（えのきたけ）</th><td>23</td><td>7.5</td><td>2.8</td><td>0.3</td></tr><tr><th scope='row' class='shokuzaimei'>まつたけ</th><td>24</td><td>8.3</td><td>2.1</td><td>0.7</td></tr><tr><th scope='row' class='shokuzaimei'>きくらげ[乾燥]</th><td>168</td><td>71.2</td><td>8</td><td>2.2</td></tr>
+						</table>
+					</div>
+					<div id="main_blue_inner">
+					<h2 class="serif border-image-green">
+					  <p>ナッツ</p>
+					 </h2>
+						<p class="sentence-margin inbox-sentence">
+						種実類は、食用とする植物の種子や堅い皮や殻におおわれた果実をいいます。種実類のうち、木の実は一般的に「ナッツ」といわれます。ナッツは全体的に栄養素が豊富ですが、特に脂肪分を多く含むものが多く、食べすぎには注意が必要です。脂質を多く含んでいるものは抽出されて植物油として使用されることがあります。
+						</p>
+						<table class="shokuzai-table">
+							<tr class="headline">
+								<th scope="row" class="shokuhinmei">食品名</th>
+								<td>エネルギー<br />(kcal)</td>
+								<td>糖質<br />(g)</td>
+								<td>たんぱく質<br />(g)</td>
+								<td>脂質<br />(g)</td>
+							</tr>
+							<tr><th scope='row' class='table-color-red shokuzaimei'>マカダミアナッツ</th><td>721</td><td>4.8</td><td>8.8</td><td>76.8</td></tr><tr><th scope='row' class='shokuzaimei'>くるみ</th><td>675</td><td>11.8</td><td>14.7</td><td>68.9</td></tr><tr><th scope='row' class='shokuzaimei'>ピーナッツ（落花生）</th><td>563</td><td>18.9</td><td>25.5</td><td>47.6</td></tr><tr><th scope='row' class='shokuzaimei'>アーモンド</th><td>599</td><td>19.7</td><td>18.7</td><td>54.3</td></tr><tr><th scope='row' class='shokuzaimei'>カシューナッツ</th><td>577</td><td>26.8</td><td>19.9</td><td>47.8</td></tr><tr><th scope='row' class='shokuzaimei'>栗</th><td>165</td><td>37</td><td>2.8</td><td>0.6</td></tr>
+						</table>
+					</div>
+
+					</a>
+				</div>
+	<!-- その他ここまで -->
+				</div><!--main_orange-->
+			</div><!--slidetoggle-->
+		</div><!--main_inner-->
+	</div><!--dna_main shokuji-->
+</section>
+<!--おすすめ食材ランキングここまで-->
+<!-- 食事アレンジここから -->
+<section>
+	<div class="dna_main shokuji">
+		<div id="main_inner">
+			<h1 class="ttl_h1 syncer-acdn shokuji-contents-name" data-target="syncer-acdn-food-arrange" data-name="+">食事アレンジ</h1>
+			<div class="slidetoggle" id="syncer-acdn-food-arrange" style="display:none;">
+				<div id="main_orange">
+				<div id="main_orange_inner">
+	<!-- アレンジ１ここから -->
+				<div id="main_orange_inner">
+					<dl class="main_orange serif">
+						<a class="syncer-acdn ranking" data-target="syncer-acdn-food-arrange-1">
+							<div class="ranking-wrapper-a-imgwrapper">
+						     <img src="images/food_arrange_nikujaga.png" class="ranking-wrapper-a-imgwrapper-img2">
+						    </div>
+							<h2 class="osusume-shokuzai-h2">肉じゃが</h2>
+						</a>
+					</dl>
+					<a class="food-arrange-a" id="syncer-acdn-food-arrange-1" style="display:none;">
+							<img src="images/food_arrange_nikujaga.png" class="foof-arrange-img">
+							<ul class="food-arrange-ul">
+								<li>・
+								みりんの代わりに料理酒と甘味料を。
+								</li>
+								<li>・
+								じゃがいもの代わりに里芋を。
+								</li>
+								<li>・
+								いもの量を減らしてその分しらたきを。
+								</li>
+							</ul>
+					</a>
+				</div>
+	<!-- アレンジ１ここまで -->
+<br />
+	<!-- アレンジ２ここから -->
+				<div id="main_orange_inner">
+					<dl class="main_orange serif">
+						<a class="syncer-acdn ranking" data-target="syncer-acdn-food-arrange-2">
+							<div class="ranking-wrapper-a-imgwrapper">
+						     <img src="images/food_arrange_shogayaki.png" class="ranking-wrapper-a-imgwrapper-img2">
+						    </div>
+							<h2 class="osusume-shokuzai-h2">生姜焼き</h2>
+						</a>
+					</dl>
+					<a class="food-arrange-a" id="syncer-acdn-food-arrange-2" style="display:none;">
+							<img src="images/food_arrange_shogayaki.png" class="foof-arrange-img">
+							<ul class="food-arrange-ul">
+								<li>・
+								みりん・砂糖の代わりにラカントを。
+								</li>
+								<li>・
+								付け合わせにオクラを。
+								</li>
+								<li>・
+								付け合わせにきのこ類を。
+								</li>
+							</ul>
+					</a>
+				</div>
+	<!-- アレンジ２ここまで -->
+<br />
+	<!-- アレンジ３ここから -->
+				<div id="main_orange_inner">
+					<dl class="main_orange serif">
+						<a class="syncer-acdn ranking" data-target="syncer-acdn-food-arrange-3">
+							<div class="ranking-wrapper-a-imgwrapper">
+						     <img src="images/food_arrange_karaage.png" class="ranking-wrapper-a-imgwrapper-img2">
+						    </div>
+							<h2 class="osusume-shokuzai-h2">から揚げ</h2>
+						</a>
+					</dl>
+					<a class="food-arrange-a" id="syncer-acdn-food-arrange-3" style="display:none;">
+							<img src="images/food_arrange_karaage.png" class="foof-arrange-img">
+							<ul class="food-arrange-ul">
+								<li>・
+								衣を小麦粉や片栗粉ではなく、大豆粉に。
+								</li>
+								<li>・
+								素揚げにする。
+								</li>
+								<li>・
+								付け合わせに酢の物を。
+								</li>
+							</ul>
+					</a>
+				</div>
+	<!-- アレンジ３ここまで -->
+				</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- 食事アレンジここまで -->
+
+
+<!-- 運動アドバイスここから -->
+<section>
+	<div class="ad">
+		<h1 class="ttl_h1 your_dna" style="background: #6666ff; border-bottom: 7px solid #9999ff; padding: 25px; border-radius: 2px; font-size: 1.8em; color: #FFFFFF; font-weight: bold;">運動アドバイス</h1>
+	</div>
+</section>
+<!-- 運動タイプここから -->
+<section>
+	<div class="dna_main undou">
+		<div id="main_inner">
+			<h1 class="ttl_h1 syncer-acdn undou-contents-name" data-target="syncer-acdn-exetype" data-name="+">運動タイプ</h1>
+			<div class="slidetoggle" id="syncer-acdn-exetype" style="display:none;"><br />
+				<h2 class="serif undo-type">
+					<p style="font-size: .9em;"><span>
+					筋トレ＋有酸素運動タイプ
+					</span></p>
+				</h2>
+				<div id="main_mono">
+					<div id="main_mono_inner">
+						<p class="inbox-sentence">
+							筋肉トレーニングをしっかりと行い、その後に有酸素運動を長めに行うことがおすすめです。<br />どちらかと言うと有酸素運動に力を入れ、時間をかけると良いでしょう。<br />できるようでしたら、ベースメニューにいくつかトレーニングを追加すると、より高い効果を期待できます。
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- 運動タイプここまで -->
+<!-- 運動順ここから -->
+<section>
+	<div class="dna_main undou">
+		<div id="main_inner">
+			<h1 class="ttl_h1 syncer-acdn undou-contents-name" data-target="syncer-acdn-exe-order" data-name="+">おすすめ運動順</h1>
+			<div class="risk_box slidetoggle" id="syncer-acdn-exe-order" style="display:none;"><br />
+				<p class="inbox-sentence">
+				運動の順番、力を入れるポイントはひとりひとり異なります！効率よく行うためにも、遺伝的体質に適したアレンジをしましょう！
+				</p>
+				<div id="main_pink">
+				<div id="main_pink_inner">
+	<!-- 運動一番目ここから -->
+				<div id="main_pink_inner">
+					<dl class="main_pink serif">
+						<a class="syncer-acdn ranking" data-target="syncer-acdn-exe-order-1">
+							<div class="ranking-wrapper-a-imgwrapper">
+							 <img src="images/step1.png" class="step-image ranking-wrapper-a-imgwrapper-img3">
+							</div>
+							<h2 class="osusume-underline ranking-wrapper-a-h2-1">
+								軽めにストレッチ
+							</h2>
+						</a>
+					</dl>
+					<a id="syncer-acdn-exe-order-1" style="display:none;">
+						<div class="inbox">
+							<img src="images/strech1_karume.png" class="otegaru-img">
+							<p class="text inbox-sentence">
+								運動を始める前は必ずストレッチを行いましょう。<br />しかし、あなたは、有酸素運動に力を入れたい遺伝的体質ですので、あまり時間をかけて、一生懸命やらなくてもＯＫです。
+							</p>
+						</div>
+					</a>
+				</div>
+	<!-- 運動一番目ここまで -->
+<br />
+	<!-- 運動二番目ここから -->
+				<div id="main_pink_inner">
+					<dl class="main_pink serif">
+						<a class="syncer-acdn ranking" data-target="syncer-acdn-exe-order-2">
+							<div class="ranking-wrapper-a-imgwrapper">
+							 <img src="images/step2.png" class="step-image ranking-wrapper-a-imgwrapper-img3">
+							</div>
+							<h2 class="osusume-underline ranking-wrapper-a-h2-1">
+								筋肉トレーニング
+							</h2>
+						</a>
+					</dl>
+					<a id="syncer-acdn-exe-order-2" style="display:none;">
+						<div class="inbox">
+							<img src="images/training.png" class="otegaru-img">
+							<p class="text inbox-sentence">
+								あなたには、筋肉トレーニングよりも有酸素運動がおすすめですが、有酸素運動の前に筋肉トレーニングも行いましょう。<br />有酸素運動の前に筋肉トレーニングを行うことで脂肪燃焼の効率が上がると言われています。<br />できる範囲でおすすめメニューも多く取り入れましょう！
+							</p>
+						</div>
+					</a>
+				</div>
+	<!-- 運動二番目ここまで -->
+<br />
+	<!-- 運動三番目ここから -->
+				<div id="main_pink_inner">
+					<dl class="main_pink serif">
+						<a class="syncer-acdn ranking" data-target="syncer-acdn-exe-order-3">
+							<div class="ranking-wrapper-a-imgwrapper">
+							 <img src="images/step3.png" class="step-image ranking-wrapper-a-imgwrapper-img3">
+							</div>
+							<h2 class="osusume-underline ranking-wrapper-a-h2-1">
+								有酸素運動
+							</h2>
+						</a>
+					</dl>
+					<a id="syncer-acdn-exe-order-3" style="display:none;">
+						<div class="inbox">
+							<img src="images/run.png" class="otegaru-img">
+							<p class="text inbox-sentence">
+								あなたは、有酸素運動が特におすすめです！時間をかけ、力を入れて行いましょう！<br />できるのであれば、30分以上の長い時間をかけたり、ハァハァと息が切れるくらいの高い負荷で行ったり、毎日有酸素運動を行ったりすることがおすすめです。<br />ランニングの後にサイクリングを行うなど、複数の種目を取り入れるとさらに良いでしょう！
+							</p>
+						</div>
+					</a>
+				</div>
+	<!-- 運動三番目ここまで -->
+<br />
+	<!-- 運動四番目ここから -->
+
+				<div id="main_pink_inner">
+					<dl class="main_pink serif">
+						<a class="syncer-acdn ranking" data-target="syncer-acdn-exe-order-4">
+							<div class="ranking-wrapper-a-imgwrapper">
+							 <img src="images/step4.png" class="step-image ranking-wrapper-a-imgwrapper-img3">
+							</div>
+							<h2 class="osusume-underline ranking-wrapper-a-h2-1">
+								運動後ストレッチ
+							</h2>
+						</a>
+					</dl>
+					<a id="syncer-acdn-exe-order-4" style="display:none;">
+						<div class="inbox">
+							<img src="images/strech2.png" class="otegaru-img">
+							<p class="text inbox-sentence">
+								ストレッチは、あなたにとっては特におすすめというわけではありませんが、運動後は使った筋肉を中心に入念に行いましょう。
+							</p>
+						</div>
+					</a>
+				</div>
+
+	<!-- 運動四番目ここまで -->
+				</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- 運動順ここまで -->
+
+<!-- 筋トレここから -->
+<section>
+	<div class="dna_main undou">
+		<div id="main_inner">
+			<h1 class="ttl_h1 syncer-acdn undou-contents-name" data-target="syncer-acdn-exe-training" data-name="+">筋肉トレーニングアドバイス</h1>
+			<div class="risk_box slidetoggle" id="syncer-acdn-exe-training" style="display:none;"><br />
+				<div id="main_orange">
+	<!-- 筋トレ負荷ここから -->
+				<div id="main_orange_inner">
+					<dl class="main_orange serif border-image-blue training-advice-marginbottom">
+							<h2>負荷と回数の決め方</h2>
+					</dl>
+		<!-- ジムここから -->
+					<div id="main_orange_inner">
+						<a class="syncer-acdn ranking" data-target="syncer-acdn-exe-training-1-gym">
+						    <img src="images/machine.png" class="fukakaisu-img">
+							<h2 class="serif training-advice-underline fukakaisu-h2">ジムなどでマシンを使うなら…</h2>
+						</a>
+						<a id="syncer-acdn-exe-training-1-gym" style="display:none;">
+
+								<h2 class="serif training-advice-margintop text-back-blue">
+									軽めの重量で回数を多く！
+								</h2>
+							<p class="text inbox-sentence">
+								あなたにおすすめな筋肉トレーニングの負荷と回数の決め方は「低い負荷・多い回数」です。<br />一般的には「１０回で限界になる重さで１０回×３セット」が良いと言われていますが、すべてのセットをこのやり方でやるのではなく、以下のアレンジを加えた方が効率よく理想の体型に近づくことができます。
+							</p>
+							<br /><br />
+							<h2 class="serif text-back-blue">アレンジ方法</h2>
+									<center style="font-size: 16px;">
+									<hr class="list"/><br /><font color="#1e723e">－１セット目－</font><br /><br />
+										１０回で限界になる重さで１０回
+									<br /><br /><hr class="list"/><br />
+									<font color="#1e723e">－２セット目－</font><br /><br />
+										２５回以上繰り返すことができる重さで３０回
+									<br /><br /><hr class="list"/><br />
+									<font color="#1e723e">－３セット目－</font><br /><br />
+										２５回以上繰り返すことができる重さで２５回
+									<br /><br /><hr class="list"/>
+									</center>
+
+<!--
+								<h2 class="serif training-advice-margintop text-back-blue">
+									今の状態に合わせて変えましょう！
+								</h2>
+							<p class="text inbox-sentence">
+								あなたは、一般的に良いと言われている、「１０回で限界になる重さで１０回×３セット」がおすすめですが、今の状態に合わせて以下のアレンジを加えた方が効率よく理想の体型に近づくことができます。
+							</p>
+							<br /><br />
+							<h2 class="serif text-back-blue">体脂肪が気になる場合</h2>
+									<center>
+									<hr class="list"/><br /><font color="#1e723e">－１セット目－</font><br /><br />
+										１０回で限界になる重さで【１０回】
+									<br /><br /><hr class="list"/><br />
+									<font color="#1e723e">－２セット目－</font><br /><br />
+										２５回以上繰り返すことができる重さで【３０回】
+									<br /><br /><hr class="list"/><br />
+									<font color="#1e723e">－３セット目－</font><br /><br />
+										２５回以上繰り返すことができる重さで【２５回】
+									<br /><br /><hr class="list"/></center>
+							<h2 class="serif text-back-blue">筋肉量が少ない場合</h2>
+									<center>
+									<hr class="list"/><br /><font color="#1e723e">－１セット目－</font><br /><br />
+										８回で限界になる重さで【８回】
+									<br /><br /><hr class="list"/><br />
+									<font color="#1e723e">－２セット目－</font><br /><br />
+										８回できるかできないかの重さで<br>【８回＋補助付きで１回】
+									<br /><br /><hr class="list"/><br />
+									<font color="#1e723e">－３セット目－</font><br /><br />
+										８回できるかできないかの重さで<br>【８回＋補助付きで１回】
+									<br /><br /><hr class="list"/></center>
+-->
+						</a>
+					</div>
+		<!-- ジムここまで -->
+		<br />
+		<!-- 自宅ここから -->
+					<div id="main_orange_inner">
+						<a class="syncer-acdn ranking" data-target="syncer-acdn-exe-training-1-home">
+							<img src="images/dumbbell.png" class="fukakaisu-img">
+							<h2 class="serif training-advice-underline fukakaisu-h2">自宅などでマシンを使わないなら…</h2>
+						</a>
+						<a id="syncer-acdn-exe-training-1-home" style="display:none;">
+
+								<h2 class="serif training-advice-margintop text-back-blue">
+									速めのテンポで回数を多く！
+								</h2>
+							<p class="text inbox-sentence">
+								あなたにおすすめな筋肉トレーニングの負荷と回数の決め方は「低い負荷・多い回数」です。<br />一般的には「ひとつの動作を３秒かける」が良いと言われていますが、すべてのセットをこのやり方でやるのではなく、以下のアレンジを加えた方が効率よく理想の体型に近づくことができます。
+							</p>
+							<br /><br />
+							<h2 class="serif text-back-blue">アレンジ方法</h2>
+									<center style="font-size: 16px;">
+									<hr class="list"/><br /><font color="#1e723e">－１セット目－</font><br /><br />
+										ひとつの動作を３秒かけて１０回
+									<br /><br /><hr class="list"/><br />
+									<font color="#1e723e">－２セット目－</font><br /><br />
+										ひとつの動作を１秒で繰り返して３０回
+									<br /><br /><hr class="list"/><br />
+									<font color="#1e723e">－３セット目－</font><br /><br />
+										ひとつの動作を１秒で繰り返して２５回
+									<br /><br /><hr class="list"/></center>
+
+<!--
+								<h2 class="serif text-back-blue">
+									今の状態に合わせて変えましょう！
+									</h2>
+							<p class="text inbox-sentence">
+								あなたは、一般的に良いと言われている、「ひとつの動作を３秒かける」がおすすめですが、今の状態に合わせて以下のアレンジを加えた方が効率よく理想の体型に近づくことができます。
+							</p>
+							<br /><br />
+							<h2 class="serif text-back-blue">体脂肪が気になる場合</h2>
+									<center>
+									<hr class="list"/><br /><font color="#1e723e">－１セット目－</font><br /><br />
+										ひとつの動作を３秒かけて【１０回】
+									<br /><br /><hr class="list"/><br />
+									<font color="#1e723e">－２セット目－</font><br /><br />
+										ひとつの動作を１秒で繰り返して【３０回】
+									<br /><br /><hr class="list"/><br />
+									<font color="#1e723e">－３セット目－</font><br /><br />
+										ひとつの動作を１秒で繰り返して【２５回】
+									<br /><br /><hr class="list"/></center>
+							<h2 class="serif text-back-blue">筋肉量が少ない場合</h2>
+									<center>
+									<hr class="list"/><br /><font color="#1e723e">－１セット目－</font><br /><br />
+										ひとつの動作を３秒かけて【１０回】
+									<br /><br /><hr class="list"/><br />
+									<font color="#1e723e">－２セット目－</font><br /><br />
+										ひとつの動作を７秒かけて【８回】
+									<br /><br /><hr class="list"/><br />
+									<font color="#1e723e">－３セット目－</font><br /><br />
+										ひとつの動作を７秒かけて【８回】
+									<br /><br /><hr class="list"/></center>
+-->
+						</a>
+					</div>
+		<!-- 自宅ここまで -->
+				</div>
+	<!-- 筋トレ負荷ここまで -->
+<br />
+	<!-- メニューの決め方ここから -->
+				<div id="main_orange_inner">
+					<dl class="main_orange serif border-image-blue">
+							<h2 style="margin-top: 1em;">メニューの決め方</h2>
+					</dl>
+		<!-- お手軽メニューここから -->
+					<div id="main_orange_inner">
+						<a class="syncer-acdn ranking" data-target="syncer-acdn-exe-training-2-home">
+							<div class="ranking-wrapper-a-imgwrapper">
+							 <img src="images/otegatu-icon.png" class="ranking-wrapper-a-imgwrapper-img1">
+							</div>
+							<h2 class="serif training-advice-underline ranking-wrapper-a-h2-1">お手軽メニュー</h2>
+						</a>
+
+						<!--お手軽ここから-->
+						<a id="syncer-acdn-exe-training-2-home" class="sentence-border-bottom" style="display:none;">
+								<h2 class="serif training-advice-margintop text-back-blue">
+									ドローイン
+								</h2>
+							<p class="text inbox-sentence">
+								電車に乗っているときや信号待ちのときに気軽にできる「ドローイン」がおすすめです！<br />自宅での運動はもちろん、思い出したときにいつでもどこでもドローインを行いましょう！
+							</p>
+							<h2 class="serif menu-ranking-how"><font color="#ca416b">－やり方－</font></h2>
+							<center><img src="images/drawin.gif" class="order"></center>
+							<p class="text inbox-sentence">
+								息を吸ってお腹をふくらまし、吐きながらおへその部分の少し下を意識して、出来る限り思いきりへこましていきます。その時、お尻の穴を閉めるように意識をすると、腹横筋と一緒に働いて内臓の位置や、姿勢のゆがみを整えてくれる骨盤底筋群も一緒に鍛えることができます。<br />息を吐ききったところで、お腹をへこませた状態を３０秒程度キープします。<br />お腹をへこませた状態を保ちながら呼吸を止めないように、細く長く呼吸を続けます。
+							</p>
+							<h2 class="serif menu-ranking-how"><font color="#ca416b">－アレンジ－</font></h2>
+							<p class="text inbox-sentence">
+								床に寝ころんだ状態で行いましょう。腹横筋を意識しやすく、より効果的です。
+							</p>
+							<center><img src="images/drawin_2.gif" class="order"></center>
+							<h2 class="serif menu-ranking-how"><font color="#ca416b">－いっしょにやりたいストレッチ－</font></h2>
+							<p class="text inbox-sentence">
+								膝を閉じ足を左右に倒すことで、脇腹についたお肉に対して、効果が期待できます。<br />このストレッチで、ぽっこりお腹を解消し、くびれたウエストを目指しましょう。<br />ドローインの後やちょっと思い出したときに行いましょう！
+							</p>
+							<center><img src="images/stretch_c.gif" class="order"></center>
+						</a>
+						<!--お手軽ここまで-->
+
+					</div><!--.main_orange_inner-->
+		<!-- お手軽メニューここまで -->
+		<br />
+		<!-- ランキングここから -->
+					<div id="main_orange_inner">
+						<a class="syncer-acdn ranking" data-target="syncer-acdn-exe-training-2-ranking">
+							<div class="ranking-wrapper-a-imgwrapper">
+							 <img src="images/raning_dai.png" class="ranking-wrapper-a-imgwrapper-img3">
+							</div>
+							<h2 class="serif training-advice-underline ranking-wrapper-a-h2-1">メニューランキング</h2>
+						</a>
+						<center>
+
+						<!--ベースメニューランキングここから-->
+
+						<div id="syncer-acdn-exe-training-2-ranking" style="display:none;">
+							<h2 class="serif training-advice-margintop text-back-blue">あなたの<br />ベースメニューランキング
+							</h2>
+
+							<!--1位ここから-->
+
+								<a class="syncer-acdn ranking" data-target="syncer-acdn-exe-training-2-ranking-1">
+									<div class="ranking-wrapper-a-imgwrapper">
+										<img src="images/ranking_1.png" class="ranking-image-1 ranking-wrapper-a-imgwrapper-img1">
+									</div>
+									<h2 class="basemenu-ranking-underline ranking-wrapper-a-h2-1">
+									クランチ
+									</h2>
+								</a>
+								<a id="syncer-acdn-exe-training-2-ranking-1" class="sentence-border-bottom" style="display:none;">
+
+								<!--個別内容ここから-->
+								<p class="text inbox-sentence">言わずと知れた筋肉トレーニングの代表、いわゆる「腹筋」です。<br />筋肉トレーニングの代表選手ですが、実はやり方を間違ってほとんど効果がない人も…<br />正しい方法で効率よく行いましょう！</p><br /><br /><h2 class="serif menu-ranking-how"><font color="#ca416b">－やり方－</font></h2><img src="images/clunch.gif"><br /><p class="text inbox-sentence">背中全体を床につけ仰向けになり、膝は９０度に曲げましょう。<br />みぞおちとおへそを近づけるように上体を起こして、ゆっくりと戻ります。<br />肩は床につけず、反動を使わずに繰り返します。<br />腰を傷めますので背中は反らさないように注意しましょう。</p><br /><br /><h2 class="serif menu-ranking-how"><font color="#ca416b">－強度の変え方－</font></h2><p class="text inbox-sentence">腕の位置を変えることで強度を調整することができます。 <br />腕の位置はお腹に近いほど負荷が軽く、頭に近いほど重くなります。 <br />フォームが崩れず、筋肉に刺激がある適切な強度で行いましょう。</p><br /><br /><h3 class="serif menu-ranking-arrangement" style="font-size:16px;">【強度１】</h3><p class="text inbox-sentence">腕をお腹に乗せた姿勢で行うと最も強度を下げて行うことができます。 <br />筋力がない方、運動初心者はまずはここから始めると良いでしょう。</p><img src="images/clunch_level1.gif"><br /><br /><h3 class="serif menu-ranking-arrangement" style="font-size:16px;">【強度２】</h3><p class="text inbox-sentence">腕を胸の前で組んだ姿勢で行うと少し強度を上げることができます。 <br />強度１に慣れてきて、回数がこなせるようになったら強度を上げましょう。</p><img src="images/clunch_level2.gif"><br /><br /><h3 class="serif menu-ranking-arrangement" style="font-size:16px;">【強度３】</h3><p class="text inbox-sentence">腕を頭に添えた姿勢で行うとさらに強度を上げることができます。 <br />この姿勢で行う場合は、首を痛めないように、腕はリラックスし、頭を手で持ち上げないように気をつけましょう。</p><img src="images/clunch_level3.gif"><br /><br /><h2 class="serif menu-ranking-how"><font color="#ca416b">－アレンジ－</font></h2><br /><br /><h3 class="serif menu-ranking-arrangement" style="font-size:16px;">【アレンジ１：V字クランチ】</h3><p class="text inbox-sentence">足を上げた状態からスタートすることで、おへそより上の腹筋への負荷を、効率よく高めることができます。</p><img src="images/clunch_v.gif"><br /><br /><h3 class="serif menu-ranking-arrangement" style="font-size:16px;">【アレンジ２：ボールクランチ】</h3><p class="text inbox-sentence">バランスボールの上で行うことで、通常のクランチより背中が反り、肩部分が浮かせて行えるので、効率よく負荷を高めることができます。</p><img src="images/clunch_ball.gif">
+								<!--個別内容ここまで-->
+
+								</a>
+
+							<!--1位ここまで-->
+
+							<!--2位ここから-->
+
+								<a class="syncer-acdn ranking" data-target="syncer-acdn-exe-training-2-ranking-2">
+									<div class="ranking-wrapper-a-imgwrapper">
+										<img src="images/ranking_2.png" class="ranking-image-2 ranking-wrapper-a-imgwrapper-img2">
+									</div>
+									<h2 class="basemenu-ranking-underline ranking-wrapper-a-h2-2">
+									ベントオーバー
+									</h2>
+								</a>
+								<a id="syncer-acdn-exe-training-2-ranking-2" class="sentence-border-bottom" style="display:none;">
+
+								<!--個別内容ここから-->
+								<p class="text inbox-sentence">背中の筋肉を鍛えるメニューです。 背中全体のシェイプアップ効果が期待できます！ 背中の筋肉は、姿勢や見た目に大きく関係しますのでしっかりと鍛えましょう！</p><br /><br /><h2 class="serif menu-ranking-how"><font color="#ca416b">－やり方－</font></h2><img src="images/bentover.gif"><br /><p class="text inbox-sentence">ダンベル（ペットボトルでもＯＫ）を持ち、背中を真っ直ぐにして、上体を前に傾けます。 肘から引っ張るイメージで、ダンベルを身体に引き付けていきます。この時、肩甲骨をしっかり寄せましょう。 肩甲骨を引き付けたところでストップし、肩甲骨を開きながらゆっくり下ろします。ケガにつながりますので、背中を丸めないように注意しましょう。</p><br /><br /><h2 class="serif menu-ranking-how"><font color="#ca416b">－強度の変え方－</font></h2><p class="text inbox-sentence">ダンベルの重さやペットボトルに入れる水や砂の量を変えることで強度を調整することができます。慣れてくると重さを重くしても効果が上がりにくくなってきますので、重さを変えるだけではなく、トレーニングメニューを変えることもおすすめです。</p><br /><br /><h2 class="serif menu-ranking-how"><font color="#ca416b">－アレンジ－</font></h2><br /><br /><h3 class="serif menu-ranking-arrangement" style="font-size:16px;">【アレンジ１：ワンハンドローイング】</h3><p class="text inbox-sentence">背中の筋肉を片方ずつ鍛えるトレーニングです。片手ずつ行うので、意識を集中させて鍛えることができます。 片手にダンベルを持ってもう片方の手と膝をベンチに置きます。肩関節を中心に弧を描くように肘を上後方に引き、ゆっくり戻します。</p><img src="images/bentover_onehand.gif"><br /><br /><h3 class="serif menu-ranking-arrangement" style="font-size:16px;">【アレンジ２：チンニング】</h3><p class="text inbox-sentence">いわゆる懸垂です。広背筋など上背部全体を強く刺激できるトレーニングです。背中の筋肉にしっかりと負荷をかけながら、しっかりストレッチをかけることが出来ます。 しかし、スポーツテストでやるような回数をこなすことを目的とした懸垂の動作では大きな効果は得られませんので正しいフォームで行いましょう。 強度が高いので、１回も出来ない場合は他のトレーニングを行いましょう。</p><img src="images/chinning.gif">
+								<!--個別内容ここまで-->
+
+								</a>
+
+							<!--2位ここまで-->
+
+							<!--3位ここから-->
+
+								<a class="syncer-acdn ranking" data-target="syncer-acdn-exe-training-2-ranking-3">
+									<div class="ranking-wrapper-a-imgwrapper">
+										<img src="images/ranking_3.png" class="ranking-image-3 ranking-wrapper-a-imgwrapper-img3">
+									</div>
+									<h2 class="basemenu-ranking-underline ranking-wrapper-a-h2-3">
+									腕立て伏せ
+									</h2>
+								</a>
+								<a id="syncer-acdn-exe-training-2-ranking-3" class="sentence-border-bottom" style="display:none;">
+
+								<!--個別内容ここから-->
+								<p class="text inbox-sentence">胸の筋肉を鍛えるメニューです。<br />大きな筋肉ですので、基礎代謝アップにつながり、ダイエットには欠かせないメニューです！たくましい胸板やバストアップにも効果が期待できます！</p><br /><br /><h2 class="serif menu-ranking-how"><font color="#ca416b">－やり方－</font></h2><img src="images/pushup.gif"><br /><p class="text inbox-sentence">手は胸の真横に、肩幅の２倍に開きます。指先はやや外向きにし、床につけましょう。<br />肩甲骨を寄せて肘を曲げ、十分に下ろした後、ゆっくりと腕を伸ばします。体をまっすぐに保つ事を意識し、目線は少し前を見ましょう。<br />筋力が足りず、数回しか出来ない場合は、膝をついて行う腕立て伏せから始めましょう。</p><br /><br /><h2 class="serif menu-ranking-how"><font color="#ca416b">－強度の変え方－</font></h2><p class="text inbox-sentence">動作のスピードを変えることで強度を変えることができます。強度を上げたいときは、ひとつひとつの動作をゆっくりと行いましょう。</p><br /><br /><h2 class="serif menu-ranking-how"><font color="#ca416b">－アレンジ－</font></h2><p class="text inbox-sentence">腕の位置を肩幅よりも広くすると胸に、狭くすると腕を鍛えることができます。</p><br /><br /><h3 class="serif menu-ranking-arrangement" style="font-size:16px;">【より胸に効くアレンジ】</h3><p class="text inbox-sentence">手の位置を肩幅よりも広く (肩幅の1.5倍程度) することで、肩幅での腕立てよりもより大胸筋 (胸の筋肉) に効くエクササイズとなります。<br />たんぱく質リスクが高く、大きな筋肉を効率よく鍛え、基礎代謝を上げたい方はこちらのアレンジを行うと良いでしょう。</p><img src="images/pushup_wide.gif"><br /><br /><h3 class="serif menu-ranking-arrangement" style="font-size:16px;">【より二の腕に効くアレンジ】</h3><p class="text inbox-sentence">手の位置を肩幅よりも狭く (肩幅の半分程度)することで、大胸筋があまり働かなくなり、より二の腕に効くエクササイズになります。<br />二の腕が気になる方、細くしたい方はこちらのアレンジを行うと良いでしょう。</p><img src="images/pushup_narrow.gif"><br /><br /><h2 class="serif menu-ranking-how"><font color="#ca416b">【アレンジ：ベンチプレス】</font></h2><p class="text inbox-sentence">胸の上でバーベルを挙げ下げするトレーニングです。<br />胸の大きな筋肉である大胸筋を中心に肩や腕の筋肉も使われるので、効率よく上半身を鍛えることができます。<br />男性は逞しく、女性はバストアップに効果が期待できます。</p><img src="images/benchpress.gif">
+								<!--個別内容ここまで-->
+
+								</a>
+
+							<!--3位ここまで-->
+
+							<!--4位ここから-->
+
+								<a class="syncer-acdn ranking" data-target="syncer-acdn-exe-training-2-ranking-4">
+									<div class="ranking-wrapper-a-imgwrapper">
+										<img src="images/ranking_4.png" class="ranking-image-other ranking-wrapper-a-imgwrapper-imgother">
+									</div>
+									<h2 class="basemenu-ranking-underline ranking-wrapper-a-h2-other">
+									スクワット
+									</h2>
+								</a>
+								<a id="syncer-acdn-exe-training-2-ranking-4" class="sentence-border-bottom" style="display:none;">
+
+								<!--個別内容ここから-->
+								<p class="text inbox-sentence">太ももからヒップなどの下半身を中心に、お腹や腕まで全身を鍛えることができるメニューです！ しかし、正しいフォームで行わなければ効果が少ないだけではなくケガにつながることもありますので、注意しましょう！</p><br /><br /><h2 class="serif menu-ranking-how"><font color="#ca416b">－やり方－</font></h2><img src="images/squat.gif"><br /><p class="text inbox-sentence">脚を肩幅の２倍程度に開き、つま先を外側に向けて立ちます。両手は頭の後ろで軽く組みましょう。 膝を曲げて、９０度程度になるまで腰を落とし、ゆっくりと戻ります。背筋を伸ばし、膝がつま先より前に出ないように気をつけましょう。 お尻を後ろに突き出すイメージで行うと効果的です。</p><br /><br /><h2 class="serif menu-ranking-how"><font color="#ca416b">－強度の変え方－</font></h2><p class="text inbox-sentence">スクワットは、太ももやお尻など下半身を中心に大きな筋肉を効率よく鍛えられる種目です。スクワットをアレンジすることで、簡単に強度を上げたり、鍛える部位を変えることができます。</p><br /><br /><h3 class="serif menu-ranking-arrangement" style="font-size:16px;">【強度１：チェアースクワット】</h3><p class="text inbox-sentence">筋力に自信がない場合はチェアースクワットを行いましょう。 椅子を背にして、肩幅に脚を開き、背すじを伸ばし、胸の前にまっすぐ腕を伸ばします。自分の後ろにある椅子に腰かけるイメージ（実際は座りません）でおしりを突き出し、 ゆっくりと屈伸運動を行います。</p><img src="images/squat_chair.gif"><br /><br /><br /><h3 class="serif menu-ranking-arrangement" style="font-size:16px;">【強度２：ハーフスクワット】</h3><p class="text inbox-sentence">一般的な強度のスクワットです。まずはハーフスクワットを行い、強度を調整することがおすすめです。 膝を９０度程度まで曲げたところまで腰を落とし、そこからゆっくりと戻します。</p><br /><br /><h3 class="serif menu-ranking-arrangement" style="font-size:16px;">【強度３：パラレルスクワット】</h3><p class="text inbox-sentence">ハーフスクワットよりもさらに腰を落とし、床に対して平行まで膝を曲げます。 フォームが崩れないように気をつけましょう。</p><br /><br /><h2 class="serif menu-ranking-how"><font color="#ca416b">－アレンジ－</font></h2><p class="text inbox-sentence">プライオメトリクストレーニング（筋肉の収縮と伸張、反射を活かしたトレーニング）を取り入れたスクワットです。<br />腰を落とした状態から、膝を伸ばす勢いで、そのまま垂直にジャンプします。着地後は、正しいスクワットのフォームに沿って腰を落とします。<br />強度が高いため、十分にスクワットに慣れてから行うようにしましょう。</p><img src="images/squat_jamp.gif">
+								<!--個別内容ここまで-->
+
+								</a>
+
+							<!--4位ここまで-->
+
+						<!--ベースメニューランキングここまで-->
+
+							<br /><br />
+
+						<!--おすすめメニューランキングここから-->
+
+							<h2 class="serif training-advice-margintop text-back-blue">あなたの<br />おすすめメニューランキング
+							</h2>
+
+							<!--１位ここから-->
+
+								<a class="syncer-acdn ranking" data-target="syncer-acdn-exe-training-2-ranking-5">
+									<div class="ranking-wrapper-a-imgwrapper">
+										<img src="images/ranking_1.png" class="ranking-image-1 ranking-wrapper-a-imgwrapper-img1">
+									</div>
+									<h2 class="basemenu-ranking-underline ranking-wrapper-a-h2-1">
+									レッグレイズ
+									</h2>
+								</a>
+								<a id="syncer-acdn-exe-training-2-ranking-5" class="sentence-border-bottom" style="display:none;">
+
+								<!--個別内容ここから-->
+								<p class="text inbox-sentence">下腹部、いわゆる「下っ腹」を効果的に鍛えます。<br />下腹部を鍛えることで、お腹を引き込む力が養われ、お腹のぽっこりが改善されます！<br />腰に負担がかかりやすいので、腰痛がある方は注意が必要です。</p><br /><br /><h2 class="serif menu-ranking-how"><font color="#ca416b">－やり方－</font></h2><img src="images/legraise.gif"><br /><p class="text inbox-sentence">仰向けに寝て背筋を伸ばします。<br />両手を体側に置き、からだを安定させましょう。<br />両脚を伸ばしたまま、股関節が床を垂直になるまで上げ、戻します。<br />腰の下に空間ができてしまうと腰を痛めやすいので注意しましょう。<br />脚の筋肉ではなく、下腹部の筋肉で行うことを意識するとより効果的です。</p><br /><br /><h2 class="serif menu-ranking-how"><font color="#ca416b">－強度の変え方－</font></h2><p class="text inbox-sentence">膝の曲げ方や脚の上げる角度で強度を調整することができます。</p><br /><br /><h3 class="serif menu-ranking-arrangement" style="font-size:16px;">【強度１】</h3><p class="text inbox-sentence">ひざを曲げると強度を下げることができます。<br />深く曲げるほど負荷が下がりますので、筋力がない方、運動初心者はまずはここから始めると良いでしょう。</p><br /><br /><h3 class="serif menu-ranking-arrangement" style="font-size:16px;">【強度２】</h3><p class="text inbox-sentence">脚を下げる時に意識を集中させ、力を抜かず上げている時よりゆっくり下ろしましょう。脚を上げている時よりも、下ろしているときこそ筋肉に強い刺激がいきます。</p><br /><br /><h3 class="serif menu-ranking-arrangement" style="font-size:16px;">【強度３】</h3><p class="text inbox-sentence">メディシンボール（小さいボール）やタオルを脚と脚の間に挟んで行いましょう。また、傾斜をつけることができる台がある場合はそちらを使用すると更に負荷を上げることができます。</p>
+								<!--個別内容ここまで-->
+
+								</a>
+
+							<!--１位ここまで-->
+
+
+								<!--２位ここから-->
+								<a class="syncer-acdn ranking" data-target="syncer-acdn-exe-training-2-ranking-6">
+									<div class="ranking-wrapper-a-imgwrapper">
+										<img src="images/ranking_2.png" class="ranking-image-2 ranking-wrapper-a-imgwrapper-img2">
+									</div>
+									<h2 class="basemenu-ranking-underline ranking-wrapper-a-h2-2">
+									フライ
+									</h2>
+									</a>
+								<a id="syncer-acdn-exe-training-2-ranking-6" class="sentence-border-bottom" style="display:none;">
+									<p class="text inbox-sentence">
+										胸の筋肉を鍛えるメニューです。<br />大きな筋肉ですので、基礎代謝アップにつながり、ダイエットには欠かせないメニューです！たくましい胸板やバストアップにも効果が期待できます！
+									</p>
+									<br /><br />
+									<h2 class="serif menu-ranking-how"><font color="#ca416b">－やり方－</font></h2>
+									<img src="images/fly.gif">
+									<p class="text inbox-sentence">
+										ベンチに仰向けになり、胸の上でダンベルを持ちます。肩甲骨をしっかりと寄せて、胸をはり、ひじは少し余裕を持たせておきましょう。<br />肩甲骨を寄せて、肘の角度は保ったまま腕を開いていきます。弧を描くようにダンベルをゆっくりと下ろしていきましょう。<br />大胸筋のストレッチを感じるところまで開いたら元に戻します。腕を伸ばしてしまうと、ひじを痛めてしまう可能性があるので避けましょう。
+									</p>
+								</a>
+
+								<!--２位ここまで-->
+
+								<!--３位ここから-->
+
+								<a class="syncer-acdn ranking" data-target="syncer-acdn-exe-training-2-ranking-7">
+									<div class="ranking-wrapper-a-imgwrapper">
+										<img src="images/ranking_3.png" class="ranking-image-3 ranking-wrapper-a-imgwrapper-img3">
+									</div>
+									<h2 class="basemenu-ranking-underline ranking-wrapper-a-h2-3">
+									サイドベント
+									</h2>
+								</a>
+								<a id="syncer-acdn-exe-training-2-ranking-7" class="sentence-border-bottom" style="display:none;">
+									<p class="text inbox-sentence">
+										一度ついてしまうと、落ちにくく、気になりやすいわき腹のたるみを改善できるメニューです。 さらに、わき腹の引き締めも期待できます！ 前に傾くとわき腹への刺激が弱くなりますので注意しましょう。
+									</p>
+									<br /><br />
+									<h2 class="serif menu-ranking-how"><font color="#ca416b">－やり方－</font></h2>
+									<img src="images/sidebent.gif">
+									<p class="text inbox-sentence">
+										片手にダンベル（ペットボトルなどでもＯＫ）を持ち、脚は肩幅程度に開いて立ちます。 もう片方の手は後頭部に添え、背筋を伸ばしましょう。 体側に沿ってダンベルを下ろしながら、からだを真横に倒し、反対側のわき腹を伸ばします。 伸ばしたわき腹を縮め、ダンベルを引き上げながら元に戻ります。 同じ動作を反対側も行います。
+									</p>
+								</a>
+
+								<!--３位ここまで-->
+
+								<!--４位ここから-->
+
+								<a class="syncer-acdn ranking" data-target="syncer-acdn-exe-training-2-ranking-8">
+									<div class="ranking-wrapper-a-imgwrapper">
+										<img src="images/ranking_4.png" class="ranking-image-other ranking-wrapper-a-imgwrapper-imgother">
+									</div>
+									<h2 class="basemenu-ranking-underline ranking-wrapper-a-h2-other">
+									デッドリフト
+									</h2>
+								</a>
+								<a id="syncer-acdn-exe-training-2-ranking-8" class="sentence-border-bottom" style="display:none;">
+									<p class="text inbox-sentence">
+										背中を中心に、下半身、お尻など、多くの筋肉を使います。<br />背中を引き締めることは、美しいくびれを作ることにつながります！<br />ヒップアップにも効果抜群ですが、重めの負荷を扱うときにはフォームに注意しましょう。
+									</p>
+									<br /><br />
+									<h2 class="serif menu-ranking-how"><font color="#ca416b">－やり方－</font></h2>
+									<img src="images/deadlift.gif">
+									<p class="text inbox-sentence">
+										腰が曲がらないようにしながら、お尻を後ろに突き出すように曲げ、バーを掴みます。<br />そのまま、足とお尻の力を入れて立ち上がりつつ、バーが膝を超えた辺りで、腰を真っ直ぐにしたまま背筋を使って上体を起こしていきます。<br />完全に上体まで立たすことができたら、背中の肩甲骨を締める事を意識します。<br />そして、そこから元の体勢に戻していきます。<br />デッドリフトの最中は、おなかに常に力が入っている状態をキープし、腰が曲がらないように注意しましょう！
+									</p>
+								</a>
+
+								<!--４位ここまで-->
+
+
+								<!--５位ここから-->
+
+								<a class="syncer-acdn ranking" data-target="syncer-acdn-exe-training-2-ranking-9">
+									<div class="ranking-wrapper-a-imgwrapper">
+										<img src="images/ranking_5.png" class="ranking-image-other ranking-wrapper-a-imgwrapper-imgother">
+									</div>
+									<h2 class="basemenu-ranking-underline ranking-wrapper-a-h2-other">
+									ランジ
+									</h2>
+								</a>
+								<a id="syncer-acdn-exe-training-2-ranking-9" class="sentence-border-bottom" style="display:none;">
+									<p class="text inbox-sentence">
+										お尻・太ももを中心に、下半身全体の筋肉を使います。<br />不安定な状態に耐えることにより、お腹・背中の筋肉も使いますので、おなか周りのシェイプアップにも効果的です！<br />疲れてくると、背中が丸まりがちになるので、肩甲骨を寄せることを意識しましょう。
+									</p>
+									<br /><br />
+									<h2 class="serif menu-ranking-how"><font color="#ca416b">－やり方－</font></h2>
+									<img src="images/lunge.gif">
+									<p class="text inbox-sentence">
+										背筋を伸ばして、腰幅程度に足を開きます。そして両手は腰に当てます。<br />その広さを保ったまま、片方の足を前に踏み出します。<br />その状態のまま、腰を真下に下ろしていき、膝が地面につく直前で止め、また元の体勢に戻ります。<br />これを繰り返し行い、終わったら、反対側の足も同じように行います。ひざがつま先より前に出ないように注意しましょう。
+									</p>
+								</a>
+
+								<!--５位ここまで-->
+
+
+								<!--６位ここから-->
+
+								<a class="syncer-acdn ranking" data-target="syncer-acdn-exe-training-2-ranking-10">
+									<div class="ranking-wrapper-a-imgwrapper">
+										<img src="images/ranking_6.png" class="ranking-image-other ranking-wrapper-a-imgwrapper-imgother">
+									</div>
+									<h2 class="basemenu-ranking-underline ranking-wrapper-a-h2-other">
+									ヒップリフト
+									</h2>
+								</a>
+								<a id="syncer-acdn-exe-training-2-ranking-10" class="sentence-border-bottom" style="display:none;">
+									<p class="text inbox-sentence">
+										ヒップや太ももをメインに鍛え、さらに、ぽっこりお腹改善に必要な腹横筋も鍛えることができるメニューです。<br />垂れてしまったヒップやぽっこりとしたお腹、猫背など見た目に大きく関わる筋肉を効果的に鍛えることができます！
+									</p>
+									<br /><br />
+									<h2 class="serif menu-ranking-how"><font color="#ca416b">－やり方－</font></h2>
+									<img src="images/hiplift.gif">
+									<p class="text inbox-sentence">
+										仰向けになって、膝が９０度になるように膝を立てます。<br />腕を床と垂直に伸ばし、お尻、背中の順番で床から浮かせ、肩から肘までが一直線になるように上げ、ゆっくりと下ろします。<br />下ろす時は、背中、お尻の順番で床につくようにしましょう。
+									</p>
+								</a>
+
+								<!--６位ここまで-->
+
+
+								<!--７位ここから-->
+
+								<a class="syncer-acdn ranking" data-target="syncer-acdn-exe-training-2-ranking-11">
+									<div class="ranking-wrapper-a-imgwrapper">
+										<img src="images/ranking_7.png" class="ranking-image-other ranking-wrapper-a-imgwrapper-imgother">
+									</div>
+									<h2 class="basemenu-ranking-underline ranking-wrapper-a-h2-other">
+									クロスレイズ
+									</h2>
+								</a>
+								<a id="syncer-acdn-exe-training-2-ranking-11" class="sentence-border-bottom" style="display:none;">
+									<p class="text inbox-sentence">
+										お腹まわりと背中を中心に多くの筋肉を使います。 きれいな姿勢や美しい背中に近づくことができます！ 腰痛にも効きますが、フォームが悪いと逆効果になりますので注意しましょう。
+									</p>
+									<br /><br />
+									<h2 class="serif menu-ranking-how"><font color="#ca416b">－やり方－</font></h2>
+									<img src="images/crossraise.gif">
+									<p class="text inbox-sentence">
+										四つん這いになり、からだを丸めるように、片側の手と逆側の膝を浮かせて引き寄せます。 次に、腕と脚を床と水平に伸ばし、同時に背筋も伸ばします。同じ動作を反対側も行います。 背中をまっすぐに保ち、反らしたり、丸めないように注意しましょう。 腕と脚を上げるときにお腹を背中にくっつけるイメージでへこまし、下ろすときにお腹を脱力させることで、腹横筋に対してより効果的に行うことができます。
+									</p>
+								</a>
+
+								<!--７位ここまで-->
+
+
+								<!--8位ここから-->
+
+								<a class="syncer-acdn ranking" data-target="syncer-acdn-exe-training-2-ranking-12">
+									<div class="ranking-wrapper-a-imgwrapper">
+										<img src="images/ranking_8.png" class="ranking-image-other ranking-wrapper-a-imgwrapper-imgother">
+									</div>
+									<h2 class="basemenu-ranking-underline ranking-wrapper-a-h2-other">
+									プランク
+									</h2>
+								</a>
+								<a id="syncer-acdn-exe-training-2-ranking-12" class="sentence-border-bottom" style="display:none;">
+									<p class="text inbox-sentence">
+										体幹と呼ばれる、体の中心となる部分を鍛えるメニューです。 体幹が衰えると、内臓が下がってしまうことで下っ腹がぽっこりと出てしまうことも… 基礎代謝のアップ、姿勢改善も期待できます！
+									</p>
+									<br /><br />
+									<h2 class="serif menu-ranking-how"><font color="#ca416b">－やり方－</font></h2>
+									<img src="images/plank.gif">
+									<p class="text inbox-sentence">
+										うつ伏せの状態からピーンとまっすぐ脚を伸ばします。 両肘を曲げて、両肘で上半身を上げます。 つま先を立て、お尻を肩の高さまであげ、体を一直線にします。 お腹（腹直筋）に力を入れ、骨盤をお腹の方へ引っ張るイメージで30秒程度キープします。 背中が反りすぎたり、丸まりすぎたりせず、一直線になるように注意しましょう。 目線は基本的には斜め前を見るようにし、顎があがらないようにしましょう。 時間を長くすることで強度を上げることもできます。
+									</p>
+								</a>
+
+								<!--8位ここまで-->
+
+
+								<!--9位ここから-->
+
+								<a class="syncer-acdn ranking" data-target="syncer-acdn-exe-training-2-ranking-13">
+									<div class="ranking-wrapper-a-imgwrapper">
+										<img src="images/ranking_9.png" class="ranking-image-other ranking-wrapper-a-imgwrapper-imgother">
+									</div>
+									<h2 class="basemenu-ranking-underline ranking-wrapper-a-h2-other">
+									ショルダープレス
+									</h2>
+								</a>
+								<a id="syncer-acdn-exe-training-2-ranking-13" class="sentence-border-bottom" style="display:none;">
+									<p class="text inbox-sentence">
+										肩の筋肉を鍛えるメニューです。たくましい体型を目指す男性には欠かせない筋肉ですが、実はムキムキとさせたくない女性にもぜひ鍛えてほしい筋肉です。<br />肩を鍛えたりほぐすことで姿勢がよくなり、猫背の改善にもつながります。
+									</p>
+									<br /><br />
+									<h2 class="serif menu-ranking-how"><font color="#ca416b">－やり方－</font></h2>
+									<img src="images/shoulder.gif">
+									<p class="text inbox-sentence">
+										ダンベルを両手に持ち、耳の横あたりに平行に保ちます。<br />肘が前や後ろに動かないように注意し、肘が伸びきるまで上げていきます。ダンベルを持ち上げた時に、肩のラインよりも内側に入らないようにしましょう。<br />ゆっくりと元の位置までダンベルを下げていきます。あまり深く肘を下げてしまうと、肩にうまく刺激がかかりませんので、床と平行か少し下げたところで止めましょう。<br />背中を反らせると腰を痛めるので注意が必要です。<br />また、肩は非常に複雑な構造になっており、痛めやすい部位でもありますので、慣れるまではあまり重い重量では行わないようにしましょう。
+									</p>
+								</a>
+
+								<!--9位ここまで-->
+
+
+								<!--10位ここから-->
+
+								<a class="syncer-acdn ranking" data-target="syncer-acdn-exe-training-2-ranking-14">
+									<div class="ranking-wrapper-a-imgwrapper">
+										<img src="images/ranking_10.png" class="ranking-image-other ranking-wrapper-a-imgwrapper-imgother">
+									</div>
+									<h2 class="basemenu-ranking-underline ranking-wrapper-a-h2-other">
+									アダクション
+									</h2>
+								</a>
+								<a id="syncer-acdn-exe-training-2-ranking-14" class="sentence-border-bottom" style="display:none;">
+									<p class="text inbox-sentence">
+										「内ももがコンプレックス」という方は実はとても多いです。日常であまり使わない内転筋という内ももの筋肉を効果的に鍛え、ほっそりとしたレッグラインを手に入れるためにぜひ取り入れたいメニューです。
+									</p>
+									<br /><br />
+									<h2 class="serif menu-ranking-how"><font color="#ca416b">－やり方－</font></h2>
+									<img src="images/adc.gif">
+									<p class="text inbox-sentence">
+										体の右側面か左側面を下にして横になり、上体を起こして両手をつき、上の足の膝を曲げ、下の足の前に出します。<br />下の足を伸ばしたままゆっくりと真上に上げ、限界まで上げたら少し静止します。ゆっくり下ろし、足が床につく前に再び上げます。同じ動作を反対側も行います。<br />日常生活ではあまり行わない動きですし、内ももは筋肉が弱いので、最初は上手くできないかもしれませんが、勢いをつけて足を上げないように、内ももの筋肉の力だけで足を上げるように意識しながら行いましょう。
+									</p>
+								</a>
+
+								<!--10位ここまで-->
+
+
+								<!--11位ここから-->
+
+								<a class="syncer-acdn ranking" data-target="syncer-acdn-exe-training-2-ranking-15">
+									<div class="ranking-wrapper-a-imgwrapper">
+										<img src="images/ranking_11.png" class="ranking-image-other ranking-wrapper-a-imgwrapper-imgother">
+									</div>
+									<h2 class="basemenu-ranking-underline ranking-wrapper-a-h2-other">
+									アブダクション
+									</h2>
+								</a>
+								<a id="syncer-acdn-exe-training-2-ranking-15" class="sentence-border-bottom" style="display:none;">
+									<p class="text inbox-sentence">
+										太ももの外側の大腿筋膜張筋とヒップの上部外側にある中殿筋を引き締めるメニューです。<br />太ももやヒップの引き締めから骨盤の安定まで幅広い効果が期待できます。日常生活であまり使わない筋肉を鍛えますので、ぜひ取り入れましょう。
+									</p>
+									<br /><br />
+									<h2 class="serif menu-ranking-how"><font color="#ca416b">－やり方－</font></h2>
+									<img src="images/abdc.gif">
+									<p class="text inbox-sentence">
+										横向きに寝て、立てた下側の腕に頭を乗せます。<br />下側の脚の膝を曲げて、からだを安定させましょう。<br />この状態で、上側の脚を伸ばしたまま、ゆっくりと上の方へ上げ、ゆっくりと下ろします。<br />脚が前後にぶれないように注意しましょう。<br />お尻側面上部の筋肉を意識しながら行うとより効果的です。
+									</p>
+								</a>
+
+								<!--11位ここまで-->
+
+
+								<!--12位ここから-->
+<!--
+								<a class="syncer-acdn ranking" data-target="syncer-acdn-exe-training-2-ranking-16">
+									<div class="ranking-wrapper-a-imgwrapper">
+										<img src="images/ranking_12.png" class="ranking-image-other ranking-wrapper-a-imgwrapper-imgother">
+									</div>
+									<h2 class="basemenu-ranking-underline ranking-wrapper-a-h2-other">
+									0
+									</h2>
+								</a>
+								<a id="syncer-acdn-exe-training-2-ranking-16" class="sentence-border-bottom" style="display:none;">
+									<p class="text inbox-sentence">
+										#N/A
+									</p>
+									<br /><br />
+									<h2 class="serif menu-ranking-how"><font color="#ca416b">－やり方－</font></h2>
+									#N/A
+									<p class="text inbox-sentence">
+										#N/A
+									</p>
+								</a>
+-->
+								<!--12位ここまで-->
+
+						<!--おすすめメニューランキングここまで-->
+
+						</div><!--#syncer-acdn-exe-training-2-ranking-->
+						</center>
+					</div><!--.main_orange_inner-->
+		<!-- ランキングここまで -->
+				</div><!--.main_orange_inner-->
+	<!-- メニューの決め方ここまで -->
+				</div><!--.main_orange-->
+			</div><!--.risk_box slidetoggle-->
+		</div><!--.main_inner-->
+	</div><!--.dna_main undou-->
+</section>
+<!-- 筋トレここまで -->
+<!-- 有酸素運動ここから -->
+<section>
+	<div class="dna_main undou">
+		<div id="main_inner">
+			<h1 class="ttl_h1 syncer-acdn undou-contents-name" data-target="syncer-acdn-exe-aero" data-name="+">有酸素運動アドバイス</h1>
+			<div class="risk_box slidetoggle" id="syncer-acdn-exe-aero" style="display:none;"><br />
+				<div id="main_green">
+
+					<div id="main_green_inner">
+					<h2 class="serif text-back-blue">
+						できれば毎日！有酸素運動を多めに行いましょう！
+					</h2>
+							<!--画像入れる？-->
+						<p class="inbox-sentence">
+						あなたは、他の遺伝子タイプの方以上に有酸素運動がおすすめです。<br />また、有酸素運動の前に、軽い筋肉トレーニングを行うと脂肪が燃えやすくなります。特に筋肉があまりついていない人は、有酸素運動と筋トレを合わせて行うようにしましょう。<br />少しでも良いので、できれば毎日ウォーキングなどの有酸素運動を取り入れると効率よく理想の体型に近づくことができます！
+						</p><br clear="all">
+					</div>
+
+					<br />
+					<div id="main_green_inner">
+					<h2 class="serif text-back-blue">
+						フラフープを使った有酸素運動もおすすめ！
+					</h2>
+						<p class="inbox-sentence">
+						フラフープは、身体全体を使う有酸素運動で、あなたに特におすすめです。<br />消費カロリーも多く、10 分程度続けると約100kcal も消費すると言われています。これはジョギング（80kcal）や水泳（平泳ぎ：90kcal）にも匹敵します。お腹まわりの筋肉を使いますので、お腹の引き締めやくびれを作る効果も期待できます。<br />しかし、腰回りの運動を行いますので、腰痛がある方は控えた方が良いかもしれません。
+						</p><br clear="all">
+					</div>
+
+
+					<br />
+					<div id="main_green_inner">
+					<h2 class="serif text-back-blue">
+						水中でのエクササイズに注意！
+					</h2>
+						<p class="inbox-sentence">
+						あなたは、からだが冷えやすい遺伝的体質ですので、長時間水につかっていると体温が低くなり、脂肪を燃やすどころか、反対に脂肪を蓄積してしまう可能性があります。<br />スイミングや水中ウォーキング、アクアビクスを行う場合は、長時間水の中に居続けない、終わった後に温かいスープを飲む、サウナを活用する、といった体温を下げない工夫を取り入れましょう。<br />水中エクササイズを「やるな」ということではありません。遺伝的体質に合わせて上手に取り入れましょう！
+						</p><br clear="all">
+					</div>
+
+				</div><!--.main_green-->
+			</div><!--.risk_box slidetoggle-->
+		</div><!--.main_inner-->
+	</div><!--.dna_main undou-->
+</section>
+<!-- 有酸素運動ここまで -->
+
+
+<!-- 運動ダイエットランキングここから -->
+<section>
+	<div class="dna_main undou">
+		<div id="main_inner">
+			<h1 class="ttl_h1 syncer-acdn undou-contents-name" data-target="syncer-acdn-undodiet-ranking" data-name="+">運動ダイエットランキング
+			</h1>
+			<div class="slidetoggle" id="syncer-acdn-undodiet-ranking" style="display:none;"><br />
+				<div id="main_pink">
+
+				<!--1位全体ここから-->
+				<div id="main_pink_inner">
+
+				<!--1位のタイトルここから-->
+					<dl class="main_pink serif">
+						<a class="syncer-acdn ranking" data-target="syncer-acdn-undodiet-ranking-1">
+							<div class="ranking-wrapper-a-imgwrapper">
+							 <img src="images/ranking_1.png" class="ranking-image-1 ranking-wrapper-a-imgwrapper-img1">
+							</div>
+							<h2 class="undou-diet-underline ranking-wrapper-a-h2-1">
+							有酸素運動
+							</h2>
+						</a>
+					</dl>
+				<!--1位のタイトルここまで-->
+
+					<a id="syncer-acdn-undodiet-ranking-1" style="display:none;">
+
+						<!--ここから個別内容-->
+
+						<section class="shokuji-diet-wrapper">
+
+						<!--一言メモここから-->
+							<div class="undou-diet-recommend-wrapper">
+								<h3>
+								"内臓脂肪がつきやすい
+遺伝的体質ですので、特におすすめです。"
+								</h3>
+							</div>
+						<!--一言メモここまで-->
+
+						<!--個別内容共通ここから-->
+						<p class="diet-point-top-sentence">有酸素運動とは、酸素を消費し充分な呼吸を確保しながらできる運動 (ウォーキングやジョギング、スイミングなど)のことです。血液の中を流れる脂肪や、蓄積した体脂肪を減らすには、あまりきつすぎないペースで、長時間、しっかり酸素を取り入れながら、運動を続けることが効果的です。</p><h2 class="undoudiet-text-backcolor">有酸素運動のポイント</h2><div class="diet-point-wrapper"><div class="diet-point-inbox"><h3 class="undou-diet-border-blue">まずは<span>軽い運動を20分</span>！</h3><p>じわっと汗がにじんで、隣の人と会話ができるくらいの強度の運動で、まずは20分続けてみましょう。息がきれるほどのきつい運動は、脂肪燃焼には逆効果。20分以上有酸素運動を続けると、効率よく脂肪を燃焼させることができます。</p></div><!--.diet-point-inbox--><div class="diet-point-inbox"><h3 class="undou-diet-border-blue"><span>心拍数</span>で強度をコントロール</h3><p>一人一人体力レベルや、運動経験が違うので、有酸素運動の強度(きつさ)を決めるのには、心拍数を用いるといいでしょう。脂肪が最も効率よく燃焼する心拍数は、最大心拍数60%前後とされています。</p></div><!--.diet-point-inbox--><div class="diet-point-inbox"><h3 class="undou-diet-border-blue"><span>筋トレの後</span>に有酸素運動を！</h3><p>先に筋肉トレーニングをすることで、有酸素運動においての脂肪燃焼の効率がよくなるとされています。筋肉トレーニングをした後に、有酸素運動を行うという習慣を身につければ、より効率良くダイエットをすることができるのです。</p></div><!--.diet-point-inbox--><div class="diet-point-inbox"><h3 class="undou-diet-border-blue"><span>長時間の水中の運動</span>は要注意！</h3><p>スイミングなどの水中での有酸素運動は、消費カロリーも多く、関節に負担が少ないというメリットがあります。しかし、長時間の水に浸かっていると、体が冷え、皮下脂肪を蓄積する危険性もありますので注意しましょう。</p></div><!--.diet-point-inbox--></div><!--.diet-point-wrapper--><div class="undou-diet-rightpage-top-wrapper"><h2>有酸素運動をやってみよう！</h2><h3>軽めのペースで20分。<br>少し物足りないくらいで終えるのが、ポイントです。</h3><p>初めから自分を追い込む必要はありません。一回の時間は少なくても、少しずつ続けていけることが大事。最初はゆっくりスタートしてみましょう。</p><div class="undou-diet-img-wrapper"><h2>ウォーキング</h2><p style="font-size: 16px; color: #FF0000; font-weight: bold; text-align: center;">まずはここから始めましょう！</p><img src="images/26/undou_diet_no6_01.png" style="display: block; margin-bottom: 1em;"><p class="undou-diet-img-wrapper-point-text" style="margin-bottom: 1em;">腕をしっかり振って、やや大股で、キビキビと歩きましょう。ジワっと汗がにじむ程度の速度を目指して、それをキープするようにしましょう。</p><p class="undou-diet-img-wrapper-point"><span>注意ポイント</span></p><p class="undou-diet-img-wrapper-point-text">疲れてくると、目線が足元に落ちてしまいがちです。目線はまっすぐ、遠方を見ながらしっかり腕を振りウォーキングするように心がけると、姿勢を綺麗に保ったまま歩き続けることができます。</p></div><div class="undou-diet-img-wrapper"><h2>ジョギング</h2><p style="font-size: 16px; color: #FF0000; font-weight: bold; text-align: center;">慣れてきたらジョギングがおすすめ！</p><img src="images/26/undou_diet_no6_02.png" style="display: block; margin-bottom: 1em;"><p class="undou-diet-img-wrapper-point-text" style="margin-bottom: 1em;">スピードを出すことではなく、続けられる速度で、長く続けることを心がけましょう。いきなり長距離を走ってしまうと、ケガの原因にもなるので、初めは物足りないくらいからはじめることがおすすめです。</p><p class="undou-diet-img-wrapper-point"><span>注意ポイント</span></p><p class="undou-diet-img-wrapper-point-text">肩甲骨をしっかり寄せたまま、上半身はまっすぐに保ったまま走るように心がけましょう。プランクなどの体幹トレーニングも取り入れると、ジョギング時の正しいフォームを保ちやすくなります。</p></div></div><div class="undou-diet-faq-wrapper"><p class="undou-diet-faq-faq">FAQ</p><div class="undou-diet-faq-q-wrapper"><p class="undou-diet-faq-title-before">Q:</p><p class="undou-diet-faq-title">有酸素運動をしているのに全然痩せないんだけど、どうして？</p></div><div class="undou-diet-faq-a-wrapper"><p class="undou-diet-faq-sentence-before">A:</p><p class="undou-diet-faq-sentence">原因としては、心拍数が上がっていない可能性があります。最大心拍数の60%程度で行えていますか？人によっては、60%程度の心拍数だと、物足りなく感じてしまい、ついつい息切れしてしまうまで走ってしまったりしますが、脂肪燃焼にはそんなハードな運動は必要ありません。目安としては、「（220 ー 年齢 ー 平常時の心拍数）× 0.6 + 平常時の心拍数」の心拍数を目指してみましょう。</p></div></div><!--.undou-diet-faq-wrapper--><div class="undou-diet-faq-wrapper"><p class="undou-diet-faq-faq">FAQ</p><div class="undou-diet-faq-q-wrapper"><p class="undou-diet-faq-title-before">Q:</p><p class="undou-diet-faq-title">有酸素運動だけやっていればダイエットは成功できるの？</p></div><div class="undou-diet-faq-a-wrapper"><p class="undou-diet-faq-sentence-before">A:</p><p class="undou-diet-faq-sentence">体重は落ちるかもしれませんが、ダイエットは成功しない可能性が高いです。有酸素運動だけですと、筋肉の量まで落ちてしまう危険性があるからです。筋肉の量が落ちてしまうと、1日に消費するカロリーも落ちてしまい、太りやすい体に変わってしまいます。ダイエットする前よりも太ってしまうことだってあるんです！有酸素運動だけではなく、筋肉トレーニングも取り入れるようにしましょう！</p></div></div><!--.undou-diet-faq-wrapper-->
+						<!--個別内容共通ここまで-->
+
+						</section>
+					</a>
+				</div><!--main_pink_inner-->
+				<!--1位全体ここまで-->
+
+				<!--2位全体ここから-->
+				<div id="main_pink_inner">
+
+				<!--2位のタイトルここから-->
+					<dl class="main_pink serif">
+						<a class="syncer-acdn ranking" data-target="syncer-acdn-undodiet-ranking-2">
+							<div class="ranking-wrapper-a-imgwrapper">
+							 <img src="images/ranking_2.png" class="ranking-image-2 ranking-wrapper-a-imgwrapper-img2">
+							</div>
+							<h2 class="undou-diet-underline ranking-wrapper-a-h2-2">
+							スロートレーニング
+							</h2>
+						</a>
+					</dl>
+				<!--2位のタイトルここまで-->
+
+					<a id="syncer-acdn-undodiet-ranking-2" style="display:none;">
+
+						<!--ここから個別内容-->
+
+						<section class="shokuji-diet-wrapper">
+
+						<!--一言メモここから-->
+							<div class="undou-diet-recommend-wrapper">
+								<h3>
+								"内臓脂肪がつきやすいので、
+特におすすめです。"
+								</h3>
+							</div>
+						<!--一言メモここまで-->
+
+						<!--個別内容共通ここから-->
+						<p class="diet-point-top-sentence">「5秒であげ、1秒静止、5秒で下げる」など、1回1回の動作をゆっくりと丁寧に行うことが特徴のトレーニングです。原理としては、加圧トレーニングに近く、筋肉への血流を制限して、筋肉に大きな負荷がかかっていると錯覚させることで、筋肉の成長を促します。</p><h2 class="undoudiet-text-backcolor">スロートレーニングのポイント</h2><div class="diet-point-wrapper"><div class="diet-point-inbox"><h3 class="undou-diet-border-blue"><span>筋肉を休ませない</span>ように！</h3><p>スローに、ゆっくりと動作を続けることで。常に筋肉を使っている状態を作り出すことができます。辛くなってきても、ペースは崩さず、ずっと筋肉に負荷を与え続けましょう！</p></div><!--.diet-point-inbox--><div class="diet-point-inbox"><h3 class="undou-diet-border-blue"><span>運動初心者にも</span>おすすめ！</h3><p>重りや器具を使わなくてもできるトレーニングなので、気軽にはじめることができ、筋トレ入門としてはバッチリです。また、高重量を扱わないことで、関節などへの物理的な負担が少なく、運動が苦手な人でも安全に行うことができます。</p></div><!--.diet-point-inbox--><div class="diet-point-inbox"><h3 class="undou-diet-border-blue">使っている筋肉を<span>意識しやすい</span>！</h3><p>筋肉トレーニングのやりすぎは、逆効果です。傷ついた筋肉は約48〜72時間かけて回復します。お肉や魚、プロテインなどで良質なたんぱく質をしっかり摂って、ゆっくり筋肉を休めましょう。</p></div><!--.diet-point-inbox--><div class="diet-point-inbox"><h3 class="undou-diet-border-blue"><span>正しいフォーム</span>を保ちやすい！</h3><p>速く動作を続けると、崩れがちな"フォーム"ですが、スロートレーニングでは、動作がゆっくりなため、フォームが崩れる心配が少なく、後まで効果的に筋肉に刺激を与え続けることができます。</p></div><!--.diet-point-inbox--></div><!--.diet-point-wrapper--><div class="undou-diet-rightpage-top-wrapper"><h2>スロートレーニングをやってみよう！</h2><h3>ゆっくりとペースを守れば誰でも簡単！<br>まずが1セットからやってみよう！</h3><p>ダンベルなどの道具を用意する必要がないので、場所さえあればいつでもチャレンジできます。リビングの空いてるスペースなどを使って、朝鮮してみましょう。</p><div class="undou-diet-img-wrapper"><h2>スロースクワット</h2><p style="font-size: 16px; color: #FF0000; font-weight: bold; text-align: center;">全身を使うスクワットを<br>スローなペースで</p><img src="images/26/undou_diet_no2_01.png" style="display: block; margin-bottom: 1em;"><ul class="undou-diet-process"><li class="undou-diet-process-number">①</li><li class="undou-diet-process-text">脚を肩幅の2倍に開き、つま先を外側に向けて立ちます。<br>両手は頭の後ろで軽く組みましょう。</li></ul><ul class="undou-diet-process"><li class="undou-diet-process-number">②</li><li class="undou-diet-process-text">息を吸いながら膝を曲げて腰を落とし、息を吐きながらゆっくりと戻ります。<br>背筋を伸ばし、膝がつま先より前に出ないように気をつけましょう。お尻を後ろに突き出すイメージを持ちましょう。</li></ul><p class="undou-diet-img-wrapper-point"><span>注意ポイント</span></p><p class="undou-diet-img-wrapper-point-text">背中が丸まらないように注意しましょう。<br>膝を曲げるというよりは、股関節を曲げ、しっかり腰を落とす意識で行うのがポイントです。<br>背中が曲がらないように注意しましょう。</p></div></div><div class="undou-diet-faq-wrapper"><p class="undou-diet-faq-faq">FAQ</p><div class="undou-diet-faq-q-wrapper"><p class="undou-diet-faq-title-before">Q:</p><p class="undou-diet-faq-title">スロートレーニングをする上で、何を注意すればいいの？</p></div><div class="undou-diet-faq-a-wrapper"><p class="undou-diet-faq-sentence-before">A:</p><p class="undou-diet-faq-sentence">スロートレーニングの場合、通常のトレーニングに比べて、トレーニングをしている最中に筋肉の疲れを感じやすいです。それはゆっくりと、使っている部位をしっかり注意しているからこそ起きる現象ですので、良いことです！ただし、フォームの崩れと、スピードの乱れには注意しましょう。また、呼吸を止めずに、自然な呼吸を続けることが大事です。</p></div></div><!--.undou-diet-faq-wrapper--><div class="undou-diet-faq-wrapper"><p class="undou-diet-faq-faq">FAQ</p><div class="undou-diet-faq-q-wrapper"><p class="undou-diet-faq-title-before">Q:</p><p class="undou-diet-faq-title">「スロー」ってどれぐらいのスピードでやればいいの？</p></div><div class="undou-diet-faq-a-wrapper"><p class="undou-diet-faq-sentence-before">A:</p><p class="undou-diet-faq-sentence">最初は、「5秒かけておろし、5秒かけてあげる」というペースで十分です。スロートレーニングを始めたばかりだと、それだけでも、しつかりと筋肉を使っている感覚を持つことができるでしょう。そして、5秒でもあまり疲れなくなってきたら、徐々に6秒、7秒と増やしていけばOKです。秒数をかければかけるほど、筋肉には効いてくるので、フォームが崩れないように注意しながら続けていきましょう。</p></div></div><!--.undou-diet-faq-wrapper-->
+						<!--個別内容共通ここまで-->
+
+						</section>
+					</a>
+				</div><!--main_pink_inner-->
+				<!--2位全体ここまで-->
+
+				<!--3位全体ここから-->
+				<div id="main_pink_inner">
+
+				<!--3位のタイトルここから-->
+					<dl class="main_pink serif">
+						<a class="syncer-acdn ranking" data-target="syncer-acdn-undodiet-ranking-3">
+							<div class="ranking-wrapper-a-imgwrapper">
+							 <img src="images/ranking_3.png" class="ranking-image-3 ranking-wrapper-a-imgwrapper-img3">
+							</div>
+							<h2 class="undou-diet-underline ranking-wrapper-a-h2-3">
+							筋肉トレーニング
+							</h2>
+						</a>
+					</dl>
+				<!--3位のタイトルここまで-->
+
+					<a id="syncer-acdn-undodiet-ranking-3" style="display:none;">
+
+						<!--ここから個別内容-->
+
+						<section class="shokuji-diet-wrapper">
+
+						<!--一言メモここから-->
+							<div class="undou-diet-recommend-wrapper">
+								<h3>
+								"高負荷低回数よりも、
+低負荷高回数の方がおすすめです。"
+								</h3>
+							</div>
+						<!--一言メモここまで-->
+
+						<!--個別内容共通ここから-->
+						<p class="diet-point-top-sentence">筋肉量を増やすことで、基礎代謝（何もしなくても消費されるエネルギー）を増やすことができ、太りにくい体を作ることができます。「ムキムキになりたくないから筋トレはしない」という方もいますが、そこは心配しなくても大丈夫。特に女性は筋肉は簡単にはつきませんし、急激にはつきませんので、ちょうどいいと思うところまで鍛え、後はそれを維持すればOKです。</p><h2 class="undoudiet-text-backcolor">筋肉トレーニングのポイント</h2><div class="diet-point-wrapper"><div class="diet-point-inbox"><h3 class="undou-diet-border-blue"><span>大きい筋肉から</span>始めましょう！</h3><p>体には大きく分けて、大きな筋肉のかたまりが４つあります。それは、胸・背中・お腹・下半身です。その４つの中でも、疲れにくい上半身（胸・背中・お腹）から始めて、その後下半身をトレーニングしていくと良いでしょう。</p></div><!--.diet-point-inbox--><div class="diet-point-inbox"><h3 class="undou-diet-border-blue"><span>有酸素運動の前に</span>筋トレを！</h3><p>有酸素運動と一緒にするときには、有酸素運動の前に筋肉トレーニングは行いましょう。先に有酸素運動をすると、筋肉トレーニングに必要なエネルギーを消費してしまい、トレーニング効果が薄くなってしまいます。</p></div><!--.diet-point-inbox--><div class="diet-point-inbox"><h3 class="undou-diet-border-blue">同じメニューは<span>毎日やらない</span>！</h3><p>筋肉トレーニングのやりすぎは、逆効果です。傷ついた筋肉は約48〜72時間かけて回復します。お肉や魚、プロテインなどで良質なたんぱく質をしっかり摂って、ゆっくり筋肉を休めましょう。</p></div><!--.diet-point-inbox--><div class="diet-point-inbox"><h3 class="undou-diet-border-blue"><span>軽すぎる重さ</span>は避けましょう！</h3><p>筋肉を鍛えるためにはしっかりと筋肉に刺激を与える必要があります。軽すぎる重さではあまり効果がでませんので、解析結果レポートブックを参考に、あなたにあった重さを選びましょう！</p></div><!--.diet-point-inbox--></div><!--.diet-point-wrapper--><div class="undou-diet-rightpage-top-wrapper"><h2>筋肉トレーニングをやってみよう！</h2><h3>ダイエットにも欠かせない筋肉トレーニング<br>大きい筋肉からはじめましょう！</h3><p>大きい筋肉を鍛えて基礎代謝アップを目指しましょう！まずは大胸筋と広背筋を鍛えるメニューを取り入れると、姿勢も良くなり見た目の変化を実感しやすいです。</p><div class="undou-diet-img-wrapper"><h2>腕立て伏せ</h2><img src="images/26/undou_diet_no1_01.png"><ul class="undou-diet-process"><li class="undou-diet-process-number">①</li><li class="undou-diet-process-text">うつ伏せになり、両足はつま先立ち、両手は床につきます。両手の間隔は、肩幅より拳一個分ずつ広げましょう。</li></ul><ul class="undou-diet-process"><li class="undou-diet-process-number">②</li><li class="undou-diet-process-text">息を吸いながらゆっくりと体を沈めていき、息を吐きながら体を上げます。この時胸を使っていることを意識しましょう！</li></ul><p class="undou-diet-img-wrapper-point"><span>注意ポイント</span></p><p class="undou-diet-img-wrapper-point-text">肘を外に張り出すように曲げ、床が花につくくらいまで、しっかりと体を沈めるのがポイントです。</p></div><div class="undou-diet-img-wrapper"><h2>ベントオーバー</h2><img src="images/26/undou_diet_no1_02.png"><ul class="undou-diet-process"><li class="undou-diet-process-number">①</li><li class="undou-diet-process-text">膝をやや曲げて上半身を傾け、膝の横あたりでダンベル（ペットボトル等身近にあるのでもOKです）を持ちます。</li></ul><ul class="undou-diet-process"><li class="undou-diet-process-number">②</li><li class="undou-diet-process-text">息を吸いながら肩を中心にダンベルを持ち上げ、息を吐きながらゆっくりと下ろしていきます。肩甲骨を寄せることを意識しましょう！</li></ul><p class="undou-diet-img-wrapper-point"><span>注意ポイント</span></p><p class="undou-diet-img-wrapper-point-text">肘が斜め後ろに引っ張られているイメージで上げ、最後に肩甲骨を内側に寄せるイメージでさらにダンベルを上げるとより効果的です！</p></div></div><div class="undou-diet-faq-wrapper"><p class="undou-diet-faq-faq">FAQ</p><div class="undou-diet-faq-q-wrapper"><p class="undou-diet-faq-title-before">Q:</p><p class="undou-diet-faq-title">なぜ筋トレをしても、ムキムキになりにくいの？</p></div><div class="undou-diet-faq-a-wrapper"><p class="undou-diet-faq-sentence-before">A:</p><p class="undou-diet-faq-sentence">女性のモデルさんを思い浮かべてみてください。すごくスリムなのに、女性らしい体型をキープしてらっしゃる方がほとんどですよね。痩せるだけなら食べるものを減らせばいいかもしれませんが、女性らしい体を保つためには筋トレは必須。男性と違って女性の場合は、ムキムキと筋肉がついていくというよりも、筋肉がつくことでボディにメリハリがつき、スッキリとしていく場合が多いです。</p></div></div><!--.undou-diet-faq-wrapper--><div class="undou-diet-faq-wrapper"><p class="undou-diet-faq-faq">FAQ</p><div class="undou-diet-faq-q-wrapper"><p class="undou-diet-faq-title-before">Q:</p><p class="undou-diet-faq-title">ジムに通わないと、筋肉トレーニングはできないの？</p></div><div class="undou-diet-faq-a-wrapper"><p class="undou-diet-faq-sentence-before">A:</p><p class="undou-diet-faq-sentence">やり方さえ分かっていれば、ご自宅で、自分の体重を利用して、いろんな種類の筋肉トレーニングをすることができます。なかなか家でのやり方が分からない、続かない...という方は、一度パーソナルトレーナーに見てもらうことがおすすめです。今では完全プライベートで指導してもらえるジムもあるので、お好みに合わせて選ぶことができます。</p></div></div><!--.undou-diet-faq-wrapper-->
+						<!--個別内容共通ここまで-->
+
+						</section>
+					</a>
+				</div><!--main_pink_inner-->
+				<!--3位全体ここまで-->
+
+				<!--4位全体ここから-->
+				<div id="main_pink_inner">
+
+				<!--4位のタイトルここから-->
+					<dl class="main_pink serif">
+						<a class="syncer-acdn ranking" data-target="syncer-acdn-undodiet-ranking-4">
+							<div class="ranking-wrapper-a-imgwrapper">
+							 <img src="images/ranking_4.png" class="ranking-image-other ranking-wrapper-a-imgwrapper-imgother">
+							</div>
+							<h2 class="undou-diet-underline ranking-wrapper-a-h2-other">
+							ストレッチ
+							</h2>
+						</a>
+					</dl>
+				<!--4位のタイトルここまで-->
+
+					<a id="syncer-acdn-undodiet-ranking-4" style="display:none;">
+
+						<!--ここから個別内容-->
+
+						<section class="shokuji-diet-wrapper">
+
+						<!--一言メモここから-->
+							<div class="undou-diet-recommend-wrapper">
+								<h3>
+								"体が硬くなりやすい
+遺伝的体質ですので、おすすめです。"
+								</h3>
+							</div>
+						<!--一言メモここまで-->
+
+						<!--個別内容共通ここから-->
+						<p class="diet-point-top-sentence">ストレッチによって、筋肉を和らげ、健康促進をすることもダイエットには効果的です。新陳代謝が高まり、脂肪燃焼効果も期待できます。<br>ストレッチをすることで、うまく体を使えるようになると、日常の動きだけでも痩せやすい体になっていきます。</p><h2 class="undoudiet-text-backcolor">ストレッチのポイント</h2><div class="diet-point-wrapper"><div class="diet-point-inbox"><h3 class="undou-diet-border-blue"><span>姿勢が良くなり</span>好感度UP！</h3><p>現代人の生活では、どうしても肩甲骨が開いてしまい、猫背気味になってしまいがち...。肩甲骨周りのストレッチを続けていくと肩周りがほぐれ、猫背改善に効果があります。ストレッチは姿勢改善にも効果的です。</p></div><!--.diet-point-inbox--><div class="diet-point-inbox"><h3 class="undou-diet-border-blue"><span>お風呂上がり</span>がベストタイム！</h3><p>ストレッチは、体が冷えた状態だと効果が出にくくなります。ですので、体が温まっているお風呂上がりに行うのが効果的。お風呂から出て、髪を乾かしたらストレッチをする、というように生活に組み込んでいくと、習慣にすることができます。</p></div><!--.diet-point-inbox--><div class="diet-point-inbox"><h3 class="undou-diet-border-blue">ゆっくりと<span>心もリラックス</span></h3><p>ストレッチにはリラクゼーション効果もあります。ゆっくり伸ばし て、気持ちの良いところでストップ。1日の始まりや、終わりにストレッチを習慣にすることで、気持ちの切り替えができ、ハリのある毎日を送ることができるでしょう。</p></div><!--.diet-point-inbox--><div class="diet-point-inbox"><h3 class="undou-diet-border-blue"><span>トレーニング前</span>も忘れずに！</h3><p>トレーニングをするときは、ストレッチ→筋力トレーニング→有酸素運動順番で行うことが効果的です。特に冬などの気温が低いときには、ストレッチで筋肉を温めてからトレーニングを始めることが、怪我の防止・効果アップにつながります。</p></div><!--.diet-point-inbox--></div><!--.diet-point-wrapper--><div class="undou-diet-rightpage-top-wrapper"><h2>毎日取り入れたい、<br>おすすめストレッチ</h2><h3>まずは"気持ち良さ"を実感してみて！<br>気持ちが良いことは、続けられます。</h3><p>仕事や家事の合間、信号待ちのちょっとした時間...ストレッチは少しの時間でも手軽にできますので、毎日の生活の中に取り入れましょう!</p><div class="undou-diet-img-wrapper"><h2>肩甲骨ストレッチ</h2><p style="font-size: 16px; color: #FF0000; font-weight: bold; text-align: center;">肩のこり、はりの解消に</p><img src="images/26/undou_diet_no3_01.png" style="display: block; margin-bottom: 1em;"><ul class="undou-diet-process"><li class="undou-diet-process-number">①</li><li class="undou-diet-process-text">手のひらを向かい合わすようにして、両手を真上に伸ばします。<br>この時、肘が曲がらないように注意し、肩甲骨が上に上がる感覚を感じましょう。</li></ul><ul class="undou-diet-process"><li class="undou-diet-process-number">②</li><li class="undou-diet-process-text">そこから、肘をはりながら両腕を下ろします。<br>この時、手のひらは身体の外側に向け、しっかり肩甲骨がよっていく感覚を感じましょう</li></ul></div><div class="undou-diet-img-wrapper"><h2>お尻・太ももストレッチ</h2><p style="font-size: 16px; color: #FF0000; font-weight: bold; text-align: center;">スッキリとした下半身に</p><img src="images/26/undou_diet_no3_02.png" style="display: block; margin-bottom: 1em;"><ul class="undou-diet-process"><li class="undou-diet-process-number">①</li><li class="undou-diet-process-text">仰向けにネタ状態で、片足の膝を抱え胸に近づけます。反対側の足は真っ直ぐ伸ばします。<br>この状態で20秒キープし、反対側の足も同様に行います。</li></ul><ul class="undou-diet-process"><li class="undou-diet-process-number">②</li><li class="undou-diet-process-text">仰向けの姿勢から天井に向かって足を上に上げ、太ももに手を添えます。<br>その状態を20秒キープし、反対側の足も同様に行います。</li></ul></div></div><div class="undou-diet-faq-wrapper"><p class="undou-diet-faq-faq">FAQ</p><div class="undou-diet-faq-q-wrapper"><p class="undou-diet-faq-title-before">Q:</p><p class="undou-diet-faq-title">「動的ストレッチ」と「静的ストレッチ」って？</p></div><div class="undou-diet-faq-a-wrapper"><p class="undou-diet-faq-sentence-before">A:</p><p class="undou-diet-faq-sentence">学生の頃、体育の時間の前に「イチ、ニー、サン、シー」と声を出しながら、筋肉を伸ばす準備運動をした記憶はございませんか？それが「静的ストレッチ」です。それに対し、「動的ストレッチ」とは、筋肉を伸ばし続けるのではなくて、動かし続けることでその周囲をほぐす運動のことをいいます。次のページの「肩甲骨ストレッチ」は動的ストレッチの一種です。ぜひやってみて、肩周りのほぐれ具合を確認してみてください。</p></div></div><!--.undou-diet-faq-wrapper--><div class="undou-diet-faq-wrapper"><p class="undou-diet-faq-faq">FAQ</p><div class="undou-diet-faq-q-wrapper"><p class="undou-diet-faq-title-before">Q:</p><p class="undou-diet-faq-title">体がすごく固いんだけど、普通にやってていいのかな？</p></div><div class="undou-diet-faq-a-wrapper"><p class="undou-diet-faq-sentence-before">A:</p><p class="undou-diet-faq-sentence">大丈夫です。体が固い人というのは、筋肉が日常的にうまく使えておらず、筋肉自体が凝り固まっている人が多です。ですので、「動的ストレッチ」でまずはその固い筋肉周辺をほぐすことから始めていき、その後「静的ストレッチ」で筋肉自体を柔らかく伸ばしていきましょう。ポイントは、気持ちいい範囲で留めることです。気持ち良くリラックス出来る範囲を目安にして行いましょう。</p></div></div><!--.undou-diet-faq-wrapper-->
+						<!--個別内容共通ここまで-->
+
+						</section>
+					</a>
+				</div><!--main_pink_inner-->
+				<!--4位全体ここまで-->
+
+				<!--5位全体ここから-->
+				<div id="main_pink_inner">
+
+				<!--5位のタイトルここから-->
+					<dl class="main_pink serif">
+						<a class="syncer-acdn ranking" data-target="syncer-acdn-undodiet-ranking-5">
+							<div class="ranking-wrapper-a-imgwrapper">
+							 <img src="images/ranking_5.png" class="ranking-image-other ranking-wrapper-a-imgwrapper-imgother">
+							</div>
+							<h2 class="undou-diet-underline ranking-wrapper-a-h2-other">
+							サーキットトレーニング
+							</h2>
+						</a>
+					</dl>
+				<!--5位のタイトルここまで-->
+
+					<a id="syncer-acdn-undodiet-ranking-5" style="display:none;">
+
+						<!--ここから個別内容-->
+
+						<section class="shokuji-diet-wrapper">
+
+						<!--一言メモここから-->
+							<div class="undou-diet-recommend-wrapper">
+								<h3>
+								"サーキットトレーニングは、
+おすすめです。"
+								</h3>
+							</div>
+						<!--一言メモここまで-->
+
+						<!--個別内容共通ここから-->
+						<p class="diet-point-top-sentence">サーキットトレーニングとは、数種類の無酸素運動(筋力トレーニング)と有酸素運動を組み合わせて、少し休憩を挟みながら、一定時間継続して行うトレーニングです。例えば、30秒の筋トレを行ったら、10秒ほど休憩し、また30秒間筋トレを行う。そしてまた10秒ほど休憩し、30秒間筋トレを...というように、時間で区切ってトレーニングをしていきます。</p><h2 class="undoudiet-text-backcolor">サーキットトレーニングのポイント</h2><div class="diet-point-wrapper"><div class="diet-point-inbox"><h3 class="undou-diet-border-blue">軽い負荷から<span>お手軽に</span>！</h3><p>筋トレのイメージとして「重いバーベルを苦しい顔をして持ち上げている姿」を、持ってる方も多いのでは？？サーキットトレーニングは、軽い負荷でもOK！誰でも手軽に挑戦することができます。</p></div><!--.diet-point-inbox--><div class="diet-point-inbox"><h3 class="undou-diet-border-blue"><span>短時間</span>でも効果ばつぐん！</h3><p>30秒トレーニング・10秒休憩、30秒トレーニング・10秒休憩...をサイクルにして時間を区切って繰り返すので、トレーニング終了時間が決まっているのも魅力のひとつ。隙間時間で、気軽にトレーニングを続けることができます。</p></div><!--.diet-point-inbox--><div class="diet-point-inbox"><h3 class="undou-diet-border-blue"><span>ダンベルなども必要なし！</span></h3><p>サーキットトレーニングは、ジムにあるような、大きなマシンを使わなくても、ご自宅で簡単にトレーニングできます。右ページにトレーニング例を載せているので、明日からと言わず、ぜひ今日から！挑戦してみてくださいね。</p></div><!--.diet-point-inbox--><div class="diet-point-inbox"><h3 class="undou-diet-border-blue"><span>30秒間に全力を</span>出しましょう！</h3><p>30秒間のトレーニングの間だけ、できるだけ速く動作を行いましょう。メニューによっては、上半身を上下させたり、下半身を捻ったりと様々ですが、30秒の間にできるだけ速く往復させることで、トレーニング効果が高まります。</p></div><!--.diet-point-inbox--></div><!--.diet-point-wrapper--><div class="undou-diet-rightpage-top-wrapper"><h2>サーキットトレーニングをやってみよう！</h2><h3>運動経験が少ない方でも<br>簡単に取り入れることができます！</h3><p>サーキットトレーニングは、軽い負荷でも効果が期待できますので、今まで運動やトレーニングをやったことがない場合でも挑戦しやすいトレーニング方法です。</p><div class="undou-diet-img-wrapper"><h2>おすすめ無酸素運動<br>(筋肉トレーニング)</h2><img src="images/26/undou_diet_no4_01.png" style="display: block; margin-bottom: 1em;"></div><div class="undou-diet-img-wrapper"><h2>おすすめ有酸素運動</h2><img src="images/26/undou_diet_no4_02.png" style="display: block; margin-bottom: 1em;"></div></div><div class="undou-diet-faq-wrapper"><p class="undou-diet-faq-faq">FAQ</p><div class="undou-diet-faq-q-wrapper"><p class="undou-diet-faq-title-before">Q:</p><p class="undou-diet-faq-title">サーキットトレーニングにマシンは必要？</p></div><div class="undou-diet-faq-a-wrapper"><p class="undou-diet-faq-sentence-before">A:</p><p class="undou-diet-faq-sentence">いいえ。専用のマシンやダンベルがなくてもサーキットトレーニングで高い効果を期待することができます。サーキットトレーニングは心拍数を上げながら行っていくので、ひとつひとつの運動は軽い負荷でも大丈夫！その分、トレーニングの30秒間、全力で動作を行うことが大切です。また、速くやろうとしすぎるとフォームが崩れやすくなりますので注意しましょう。</p></div></div><!--.undou-diet-faq-wrapper--><div class="undou-diet-faq-wrapper"><p class="undou-diet-faq-faq">FAQ</p><div class="undou-diet-faq-q-wrapper"><p class="undou-diet-faq-title-before">Q:</p><p class="undou-diet-faq-title">サーキットトレーニングで気をつけるポイントは？</p></div><div class="undou-diet-faq-a-wrapper"><p class="undou-diet-faq-sentence-before">A:</p><p class="undou-diet-faq-sentence">回数を重ねていくと、後半はどうしても体に疲れが出てくると思います。そのときに注意していただきたいのが「フォーム」です。フォームが崩れてしまうと、トレーニング効果が出づらくなってしまいます。周囲の人に見てもらいながらフォームが崩れていないか確認してもらったり、パーソナルトレーナーの指導を受けるのもいいでしょう。</p></div></div><!--.undou-diet-faq-wrapper-->
+						<!--個別内容共通ここまで-->
+
+						</section>
+					</a>
+				</div><!--main_pink_inner-->
+				<!--5位全体ここまで-->
+
+				<!--6位全体ここから-->
+				<div id="main_pink_inner">
+
+				<!--6位のタイトルここから-->
+					<dl class="main_pink serif">
+						<a class="syncer-acdn ranking" data-target="syncer-acdn-undodiet-ranking-6">
+							<div class="ranking-wrapper-a-imgwrapper">
+							 <img src="images/ranking_6.png" class="ranking-image-other ranking-wrapper-a-imgwrapper-imgother">
+							</div>
+							<h2 class="undou-diet-underline ranking-wrapper-a-h2-other">
+							ヨガ
+							</h2>
+						</a>
+					</dl>
+				<!--6位のタイトルここまで-->
+
+					<a id="syncer-acdn-undodiet-ranking-6" style="display:none;">
+
+						<!--ここから個別内容-->
+
+						<section class="shokuji-diet-wrapper">
+
+						<!--一言メモここから-->
+							<div class="undou-diet-recommend-wrapper">
+								<h3>
+								"ハリウッドヨガが
+おすすめです。"
+								</h3>
+							</div>
+						<!--一言メモここまで-->
+
+						<!--個別内容共通ここから-->
+						<p class="diet-point-top-sentence">ヨガは、体への負担が少なく、しなやかな筋肉をつけることができる、人気のある運動法の一つです。一口にヨガと言っても様々な種類があり、目的や目指す状態などが異なります。本書では、特にダイエットやボディメイクを目的としたヨガを紹介します。</p><h2 class="undoudiet-text-backcolor">ヨガのポイント</h2><div class="diet-point-wrapper"><div class="diet-point-inbox"><h3 class="undou-diet-border-blue"><span>ホットヨガ</span>でデトックス！</h3><p>高い温度と湿度という、発汗を促す環境で行うこのホットヨガ。老廃物を大量の発汗で排出し、体の中をキレイに保つことで、お肌の調子を改善する効果が期待できます。汗を大量にかくので、水分補 給はこまめに行いましょう。</p></div><!--.diet-point-inbox--><div class="diet-point-inbox"><h3 class="undou-diet-border-blue"><span>ハリウッドヨガ</span>で脂肪燃焼！</h3><p>エアロビクスの要素を加えたスタイルで、音楽に合わせテンポよく動くヨガです。心と体の美と健康を追求したエクササイズ法としてハリウッドのセレブ達の間でも親しまれています。初心者でも気軽に始めやすいヨガのひとつです。</p></div><!--.diet-point-inbox--><div class="diet-point-inbox"><h3 class="undou-diet-border-blue"><span>ビンサヨガ</span>で呼吸を整える！</h3><p>ストレッチにはリラクゼーション効果もあります。ゆっくり伸ばし て、気持ちの良いところでストップ。1日の始まりや、終わりにストレッチを習慣にすることで、気持ちの切り替えができ、ハリのある毎日を送ることができるでしょう。</p></div><!--.diet-point-inbox--><div class="diet-point-inbox"><h3 class="undou-diet-border-blue"><span>パワーヨガ</span>で筋トレも同時に！</h3><p>筋肉トレーニングと瞑想にポイントを置き、「動」と「静」のポーズを流れるように連続的に行うことが特長です。筋肉への負担が少ないので、初心者でも気軽に始めることができ、短期間に高いダイエット効果も期待できるヨガです。</p></div><!--.diet-point-inbox--></div><!--.diet-point-wrapper--><div class="undou-diet-rightpage-top-wrapper"><h2>代表的なヨガのポーズを<br>やってみよう！</h2><h3>ヨガ特有のポーズを体験してみましょう！</h3><p>ヨガのポーズは、独特で少し難しいかもしれません。なかなかできない場合は、ヨガインストラクターの人のレッスンを受けてみましょう。</p><div class="undou-diet-img-wrapper"><h2>さるのポーズ</h2><p style="font-size: 16px; color: #FF0000; font-weight: bold; text-align: center;">骨盤矯正・ヒップアップに</p><img src="images/26/undou_diet_no5_01.png" style="display: block; margin-bottom: 1em;"><ul class="undou-diet-process"><li class="undou-diet-process-number">①</li><li class="undou-diet-process-text">正座から膝立ちの姿勢をとり、床についたひざと足首が一直線になるように、片足を前に出し90度に立てます。</li></ul><ul class="undou-diet-process"><li class="undou-diet-process-number">②</li><li class="undou-diet-process-text">両手を後ろで組み、前足の膝を深く曲げながら腰を落とし、両膝を 伸ばしていきましょう。</li></ul><ul class="undou-diet-process"><li class="undou-diet-process-number">③</li><li class="undou-diet-process-text">息を吐きながらあごを上げ、手を背中から離して上体を反らしてい きます。</li></ul><ul class="undou-diet-process"><li class="undou-diet-process-number">④</li><li class="undou-diet-process-text">おへそを前へと突き出すようなイメージで、30秒間呼吸をしながらキープします。息を吸いながら、両膝立ちに戻り、息を吐きながらゆっくりと力を抜いていきましょう。</li></ul></div><div class="undou-diet-img-wrapper"><h2>木のポーズ</h2><p style="font-size: 16px; color: #FF0000; font-weight: bold; text-align: center;">ウエストシェイプ・むくみ解消に</p><img src="images/26/undou_diet_no5_02.png" style="display: block; margin-bottom: 1em;"><ul class="undou-diet-process"><li class="undou-diet-process-number">①</li><li class="undou-diet-process-text">リラックスした状態で、両足に均等に体重をかけて立ちます。</li></ul><ul class="undou-diet-process"><li class="undou-diet-process-number">②</li><li class="undou-diet-process-text">左足をしっかり曲げて、足裏を右太ももに付けます。</li></ul><ul class="undou-diet-process"><li class="undou-diet-process-number">③</li><li class="undou-diet-process-text">背筋を伸ばし、胸の前で合掌して呼吸を整えましょう。息を吸いながら、合わせた両手を頭の上に伸ばしていきます。</li></ul><ul class="undou-diet-process"><li class="undou-diet-process-number">④</li><li class="undou-diet-process-text">合掌ではバランスがとれない時は、両手をバンザイの形で水平にあげてみましょう。息を吐きながら右の足裏でしっかりと床を押し、下半身を安定させた状態で、上へと伸びていくイメージで30秒ほど静止します。</li></ul><ul class="undou-diet-process"><li class="undou-diet-process-number">※</li><li class="undou-diet-process-text">曲げたほうの足を、支えるほうの足の太ももより下側につけるとバランスがとりやすくなります。また、ヒップを引き締めることを意識すると、バランス感覚を保つのにより効果的です。</li></ul></div></div><div class="undou-diet-faq-wrapper"><p class="undou-diet-faq-faq">FAQ</p><div class="undou-diet-faq-q-wrapper"><p class="undou-diet-faq-title-before">Q:</p><p class="undou-diet-faq-title">そもそも「ヨガ」ってどういうものなの？</p></div><div class="undou-diet-faq-a-wrapper"><p class="undou-diet-faq-sentence-before">A:</p><p class="undou-diet-faq-sentence">もともとは古代インドから発祥していて、心と身体を鍛錬によって制御しようとするものでした。そのインド発祥のヨガが、西洋で発達した身体鍛錬と融合し、エクササイズとして発展してきたのが、現代のヨガです。そのため、瞑想の時間が設けられていたり、ポーズに独特の名前が付けられたりしています。今では体幹のトレーニングの要素であったり、有酸素運動の要素があったりと、様々なヨガの種類が存在しています。</p></div></div><!--.undou-diet-faq-wrapper--><div class="undou-diet-faq-wrapper"><p class="undou-diet-faq-faq">FAQ</p><div class="undou-diet-faq-q-wrapper"><p class="undou-diet-faq-title-before">Q:</p><p class="undou-diet-faq-title">今まであまりなったことがない部分が筋肉痛になっているんだけど？</p></div><div class="undou-diet-faq-a-wrapper"><p class="undou-diet-faq-sentence-before">A:</p><p class="undou-diet-faq-sentence">ヨガでは、重りをつかった筋肉トレーニングとは違い、様々な身体の使い方を通して、自然とトレーニングする動作を取り入れています。ですので、今まであまり筋肉痛になったことがなかった"股関節内部"であったり、"お腹の横の部分"であったりが筋肉痛になっているのは、しっかりその部位を支えている証拠ですので、大丈夫。そのまま続けていきましょう。</p></div></div><!--.undou-diet-faq-wrapper-->
+						<!--個別内容共通ここまで-->
+
+						</section>
+					</a>
+				</div><!--main_pink_inner-->
+				<!--6位全体ここまで-->
+
+				</div><!--main_pink-->
+			  </div><!--slidetoggle-->
+			</div><!--main_inner-->
+		</div><!--dna_main shokuji-->
+</section>
+<!-- 運動ダイエットランキングここまで -->
+
+<!-- その他の運動アドバイスここから -->
+<section>
+	<div class="dna_main undou">
+		<div id="main_inner">
+			<h1 class="ttl_h1 syncer-acdn undou-contents-name" data-target="syncer-acdn-exe-other" data-name="+">その他の運動アドバイス</h1>
+			<div class="risk_box slidetoggle" id="syncer-acdn-exe-other" style="display:none;"><br />
+				<div id="main_blue">
+					<div id="main_blue_inner">
+					<h2 class="serif text-back-blue">
+						短時間でも良いので、毎日有酸素運動を！
+					</h2>
+						<p class="inbox-sentence">
+						あなたは、特に内臓脂肪がつきやすい遺伝的体質です。<br />内臓脂肪は皮下脂肪と比べると、運動によって減らしやすいという特徴があり、有酸素運動を行うことがおすすめです。<br />しかし、一日行ってしばらく行わないと内臓脂肪を減らす効果は半減してしまいます。<br />また、有酸素運動は、20分以上続けなければ効果が薄いと考えられていましたが、最近の研究で、20 分有酸素運動を続けた場合と、10 分の有酸素運動を2 セット行なった場合では、得られる痩身効果に違いがないことが明らかになりました。<br />まとまった時間が取れない場合は、短い時間でも良いので、毎日有酸素運動を行い、習慣にしましょう！
+						</p><br clear="all">
+					</div>
+
+					<br />
+					<div id="main_blue_inner">
+					<h2 class="serif text-back-blue">
+						筋肉トレーニングは長い目で見て行いましょう。
+					</h2>
+						<p class="inbox-sentence">
+						あなたは、筋肉がつきにくい遺伝的体質ですので、筋肉トレーニングを行っても、効果を実感するまでに時間がかかる可能性も高いです。<br />一般的には筋肉トレーニングをはじめて3か月程度で「筋肉がついてきた！」と効果を実感される方が多いと言われてますが、それよりも時間がかかることを意識して気長に続けることも大切です。<br />できるだけ短い時間で効率よく基礎代謝アップを行うために、背中や胸、太ももの大きな筋肉から十分に鍛えましょう。<br />また、たんぱく質の吸収が苦手ですので、筋肉トレーニングの後にはプロテインを忘れずに飲むようにしましょう。
+						</p><br clear="all">
+					</div>
+
+
+					<br />
+					<div id="main_blue_inner">
+					<h2 class="serif text-back-blue">
+						ストレッチ・マッサージを特に入念に！
+					</h2>
+						<p class="inbox-sentence">
+						あなたは、お腹周りに内蔵脂肪が、下半身に皮下脂肪がつきやすい遺伝的体質です。皮下脂肪は硬くなりやすく、からだが硬くなりやすいです。<br />からだの硬さは、血行不良や姿勢の歪み、コリを引き起こし、痩せにくいからだを作ってしまうだけではなく、老化のスピードも速めます。<br />特に運動前後は、ストレッチやマッサージなどをしっかりと行い、筋肉や脂肪をほぐしましょう。からだが硬い方やストレッチに馴れていない方は、「スポーツマッサージ」や「ペアストレッチ」など、誰かにサポートしてもらいながら、正しい姿勢で、無理なくからだを伸ばしていきましょう。
+						</p><br clear="all">
+					</div>
+
+
+					<br />
+					<div id="main_blue_inner">
+					<h2 class="serif text-back-blue">
+						食事制限だけでは減量しにくく、運動が必要です！
+					</h2>
+						<p class="inbox-sentence">
+						あなたは、食事制限による体重の減量効果が現れにくいと報告されており、ダイエットやボディメイク、肥満予防のためには、食生活の改善だけではなく、毎日の生活の中に運動を取り入れることが特に大切です。<br />また、筋肉がつきにくい遺伝的体質でもあります。たんぱく質が多い食事を心がけるなども大切ですが、食事を工夫するだけでは筋肉量が増えにくく、基礎代謝も上がりにくいので、筋肉トレーニングを行うことも欠かせません。<br />運動不足はむくみを引き起こします。むくみやすい遺伝的体質でもありますので、少しずつでも良いので運動習慣を身につけましょう！<br />
+						</p><br clear="all">
+					</div>
+
+				</div><!--.main_blue-->
+			</div><!--.risk_box slidetoggle-->
+		</div><!--.main_inner-->
+	</div><!--.dna_main undou-->
+</section>
+<!-- その他の運動アドバイスここまで -->
+
+<!-- 筋トレ動画ここから --><section><div class="dna_main undou"><div id="main_inner"><h1 class="ttl_h1 syncer-acdn undou-contents-name" data-target="syncer-acdn-exe-mov" data-name="+">トレーニング動画</h1><div class="risk_box slidetoggle" id="syncer-acdn-exe-mov" style="display:none;"><br /><div id="main_blue"><div id="main_blue_inner"><h2 class="serif undo-type"><p>動画と一緒に遺伝的体質にあったトレーニングを！</span></p></h2><p class="inbox-sentence">高い効果の期待できる筋トレのやり方は生まれ持った遺伝子によって異なります。<br>あなたの遺伝的体質にあったやり方の動画を見ながら、効率よくトレーニングを行いましょう！</p><br clear="all">
+<center><img width="30%" src="images/ranking_1.png"></center><br clear="all">
+<h2 class="serif text-back-blue">クランチ：1秒×30回</h2><br><p><center><h2 style="font-size: 1.5em; border-bottom: double 5px #364e96; margin:5px;">フォームをチェック！</h2><iframe src="https://www.youtube.com/embed/WNy9BYK72fU?rel=0" frameborder="0" allowfullscreen></iframe></center></p><br clear="all"><p><center><h2 style="font-size: 1.5em; border-bottom: double 5px #364e96; margin:5px;">見ながらトレーニング！</h2><iframe src="https://www.youtube.com/embed/b7Cvaa42QlI?rel=0" frameborder="0" allowfullscreen></iframe></center></p><br clear="all">
+<center><img width="30%" src="images/ranking_2.png"></center><br clear="all">
+<h2 class="serif text-back-blue">ベントオーバー：1秒×30回</h2><br><p><center><h2 style="font-size: 1.5em; border-bottom: double 5px #364e96; margin:5px;">フォームをチェック！</h2><iframe src="https://www.youtube.com/embed/RdwKx-fJTLQ?rel=0" frameborder="0" allowfullscreen></iframe></center></p><br clear="all"><p><center><h2 style="font-size: 1.5em; border-bottom: double 5px #364e96; margin:5px;">見ながらトレーニング！</h2><iframe src="https://www.youtube.com/embed/LW5UEweQczs?rel=0" frameborder="0" allowfullscreen></iframe></center></p><br clear="all">
+<center><img width="30%" src="images/ranking_3.png"></center><br clear="all">
+<h2 class="serif text-back-blue">プッシュアップ：1秒×30回</h2><br><p><center><h2 style="font-size: 1.5em; border-bottom: double 5px #364e96; margin:5px;">フォームをチェック！</h2><iframe src="https://www.youtube.com/embed/4l2YFQj82OA?rel=0" frameborder="0" allowfullscreen></iframe></center></p><br clear="all"><p><center><h2 style="font-size: 1.5em; border-bottom: double 5px #364e96; margin:5px;">見ながらトレーニング！</h2><iframe src="https://www.youtube.com/embed/mByW9CMjThQ?rel=0" frameborder="0" allowfullscreen></iframe></center></p><br clear="all">
+<center><img width="30%" src="images/ranking_4.png"></center><br clear="all">
+<h2 class="serif text-back-blue">スクワット：1秒×30回</h2><br><p><center><h2 style="font-size: 1.5em; border-bottom: double 5px #364e96; margin:5px;">フォームをチェック！</h2><iframe src="https://www.youtube.com/embed/Ft8ZE6LswWs?rel=0" frameborder="0" allowfullscreen></iframe></center></p><br clear="all"><p><center><h2 style="font-size: 1.5em; border-bottom: double 5px #364e96; margin:5px;">見ながらトレーニング！</h2><iframe src="https://www.youtube.com/embed/Jcw-T6pEmjc?rel=0" frameborder="0" allowfullscreen></iframe></center></p><br clear="all">
+</div></div><!--.main_blue--></div><!--.risk_box slidetoggle--></div><!--.main_inner--></div><!--.dna_main undou--></section><!-- 筋トレ動画ここまで -->
+<!-- 運動アドバイスここまで -->
+<!-- その他のアドバイスここから -->
+<section>
+	<div class="ad">
+		<h1 class="ttl_h1 your_dna" style="background: #ff9933; border-bottom: 7px solid #ffcc66; padding: 25px; border-radius: 2px; font-size: 1.8em; color: #FFFFFF; font-weight: bold;">その他のアドバイス</h1>
+	</div>
+</section>
+<!-- アドバイスここから -->
+<section>
+	<div class="dna_main sonota">
+		<div id="main_inner">
+			<h1 class="ttl_h1 syncer-acdn sonota-contents-name" data-target="syncer-acdn-other" data-name="+">ライフスタイルアドバイス</h1>
+			<div class="risk_box slidetoggle" id="syncer-acdn-other" style="display:none;"><br />
+				<div id="main_mono">
+
+					<div id="main_mono_inner">
+					<h2 class="serif border-image-orange">
+						筋肉量に気をつけることが必要です。
+					</h2>
+						<p class="inbox-sentence">
+						あなたは、３つの遺伝的リスク全てに注意が必要で、遺伝的に太りやすいと言えます。<br />体重が変化しやすく、ダイエットの効果が比較的短期間で数字として表れやすいですが、脂肪ではなく筋肉が分解され、体重が減っている危険性もあります。また、ダイエットを止めた途端に体重が戻り、そして元の体重よりも重くなってしまう「リバウンド」の危険性が高い遺伝的体質でもあります。<br />体重を意識し、モチベーションを高めることも大切ですが、筋肉量が減っていないか気をつけましょう。
+						</p><br clear="all">
+					</div>
+					<br />
+					<div id="main_mono_inner">
+					<h2 class="serif border-image-orange">
+						ダイエット中でも食事の回数は減らさないように！
+					</h2>
+						<p class="inbox-sentence">
+						ダイエット中は食べる量を減らすことが大切ですが、食事の回数は減らさないように気をつけましょう。<br />あなたと同じ遺伝子タイプの方は、血糖値の増減に敏感で、お腹が空くとイライラする傾向があります。そして、血糖値をすぐに上げてくれる甘いものをつい間食してしまいがちですので、食事を抜かずに毎食決まった時間に食事を行うことがおすすめです。特に朝食を抜くと後でたくさん食べてしまい血糖値が急激に上がることにもつながります。また、同じエネルギー量であれば、回数を分けて食べた方が太りにくいことも分かっていますので、起きてから２時間以内に朝食を食べましょう。
+						</p><br clear="all">
+					</div>
+					<br />
+					<div id="main_mono_inner">
+					<h2 class="serif border-image-orange">
+						タバコはお腹まわりの敵です。禁煙をしましょう。
+					</h2>
+						<p class="inbox-sentence">
+						一般的にタバコを吸う人は吸わない人より痩せている傾向がありますので、喫煙はダイエット効果があると誤解されている方も多いようです。<br />しかし、「喫煙がお腹まわりの脂肪を蓄積させる」ということが報告されています。イギリス人の男女を対象に行われた調査では、喫煙とお腹の脂肪増加を強く示す結果が出ました。<br />あなたは、お腹まわりに脂肪がつきやすい遺伝的体質ですので、タバコを吸う方は禁煙しましょう。エクササイズにはニコチン欲を抑える効果もありますので、吸いたくなったら運動をすると一石二鳥です。
+						</p><br clear="all">
+					</div>
+
+					<br />
+					<div id="main_mono_inner">
+					<h2 class="serif border-image-orange">
+						太る前から体重や筋肉量に目を向けましょう！
+					</h2>
+						<p class="inbox-sentence">
+						あなたは、筋肉も脂肪もつきにくい遺伝的体質です。<br />若い頃は筋肉も脂肪も少なく、ほっそりと痩せており、食べても食べても太らない「痩せの大食い」の方が多い傾向もあります。<br />しかし、筋肉がつきにくいので、加齢とともに基礎代謝が大きく下がりやすく、急激に太る危険性があります。<br />また、一度太ると、脂肪は落ちにくく筋肉はつきにくい遺伝的体質ですので、筋肉を落とさずに脂肪を落とすことが難しいです。太る前から体重や筋肉量を測り、生活習慣を見直すことがおすすめです。
+						</p><br clear="all">
+					</div>
+					<br />
+					<div id="main_mono_inner">
+					<h2 class="serif border-image-orange">
+						疲れが溜まらないように十分に休息を取りましょう！
+					</h2>
+						<p class="inbox-sentence">
+						あなたは疲れやすい傾向がある遺伝的体質です。<br />食事を減らしたり運動をしたりと、ダイエットや肥満予防には疲労が付き物ですが、他の方以上に、あまり無理をせずに疲労を溜めこまないことが大切です。<br />疲労回復には、アスパラガスや豚肉、うなぎなどに含まれるビタミンＢ１や柑橘類の果物や梅干しなどに含まれるクエン酸を摂取することがおすすめです。<br />また、質の高い睡眠を心がけましょう。筋肉量を増やし、太りにくいからだを手に入れるためにも質の高い睡眠は欠かせません。
+						</p><br clear="all">
+					</div>
+
+
+					<br />
+					<div id="main_mono_inner">
+					<h2 class="serif border-image-orange">
+						まとめ食い、ドカ食いに気をつけましょう！
+					</h2>
+						<p class="inbox-sentence">
+						あなたはまとめ食いやドカ食いをしやすい傾向がある遺伝的体質です。<br />特にストレスが溜まるとたくさん食べてしまうという研究報告がされていますので、意識してまとめ食いやドカ食いを避けるようにしましょう。<br />食べられる時にまとめて食べておく「まとめ食い」や、一度に大量に食べる「ドカ食い」はダイエットの大敵なだけではなく健康を害する習慣と言われています。<br />まとめ食いやドカ食いは、胃壁を広げてしまい、さらにまとめ食い、ドカ食いを誘発してしまいますので、早めに食生活を改善し、対処しましょう。
+						</p><br clear="all">
+					</div>
+					<br />
+					<div id="main_mono_inner">
+					<h2 class="serif border-image-orange">
+						セルライト対策も積極的に取り入れましょう！
+					</h2>
+						<p class="inbox-sentence">
+						あなたは下半身、腰回りから太ももにかけて脂肪がつきやすい遺伝的体質です。<br />この部分はセルライトもできやすく、しっかりと対策を行う必要があります。<br />セルライトは一度できると除去することが難しいので、気になる前から対策を行うことがおすすめです。<br />マッサージなどでからだを温めたり、ほぐしたりとセルライト対策を毎日の生活の中に取り入れましょう。<br />また、急に減量すると、脂肪のついた部分がたるみやすく、だらしない体型になることもありますので、注意しましょう。
+						</p><br clear="all">
+					</div>
+
+				</div><!--.main_mono-->
+			</div><!--.risk_box slidetoggle-->
+		</div><!--.main_inner-->
+	</div><!--.dna_main sonota-->
+</section>
+<!-- アドバイスここまで -->
+<!-- 解析結果ここから -->
+<section>
+	<div class="dna_main sonota">
+		<div id="main_inner">
+			<h1 class="ttl_h1 syncer-acdn sonota-contents-name" data-target="syncer-acdn-01" data-name="+">解析結果</h1>
+			<div class="main_box slidetoggle" id="syncer-acdn-01" style="display:none;">
+				<div id="main_pink">
+				<div id="main_pink_inner">
+				<div class="fl">
+					<h2 class="serif" style="font-size: 1.5em; margin-top: 20px;">β３ＡＲ<a style="font-size:65%;">（β３アドレナリン受容体）</a><br />
+					<p style="margin-top: .5em;">
+					Ｃ / Ｃ（ホモ）
+					</p>
+					</h2>
+					<br />
+					<hr />
+					<h2 class="serif" style="font-size: 1.5em; margin-top: 20px;">β２ＡＲ<a style="font-size:65%;">（β２アドレナリン受容体）</a><br />
+					<p style="margin-top: .5em;">
+					Ｇ / Ｇ（ホモ）
+					</p>
+					</h2>
+					<br />
+					<hr />
+					<h2 class="serif" style="font-size: 1.5em; margin-top: 20px;">ＵＣＰ１<a style="font-size:65%;">（脱共役タンパク１）</a><br />
+					<p style="margin-top: .5em;">
+					Ａ / Ｇ（ヘテロ）
+					</p>
+					</h2>
+					<br />
+					<hr />
+					<br />
+
+				</div><!--.fl-->
+				</div><!--.main_pink_inner-->
+				</div><!--main_pink-->
+			</div><!--.main_box slidetoggle-->
+		</div><!--.main_inner-->
+	</div><!--.dna_main sonota-->
+</section>
+<!-- 解析結果ここまで -->
+<!-- その他のアドバイスここまで -->
+<section>
+	<div class="ad">
+		<h1 class="ttl_h1 your_dna" style="cursor: auto;">一生変わらない<br>「あなただけ」へのアドバイス</h1>
+	</div>
+</section>
+<p id="pagetop" style="text-align: right; margin: 10px;"><a href="#top_visual" style="display: inline-block; text-align: center; line-height: 1; padding: 10px; background: #ffcccc; border-radius: 5px; color: #ff6666;">▲<br>TOP</a></p>
+<!-- JavaScriptの読み込み -->
+<script src="{% static 'js/accordion.js' %}"></script>
+<script src="{% static 'js/transform.js' %}"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+{% endblock %}

@@ -1,0 +1,46 @@
+{% extends "register/base_no_message.html" %}
+{% load static %}
+
+{% block header %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/mystyle.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/mdb.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+  <div class="card-deck mb-3 text-center">
+    <div class="card mb-6 shadow-sm">
+      <div class="card-header">
+        <h4 class="my-0 font-weight-normal">アカウントをお持ちの方</h4>
+      </div>
+      <div class="card-body">
+        <form action="{% url 'logetapp:login' %}" method="POST">
+            {{ form.non_field_errors }}
+            {% for field in form %}
+                {{ field }}
+                {{ field.errors }}
+                <hr>
+            {% endfor %}
+            <button type="submit" class="btn btn-lg btn-block btn-outline-primary" >ログイン</button>
+            <input type="hidden" name="next" value="{{ next }}" />
+            {% csrf_token %}
+        </form><hr>
+            パスワードを忘れた方は<a href="{% url 'logetapp:password_reset' %}">こちら</a>
+      </div>
+    </div>
+    <div class="card mb-6 shadow-sm">
+      <div class="card-header">
+        <h4 class="my-0 font-weight-normal">はじめての方</h4>
+      </div>
+        <div class="card-body">
+            <a href="{% url 'logetapp:user_create' %}" class="btn btn-lg btn-block btn-outline-primary" >新規登録</a>
+        </div>
+    </div>
+  </div>
+</div>
+
+
+
+{% endblock %}

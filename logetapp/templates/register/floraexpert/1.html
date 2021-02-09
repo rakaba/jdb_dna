@@ -1,0 +1,1369 @@
+{% extends "register/base.html" %}
+{% load static %}
+
+{% block header %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/style_sp.css' %}">
+{% endblock %}
+
+{% block content %}
+<!-- ヘッダーここから -->
+<div id="header">
+	<div id="header_main">
+		<h1 style="color: #333333;">Report & Advice</h1>
+		<p>- ＤＮＡ検査・解析結果 -</p>
+	</div>
+	<div id="header_sub">
+	</div>
+</div>
+<!-- ヘッダーここまで -->
+<!-- 遺伝的体質ここから -->
+<section>
+	<div id="dna_constitution">
+		<h2 class="your_dna" style="background: #FF6666; border-bottom: 7px solid #ff9999; padding: 25px; border-radius: 2px; font-size: 1.8em; color: #FFFFFF; font-weight: bold;">遺伝的体質</h2>
+	</div>
+</section>
+<!-- 遺伝的リスクここから -->
+<section>
+	<div class="dna_main taishitsu">
+		<div id="constitution_main_inner_01">
+			<h2 class="syncer-acdn ttl_h1 taishitsu-contents-name" data-target="syncer-acdn-02" data-name="+">遺伝的リスク</h2>
+			<div class="slidetoggle" id="syncer-acdn-02" style="display:none;">
+				<p class="description inbox-sentence">３つの遺伝的リスクの高さから総合的に判断したあなたの遺伝的体質です。</p>
+				<div class="dna_risk">
+					<div class="risk_area cf">
+						<p class="risk_name">糖化リスク：</p>
+						<p class="risk_level_3"><span class="red">高い</span></p>
+					</div>
+					<div class="risk_area cf">
+						<p class="risk_name">活性酸素リスク：</p>
+						<p class="risk_level_3"><span class="red">高い</span></p>
+					</div>
+					<div class="risk_area cf">
+						<p class="risk_name">過酸化脂質リスク：</p>
+						<p class="risk_level_3"><span class="red">高い</span></p>
+					</div>
+				</div>
+				<p class="description_title border-image-red">遺伝的体質総合コメント</p>
+				<p class="description inbox-sentence">
+					${target1}は、３つの遺伝的リスクの全てが高く、からだの焦げ（糖化）とからだの錆び（酸化）の両方に注意が必要な遺伝的体質です。
+遺伝的リスクが高い場合でも、毎日のライフスタイルを見直すことでお肌トラブルを避け、老化のスピードを遅くすることができます。お肌トラブルや老化が気になる前から対策を始めましょう。
+活性酸素リスク対策を最も優先して行うことがおすすめです。美容法やアンチエイジング法は無数にありますが、活性酸素の発生を防ぐ方法や抗酸化力を高める方法を優先して取り入れましょう。
+糖化リスク対策や過酸化脂質リスク対策も積極的に取り入れたいですが、神経質になりすぎると逆効果ですので、無理なく出来る範囲で行うことが大切です。
+				</p>
+		<div id="constitution_main_inner_02">
+			<h2 class="description_title border-image-red">それぞれの遺伝的リスクの解説</h2>
+				<div class="dna_risk">
+					<p>
+						<a class="syncer-acdn risk_area_flex" data-target="syncer-acdn-risk-ad-c">
+							<div class="risk_area cf">
+								<p class="risk_name risk_name_underline"><i class="fa fa-caret-right" aria-hidden="true"></i> 糖化リスク：</p>
+								<p class="risk_level_3"><span class="red">高い</span></p>
+							</div>
+						</a>
+					</p>
+					<p id="syncer-acdn-risk-ad-c" class="description inbox-sentence" style="display:none; margin-top: 5px; font-size: 16px;">
+						高い
+					</p>
+					<p>
+						<a class="syncer-acdn risk_area_flex" data-target="syncer-acdn-risk-ad-p">
+							<div class="risk_area cf">
+								<p class="risk_name risk_name_underline"><i class="fa fa-caret-right" aria-hidden="true"></i> 活性酸素リスク：</p>
+								<p class="risk_level_3"><span class="red">高い</span></p>
+							</div>
+						</a>
+					</p>
+					<p id="syncer-acdn-risk-ad-p" class="description inbox-sentence" style="display:none; margin-top: 5px; font-size: 16px;">
+						高い
+					</p>
+					<p>
+						<a class="syncer-acdn risk_area_flex" data-target="syncer-acdn-risk-ad-f">
+							<div class="risk_area cf">
+								<p class="risk_name risk_name_underline"><i class="fa fa-caret-right" aria-hidden="true"></i> 過酸化脂質リスク：</p>
+								<p class="risk_level_3"><span class="red">高い</span></p>
+							</div>
+						</a>
+					</p>
+					<p id="syncer-acdn-risk-ad-f" class="description inbox-sentence" style="display:none; margin-top: 5px; font-size: 16px;">
+						高い
+					</p>
+				</div>
+			</div>
+		<div id="constitution_main_inner_03">
+				<h2 class="description_title border-image-red">
+					<span class="sub_title">もっと知りたい！</span><br />
+					美容に関連する遺伝的リスク
+				</h2>
+				<div class="dna_risk">
+					<a class="syncer-acdn" data-target="syncer-acdn-risk-c">
+						<div class="risk_area cf">
+							<p class="risk_name risk_name_underline" style="width: 100%;"><i class="fa fa-caret-right" aria-hidden="true"></i> 糖化リスクとは？</p>
+						</div>
+					</a>
+				<div id="syncer-acdn-risk-c" style="display:none;">
+					<p class="description inbox-sentence" style="font-size: 16px; margin-top: 5px;">
+						「糖化リスク」とは、体内のたんぱく質と、食事などによって摂取した糖が結びつき、「AGEｓ」という物質が作られる「糖化」の進みやすさに関連する遺伝的リスクです。
+					</p>
+					<h3 class="risk-back-red">
+						糖化リスクが高い人に起こりやすいお肌トラブル
+					</h3>
+					<ul>
+						<li style="font-size: 16px; list-style: disc; margin-left: 1em;">お肌の弾力、ハリが失われやすい。</li>
+						<li style="font-size: 16px; list-style: disc; margin-left: 1em;">
+						お肌がたるみやすい。</li>
+						<li style="font-size: 16px; list-style: disc; margin-left: 1em;">お肌の透明感が失われやすい。</li>
+						<li style="font-size: 16px; list-style: disc; margin-left: 1em;">
+						お肌がくすみやすい。</li>
+					</ul>
+
+				</div>
+				<a class="syncer-acdn" data-target="syncer-acdn-risk-f">
+					<div class="risk_area cf">
+						<p class="risk_name risk_name_underline" style="width: 100%;"><i class="fa fa-caret-right" aria-hidden="true"></i> 活性酸素リスクとは？</p>
+					</div>
+				</a>
+				<div id="syncer-acdn-risk-f" style="display:none;">
+					<p class="description inbox-sentence" style="font-size: 16px; margin-top: 5px;">
+						「活性酸素リスク」とは、呼吸や紫外線などの影響で発生する「活性酸素」を除去する能力、つまり、活性酸素の溜まりやすさに関連する遺伝的なリスクです。
+					</p>
+					<h3 class="risk-back-red">
+						活性酸素リスクが高い人に起こりやすいお肌トラブル
+					</h3>
+					<ul>
+						<li style="font-size: 16px; list-style: disc; margin-left: 1em;">メラニン性のシミ、そばかすができやすい。</li>
+						<li style="font-size: 16px; list-style: disc; margin-left: 1em;">
+						シミやたるみができやすい。</li>
+						<li style="font-size: 16px; list-style: disc; margin-left: 1em;">お肌の弾力やハリが失われやすい。</li>
+					</ul>
+
+				</div>
+				<a class="syncer-acdn" data-target="syncer-acdn-risk-p">
+					<div class="risk_area cf">
+						<p class="risk_name risk_name_underline" style="width: 100%;"><i class="fa fa-caret-right" aria-hidden="true"></i> 過酸化脂質リスクとは？</p>
+					</div>
+				</a>
+				<div id="syncer-acdn-risk-p" style="display:none;">
+					<p class="description inbox-sentence" style="font-size: 16px; margin-top: 5px;">
+						「過酸化脂質リスク」とは、体内のLDLが酸化することによって発生する「過酸化脂質」のできやすさに関する遺伝的リスクです。
+					</p>
+					<h3 class="risk-back-red">過酸化脂質リスクが高い人に起こりやすいお肌トラブル</h3>
+					<ul>
+						<li style="font-size: 16px; list-style: disc; margin-left: 1em;">シミ（老人性の色素斑）ができやすい。</li>
+						<li style="font-size: 16px; list-style: disc; margin-left: 1em;">
+						お肌が荒れやすい。</li>
+						<li style="font-size: 16px; list-style: disc; margin-left: 1em;">
+						乾燥肌になりやすい。</li>
+						<li style="font-size: 16px; list-style: disc; margin-left: 1em;">
+						加齢臭にも注意が必要。</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- 遺伝的リスクここまで -->
+
+<!--気をつけたいお肌トラブルランキングここから-->
+<section>
+	<div class="dna_main taishitsu">
+		<div id="main_inner">
+			<h1 class="ttl_h1 syncer-acdn taishitsu-contents-name" data-target="syncer-acdn-foodtype-ranking" data-name="+">気をつけたいお肌トラブルランキング</h1>
+			<div class="slidetoggle" id="syncer-acdn-foodtype-ranking" style="display:none;"><br />
+			  <div id="main_pink">
+				<div id="main_pink_inner">
+					<dl class="main_pink">
+						<a class="syncer-acdn ranking-wrapper-a ranking skincare-trouble-ranking-flex-wrapper" data-target="syncer-acdn-trouble-ranking1">
+							<div class="ranking-wrapper-a-imgwrapper">
+							 <img src="images/ranking_1.png" class="ranking-image-1 ranking-wrapper-a-imgwrapper-img1">
+							</div>
+							<div class="skincare-trouble-ranking-degree-flex">
+							<h2 class="adviceranking-underline ranking-wrapper-a-h2-1 skincare-trouble-ranking-a">
+								シミ・そばかす
+							</h2>
+							<p class="degree-mark">危険度：
+								●●●●●
+							</p>
+							</div>
+						</a>
+						<a id="syncer-acdn-trouble-ranking1" class=""  style="display:none;">
+							<h2 class="skincare-trouble-ranking-text-backcolor">
+								シミ・そばかす
+								対策のポイント</h2>
+								<div class="skincare-point-wrapper"><div class="skincare-point-inbox"><h3 class="skincare-border-orange">
+									<span>紫外線</span>から身を守りましょう</h3><p>日焼け止めクリームや、日傘、長袖の服、帽子、サングラスの着用である程度の紫外線をカットできます。出歩くのは少しだけだからといって、何もケアしないまま外に出るのは危険です。日光がなるべく肌に当たらないような工夫をしましょう。</p></div><!--.diet-point-inbox--><div class="skincare-point-inbox">
+									<h3 class="skincare-border-orange"><span>ビタミン・ミネラル</span>を摂取</h3>
+									<p>ビタミンとミネラルを摂ることで、新陳代謝を活発にし、表皮が角質となってはがれ落ちるときにメラニン色素も排出されます。特にビタミンCはシミに効果があるとされていますので、サプリメントなどで積極的に摂るようにしましょう。</p></div><!--.diet-point-inbox-->
+									<div class="skincare-point-inbox">
+										<h3 class="skincare-border-orange">大切なのは<span>規則正しい生活</span></h3>
+										<p>十分な睡眠を取ることが特に重要で、「美容睡眠」といわれる夜10時〜午前2時は、睡眠に務めると良いと言われます。その時間は、美肌の維持、シミやシワの帽子などに使われる「成長ホルモン」が多く分泌されます。</p></div>
+										<!--.diet-point-inbox-->
+										<div class="skincare-point-inbox"><h3 class="skincare-border-orange"><span>お肌の水分補給</span>を忘れずに</h3>
+											<p>シミは水分が不足して、潤いをなくした肌によりできやすくなってしまいます。水分が不足しないようにしっかり水分補充ができる化粧水を選び、その水分を長く肌が保持することができる保湿クリームを用いると良いでしょう。</p></div>
+											<!--.diet-point-inbox--></div><!--.diet-point-wrapper-->
+											<div class="skincare-faq-wrapper"><p class="skincare-faq-faq">FAQ</p><div class="skincare-faq-q-wrapper">
+												<p class="skincare-faq-title-before">Q:</p><p class="skincare-faq-title">曇りの日は日焼け止めを塗らなくても大丈夫？</p></div><div class="skincare-faq-a-wrapper">
+													<p class="skincare-faq-sentence-before">A:</p><p class="skincare-faq-sentence">太陽が直接顔を出していなくても、紫外線は地球に降り注いでいます。快晴の時と比べると、紫外線の量は、うす曇りの場合は約80〜90%、くもりの場合は約60%、雨の場合は約30%の量になります。ですので、お出かけする時には曇りの日でも関係なく日焼け止めは塗っておいたほうが良いでしょう。</p></div></div><!--.shokuji-diet-faq-wrapper-->
+							</a>
+						</dl>
+					</div>
+<!--1位ここまで-->
+<!--2位ここから-->
+				<div id="main_pink_inner">
+					<dl class="main_pink">
+						<a class="syncer-acdn ranking-wrapper-a ranking skincare-trouble-ranking-flex-wrapper" data-target="syncer-acdn-trouble-ranking2">
+							<div class="ranking-wrapper-a-imgwrapper">
+							 <img src="images/ranking_2.png" class="ranking-image-2 ranking-wrapper-a-imgwrapper-img2">
+							</div>
+							<div class="skincare-trouble-ranking-degree-flex">
+							<h2 class="adviceranking-underline ranking-wrapper-a-h2-2 skincare-trouble-ranking-a">
+								シワ
+							</h2>
+							<p class="degree-mark">危険度：
+								●●●●●
+							</p>
+							</div>
+						</a>
+						<a id="syncer-acdn-trouble-ranking2" class=""  style="display:none;">
+							<h2 class="skincare-trouble-ranking-text-backcolor">
+								シワ
+								対策のポイント</h2>
+							<div class="skincare-point-wrapper"><div class="skincare-point-inbox">
+								<h3 class="skincare-border-orange"><span>水分・油分</span>の調節が大事</h3>
+								<p>保湿成分の配合された化粧水などで、肌の水分が失われることを予防しましょう。乾燥しわが目立つ人は皮脂が不足しているのかもしれません。洗顔剤を、洗浄力のマイルドなものに変えるなど、皮脂の量を保つ工夫をしましょう。</p></div><!--.diet-point-inbox-->
+								<div class="skincare-point-inbox"><h3 class="skincare-border-orange"><span>血行の改善</span>を促しましょう</h3>
+									<p>肩や首のコリがひどいと、顔の血行も滞り、シワが悪化します。よくお風温めたりストレッチでほぐすことで肌の血行を良くしましょう。特に寒い冬などは、半 身浴で体を芯から温めてあげると良いでしょう。</p></div><!--.diet-point-inbox--><div class="skincare-point-inbox"><h3 class="skincare-border-orange">
+										<span>表情筋</span>を鍛えてシワ対策</h3>
+										<p>顔の肌は、表情筋の上に脂肪が付き、その上に皮膚が付いています。その表情筋が弱くなってくると、皮膚を支えられなくなるのでシワの原因になってしまうのです。口を大きく動かすエクササイズなどで、表情筋のトレーニングを行いましょう。</p></div><!--.diet-point-inbox--><div class="skincare-point-inbox">
+											<h3 class="skincare-border-orange"><span>たんぱく質とビタミンC</span>を</h3>
+											<p>たんぱく質は、コラーゲンやエラスチンなどの肌繊維や、角質層を作るための原材料として不可欠な栄養素です。また、コラーゲン合成時に欠かせない酵素の働きを、ビタミンCがサポートします。食事で補うことができない分は、サプリメントをうまく使って補っていきましょう。</p></div><!--.diet-point-inbox--></div><!--.diet-point-wrapper-->
+											<div class="skincare-faq-wrapper"><p class="skincare-faq-faq">FAQ</p><div class="skincare-faq-q-wrapper">
+												<p class="skincare-faq-title-before">Q:</p><p class="skincare-faq-title">表情筋はどうやって鍛えればいいの？</p></div>
+												<div class="skincare-faq-a-wrapper"><p class="skincare-faq-sentence-before">A:</p><p class="skincare-faq-sentence">なるべく大げさな表情をしながら「あ、い、う、え、お」と声に出して、顔を動かしていきます。この時、顔全体の筋肉を大きく使うように意識しながら行うのがポイントです。このエクササイズを、1日3セット繰り返すことを続けていけば、少しずつ表情筋が鍛えられていくでしょう。毎日コツコツと、継続していくことが重要です。</p></div></div><!--.shokuji-diet-faq-wrapper-->
+						</a>
+					</dl>
+				</div>
+<!--2位ここまで-->
+<!--3位ここから-->
+				<div id="main_pink_inner">
+					<dl class="main_pink">
+						<a class="syncer-acdn ranking-wrapper-a ranking skincare-trouble-ranking-flex-wrapper" data-target="syncer-acdn-trouble-ranking3">
+							<div class="ranking-wrapper-a-imgwrapper">
+							 <img src="images/ranking_3.png" class="ranking-image-3 ranking-wrapper-a-imgwrapper-img2">
+							</div>
+							<div class="skincare-trouble-ranking-degree-flex">
+							<h2 class="adviceranking-underline ranking-wrapper-a-h2-3 skincare-trouble-ranking-a">
+								肌荒れ・乾燥肌
+							</h2>
+							<p class="degree-mark">危険度：
+								●●●●●
+							</p>
+							</div>
+						</a>
+						<a id="syncer-acdn-trouble-ranking3" class=""  style="display:none;">
+							<h2 class="skincare-trouble-ranking-text-backcolor">
+								肌荒れ・乾燥肌
+								対策のポイント</h2>
+							<div class="skincare-point-wrapper"><div class="skincare-point-inbox">
+								<h3 class="skincare-border-orange"><span>糖分や油分</span>が多い食品に注意</h3>
+								<p>チョコレートやナッツ類は、栄養分や良質な脂質も含まれているのですが、食べ過ぎるとニキビができやすくなってしまいます。また、ジャンクフードなどは、それに含まれている油分が酸化してしまうとやはり肌に悪い影響を与えてしまいます。</p></div><!--.diet-point-inbox--><div class="skincare-point-inbox">
+									<h3 class="skincare-border-orange"><span>睡眠をしっかり</span>とりましょう</h3>
+									<p>肌の新陳代謝が活発に行われるのは、入眠から３〜４時間とされています。脳を含めて全身が完全に熟睡している「ノンレム睡眠」といわれる睡眠状態を、しっかりとることが大切です。睡眠開始から３～４時間をグッスリと眠ることが重要です。</p></div><!--.diet-point-inbox--><div class="skincare-point-inbox">
+										<h3 class="skincare-border-orange"><span>ストレス</span>とうまく付き合う</h3>
+										<p>ストレスとは、自律神経が乱れることにより起こります。自分の中でストレスが溜まってどうしようもない時は、思いっきり笑う、泣いてみる、思っていることを書いてみるなど、自分にあったストレス解消法で、自立神経のバランスを整えましょう。</p></div><!--.diet-point-inbox--><div class="skincare-point-inbox">
+											<h3 class="skincare-border-orange"><span>寝る１時間前</span>にお風呂へ</h3>
+											<p>寝る前に体を温めると、体温が下がり始める１～２時間後に眠気のピークがきます。また、お風呂にアロマオイルを１〜２滴垂らすと寝付きがさらに良くなります。心身をリラックスさせる「ラベンダー」や安眠効果がある「カモミール」の香りがおすすめです。</p></div><!--.diet-point-inbox--></div><!--.diet-point-wrapper-->
+											<div class="skincare-faq-wrapper"><p class="skincare-faq-faq">FAQ</p><div class="skincare-faq-q-wrapper">
+												<p class="skincare-faq-title-before">Q:</p><p class="skincare-faq-title">ストレス解消法のおすすめは？</p></div><div class="skincare-faq-a-wrapper">
+													<p class="skincare-faq-sentence-before">A:</p><p class="skincare-faq-sentence">ストレスを解消するためにお菓子をたくさん食べてしまい、余計に肌荒れが起きてしまうようでは、元も子もありません。ストレス解消法にもいろいろありますが、おすすめは運動。女性には特にヨガがおすすめです。手軽にチャレンジすることができ、ホットヨガであればデトックス効果も期待できるので、一石二鳥です。</p></div></div><!--.shokuji-diet-faq-wrapper-->
+						</a>
+					</dl>
+				</div>
+
+<!--3位ここまで-->
+<!--4位ここから-->
+				<div id="main_pink_inner">
+					<dl class="main_pink">
+						<a class="syncer-acdn ranking-wrapper-a ranking skincare-trouble-ranking-flex-wrapper" data-target="syncer-acdn-trouble-ranking4">
+							<div class="ranking-wrapper-a-imgwrapper">
+							 <img src="images/ranking_4.png" class="ranking-image-other ranking-wrapper-a-imgwrapper-img2">
+							</div>
+							<div class="skincare-trouble-ranking-degree-flex">
+							<h2 class="adviceranking-underline ranking-wrapper-a-h2-other skincare-trouble-ranking-a">
+								毛穴のつまり・黒ずみ
+							</h2>
+							<p class="degree-mark">危険度：
+								●●●●●
+							</p>
+							</div>
+						</a>
+						<a id="syncer-acdn-trouble-ranking4" class=""  style="display:none;">
+							<h2 class="skincare-trouble-ranking-text-backcolor">
+								毛穴のつまり・黒ずみ
+								対策のポイント</h2>
+							<div class="skincare-point-wrapper"><div class="skincare-point-inbox">
+								<h3 class="skincare-border-orange">洗顔料は<span>酵素配合</span>に</h3>
+								<p>酵素には様々な種類がありますが、洗顔料に入れられている酵素の主な働きは「たんぱく質を分解する」ことです。通常の洗顔では落とすことが難しいとされている、古い角質や角栓、毛穴の汚れのお手入れをしたい方におすすめです。</p></div><!--.diet-point-inbox--><div class="skincare-point-inbox">
+									<h3 class="skincare-border-orange"><span>正しい洗顔方法</span>を心がけよう</h3>
+									<p>洗顔料をしっかり手のひらで泡立て、先にぬるま湯で顔をゆすいでからつけるようにします。そして、手でゴシゴシこするということはせず、泡でやさしく顔を洗ってあげください。</p></div><!--.diet-point-inbox--><div class="skincare-point-inbox">
+										<h3 class="skincare-border-orange"><span>オイルクレンジング</span>がおすすめ</h3>
+										<p>毛穴の詰まりが気になる方にはオイルクレンジングがおすすめです。オイルは、毛穴の中に入り込み汚れを浮かせることが得意です。毛穴の汚れと相性がよくないのが、化粧水タイプやシートタイプの拭き取りクレンジングなので注意が必要です。</p></div><!--.diet-point-inbox--><div class="skincare-point-inbox">
+											<h3 class="skincare-border-orange"><span>ピーリング</span>で生まれ変わる肌</h3>
+											<p>どうしても気になってしまう場合は、ピーリングを行うのも良いでしょう。ピーリングとは、肌を1枚めくって新しい表皮を表に出すことです。皮膚科やエステサロンでやってもらえますので、肌の状態を十分に相談しながら行うようにしてください。</p></div><!--.diet-point-inbox--></div><!--.diet-point-wrapper-->
+											<div class="skincare-faq-wrapper"><p class="skincare-faq-faq">FAQ</p><div class="skincare-faq-q-wrapper">
+												<p class="skincare-faq-title-before">Q:</p><p class="skincare-faq-title">ピンセットなどを使って、自分で黒ずみを取ってもいいの？</p></div><div class="skincare-faq-a-wrapper">
+													<p class="skincare-faq-sentence-before">A:</p><p class="skincare-faq-sentence">いいえ。ピンセットで、角栓を鼻などの毛穴から引きずり出すことに爽快感を覚える人もいるようですが、これは絶対にやめてください。毛穴が開く原因になるほか、肌を痛めて別の炎症や肌荒れを起こす原因にもなります。もしどうしても気になるようなら、エステサロンさんなどプロの方に、一度相談することが良いでしょう。</p></div></div><!--.shokuji-diet-faq-wrapper-->
+						</a>
+					</dl>
+				</div>
+
+<!--4位ここまで-->
+<!--5位ここから-->
+				<div id="main_pink_inner">
+					<dl class="main_pink">
+						<a class="syncer-acdn ranking-wrapper-a ranking skincare-trouble-ranking-flex-wrapper" data-target="syncer-acdn-trouble-ranking5">
+							<div class="ranking-wrapper-a-imgwrapper">
+							 <img src="images/ranking_5.png" class="ranking-image-other ranking-wrapper-a-imgwrapper-imgother">
+							</div>
+							<div class="skincare-trouble-ranking-degree-flex">
+							<h2 class="adviceranking-underline ranking-wrapper-a-h2-other skincare-trouble-ranking-a">
+								お肌のたるみ・ハリ
+							</h2>
+							<p class="degree-mark">危険度：
+								●●●●●
+							</p>
+							</div>
+						</a>
+						<a id="syncer-acdn-trouble-ranking5" class=""  style="display:none;">
+							<h2 class="skincare-trouble-ranking-text-backcolor">
+								お肌のたるみ・ハリ
+								対策のポイント</h2>
+							<div class="skincare-point-wrapper"><div class="skincare-point-inbox"><h3 class="skincare-border-orange">
+								<span>首の位置</span>のズレも原因の一つ</h3>
+								<p>長時間のパソコン作業を強いられている人は、首の位置のズレがよく起こり、このズレが顔のたるみや歪みを引き起こすこともあります。定期的に首を回したり、軽い運動をしたりして、首周りの緊張をほぐしましょう。</p></div><!--.diet-point-inbox--><div class="skincare-point-inbox"><h3 class="skincare-border-orange">
+									<span>リンパ</span>の流れをスムーズに</h3>
+									<p>リンパが流れている鎖骨周りをマッサージしたり、肩を回して肩甲骨を動かしたりすることは、リンパの流れをスムーズに促すのに効果的です。自分一人で行うのが難しい場合は、エステサロンなそプロの方にお願いするのが良いでしょう。</p></div><!--.diet-point-inbox--><div class="skincare-point-inbox">
+										<h3 class="skincare-border-orange">普段の生活を<span>左右対称に</span></h3>
+										<p>食べる時、片方ばかりで噛むのは、口元のたるみにも影響します。口の片側の筋肉だけが緊張してしまい、右左非対称のたるみが出てきてしまうのです。また頬杖をつく癖がある方も要注意。常に良い姿勢を心がけましょう。</p></div><!--.diet-point-inbox--><div class="skincare-point-inbox">
+											<h3 class="skincare-border-orange">適切な量の<span>水分補給</span>を</h3>
+											<p>お肌のハリを保つには、体の中からの保湿が大切です。体の中からの保湿というのは水分を摂ることで可能になります。一番肌のハリに効果のある飲み方は15分おきに少量の水分を飲むことです。少し難しいかもしれませんが、喉が渇いたと感じる前に、少量ずつ水を摂取するのがポイントです。</p></div><!--.diet-point-inbox--></div><!--.diet-point-wrapper-->
+											<div class="skincare-faq-wrapper"><p class="skincare-faq-faq">FAQ</p><div class="skincare-faq-q-wrapper">
+												<p class="skincare-faq-title-before">Q:</p><p class="skincare-faq-title">たるみが起きるのは、顔の筋肉不足が原因？</p></div><div class="skincare-faq-a-wrapper">
+													<p class="skincare-faq-sentence-before">A:</p><p class="skincare-faq-sentence">それが全てではありませんが、原因の一つであるとも言えるでしょう。顔の筋肉(表情筋)を不足させないためには、表情を豊かに日々を過ごすこと、すなわち、よく笑うことが大切です。辛いことばかり感じてしまうと、表情も沈んでしまい、表情筋も衰えてしまいます。なるべく楽しいことを経験し、より笑いの多い生活を心がけましょう。</p></div></div><!--.shokuji-diet-faq-wrapper-->
+						</a>
+					</dl>
+				</div>
+
+<!--5位ここまで-->
+<!--6位ここから-->
+				<div id="main_pink_inner">
+					<dl class="main_pink">
+						<a class="syncer-acdn ranking-wrapper-a ranking skincare-trouble-ranking-flex-wrapper" data-target="syncer-acdn-trouble-ranking6">
+							<div class="ranking-wrapper-a-imgwrapper">
+							 <img src="images/ranking_6.png" class="ranking-image-other ranking-wrapper-a-imgwrapper-imgother">
+							</div>
+							<div class="skincare-trouble-ranking-degree-flex">
+							<h2 class="adviceranking-underline ranking-wrapper-a-h2-other skincare-trouble-ranking-a">
+								お肌のくすみ
+							</h2>
+							<p class="degree-mark">危険度：
+								●●●●●
+							</p>
+							</div>
+						</a>
+						<a id="syncer-acdn-trouble-ranking6" class=""  style="display:none;">
+							<h2 class="skincare-trouble-ranking-text-backcolor">
+								お肌のくすみ
+								対策のポイント</h2>
+							<div class="skincare-point-wrapper"><div class="skincare-point-inbox"><h3 class="skincare-border-orange">
+								<span>紫外線</span>から身を守りましょう</h3>
+								<p>日焼け止めクリームや、日傘、長袖の服、帽子、サングラスの着用である程度の紫外線をカットできます。出歩くのは少しだけだからといって、何もケアしないまま外に出るのは危険です。日光がなるべく肌に当たらないような工夫をしましょう。</p></div><!--.diet-point-inbox--><div class="skincare-point-inbox">
+									<h3 class="skincare-border-orange"><span>血流を意識</span>した食生活</h3>
+									<p>ショウガや唐辛子は血流を促す作用がありますので、季節を問わず積極的に摂るようにしましょう。また、白砂糖などの体を冷やしてしまうものは避け、黒糖などの体を温めてくれる食材を選ぶのも、顔のくすみ対策のひとつとなります。</p></div><!--.diet-point-inbox--><div class="skincare-point-inbox">
+										<h3 class="skincare-border-orange">十分な<span>保湿</span>でくすみ対策</h3><p>肌が乾燥したり、キメが乱れていると、透明感がなくなって、肌が暗く見えてしまいがちになってしまいます。肌が潤い、キメが整ってこそ、透明感や明るさが際立つので、十分な保湿で美白への第一歩を整えましょう。</p></div><!--.diet-point-inbox--><div class="skincare-point-inbox">
+											<h3 class="skincare-border-orange"><span>日焼け止め</span>を上手に利用</h3><p>朝に一回日焼け止めを塗っていれば、もうOK...なんて思っていませんかお昼時は紫外線がもっとも強い時間帯です。例えば、ランチに出る前には日焼け止めを塗り直すなどして、肌をこまめにガードしてあげるようにしましょう。</p></div><!--.diet-point-inbox--></div><!--.diet-point-wrapper-->
+											<div class="skincare-faq-wrapper"><p class="skincare-faq-faq">FAQ</p><div class="skincare-faq-q-wrapper">
+												<p class="skincare-faq-title-before">Q:</p><p class="skincare-faq-title">タバコってくすみの原因になるの？</p></div><div class="skincare-faq-a-wrapper">
+													<p class="skincare-faq-sentence-before">A:</p><p class="skincare-faq-sentence">はい、なります。くすみの原因になることはもちろん、喫煙することにより血行が悪くなり、肌に必要な栄養分が行き渡らないこと、そして、タバコはビタミンCを破壊するのでコラーゲンやエラスチンが作られないことで、肌のハリや弾力が奪われます。お肌にとって良いことは何もないので、タバコは吸わないのがべターでしょう。</p></div></div><!--.shokuji-diet-faq-wrapper-->
+						</a>
+					</dl>
+				</div>
+<!--6位ここまで-->
+			  </div><!--.main_pink-->
+			</div><!--.slidetoggle-->
+		</div><!--.main_inner-->
+	</div><!--.dna_main shokuji-->
+</section>
+<!--気をつけたいお肌トラブルランキングここまで-->
+
+<!-- お肌&ヘアトラブル危険度ここから -->
+<section>
+	<div class="dna_main taishitsu">
+		<div id="main_inner">
+			<h1 class="ttl_h1 syncer-acdn taishitsu-contents-name" data-target="syncer-acdn-skinhairriskpoint" data-name="+">お肌&ヘアトラブル危険度</h1>
+			<div class="slidetoggle" id="syncer-acdn-skinhairriskpoint" style="display:none;"><br />
+			<h2 class="serif border-image-red">１０段階中<p style="font-size:150%;">【
+				10
+			】</p></h2>
+				<div id="main_mono">
+				<div id="main_mono_inner">
+						<p class="sentence-margin inbox-sentence">
+							${target1}の遺伝的なお肌＆ヘアトラブル危険度は、10 段階中「10」です。
+他の遺伝子タイプの方と比較してお肌トラブルが起こりやすいと言え、すべての遺伝的リスク対策が必要です。
+						</p>
+				</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- お肌&ヘアトラブル危険度ここまで -->
+<!--糖化・酸化が引き起こすヘアトラブルここから-->
+<section>
+	<div class="dna_main taishitsu">
+		<div id="main_inner">
+			<h1 class="ttl_h1 syncer-acdn taishitsu-contents-name" data-target="syncer-acdn-hairtrouble" data-name="+">糖化・酸化が引き起こすヘアトラブル</h1>
+			<div class="slidetoggle" id="syncer-acdn-hairtrouble" style="display:none;"><br />
+				<div id="main_blue">
+				<div id="main_blue_inner">
+						<a class="syncer-acdn border-image-red hairtrouble-a" data-target="syncer-acdn-hairtrouble-volume">
+							ボリューム
+						</a>
+						<p class="hairtrouble-sentence-p">
+							糖化によって作られるAGEsが、炎症性サイトカインを増やすことや、活性酸素が毛母細胞を攻撃することにより毛母細胞の働きが弱まったり、過酸化脂質によって毛穴が詰まることで髪の発育が阻害され、ボリュームを失う原因となります。
+						</p>
+						<a class="syncer-acdn border-image-red hairtrouble-a" data-target="syncer-acdn-hairtrouble-gloss">
+							キューティクル（ツヤ）
+						</a>
+						<p class="hairtrouble-sentence-p">
+							キューティクルが糖化すると髪の透明度が下がり、活性酸素はキューティクルを破壊します。過酸化脂質が増えることで血流が悪化し毛根への栄養が失われることも髪のツヤを失う原因となります。
+						</p>
+						<a class="syncer-acdn border-image-red hairtrouble-a" data-target="syncer-acdn-hairtrouble-damage">
+							ダメージ（コシ、ハリ、パサつき、枝毛）
+						</a>
+						<p class="hairtrouble-sentence-p">
+							髪のダメージはコシやハリの喪失、髪のパサつきや枝毛を引き起こします。<br>
+							過酸化脂質は毛包でのコシとハリを保つ遺伝子 KAP5.1 の働きを阻害します。<br>ケラチン繊維が糖化により変形することで髪の強度が下がりることや、活性酸素除去にアミノ酸が使われ、アミノ酸のバランスが崩れること、過酸化脂質による血流の悪化は髪のダメージの修復を妨げる原因となります。
+						</p>
+				</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!--糖化・酸化が引き起こすヘアトラブルここまで-->
+<!-- 優先順位ここから -->
+<section>
+	<div class="dna_main taishitsu">
+		<div id="main_inner">
+			<h1 class="ttl_h1 syncer-acdn taishitsu-contents-name" data-target="syncer-acdn-priority" data-name="+">遺伝的リスク対策優先順位</h1>
+			<div class="slidetoggle" id="syncer-acdn-priority" style="display:none;"><br />
+			<h2 class="serif border-image-red"><p>
+				活性酸素リスク ＞ 過酸化脂質リスク ＞ 糖化リスク
+			</p></h2>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- 優先順位ここまで -->
+<!-- 遺伝的体質ここまで -->
+
+<!-- 食生活アドバイスここから -->
+<section>
+	<div class="ad">
+		<h1 class="ttl_h1 your_dna" style="background: #66cc99; border-bottom: 7px solid #99cc99; padding: 25px; border-radius: 2px; font-size: 1.8em; color: #FFFFFF; font-weight: bold;">食生活アドバイス</h1>
+	</div>
+</section>
+<!-- 食事ダイエットランキングここから -->
+<section>
+	<div class="dna_main shokuji">
+		<div id="main_inner">
+			<h1 class="ttl_h1 syncer-acdn shokuji-contents-name" data-target="syncer-acdn-fooddiet-ranking" data-name="+">
+				アドバイスランキング
+			</h1>
+			<div class="slidetoggle" id="syncer-acdn-fooddiet-ranking" style="display:none;"><br />
+				<div id="main_pink">
+				<!--1位全体ここから-->
+				<div id="main_pink_inner">
+				<!--1位のタイトルここから-->
+					<dl class="main_pink serif">
+						<a class="syncer-acdn ranking" data-target="syncer-acdn-fooddiet-ranking-1">
+							<div class="ranking-wrapper-a-imgwrapper">
+							 <img src="images/ranking_1.png" class="ranking-image-1 ranking-wrapper-a-imgwrapper-img1">
+							</div>
+							<h2 class="adviceranking-underline ranking-wrapper-a-h2-1">
+							抗酸化力の高いものを積極的に！
+							</h2>
+						</a>
+					</dl>
+				<!--1位のタイトルここまで-->
+					<a id="syncer-acdn-fooddiet-ranking-1" style="display:none;">
+						<!--ここから個別内容-->
+						<p class="skincare-meal-ranking-p">
+							お肌トラブルや老化の原因である「活性酸素」は呼吸をするだけでも発生します。私たちのからだには、活性酸素の攻撃から身を守る「抗酸化力」が備わっていますが、抗酸化力は加齢とともに衰えていきます。特に${target1}は、活性酸素が溜まりやすい遺伝的体質ですので、まずは食事などで抗酸化物質を摂取し、抗酸化力を高めるようにしましょう。
+						</p>
+
+						<img src="images/
+							food_ad_b1
+						.png" class="shokuji-ranking-img">
+
+					</a>
+				</div><!--main_pink_inner-->
+				<!--1位全体ここまで-->
+
+				<!--2位全体ここから-->
+				<div id="main_pink_inner">
+				<!--2位のタイトルここから-->
+					<dl class="main_pink serif">
+						<a class="syncer-acdn ranking" data-target="syncer-acdn-fooddiet-ranking-2">
+							<div class="ranking-wrapper-a-imgwrapper">
+							 <img src="images/ranking_2.png" class="ranking-image-2 ranking-wrapper-a-imgwrapper-img2">
+							</div>
+							<h2 class="adviceranking-underline ranking-wrapper-a-h2-2">
+							食品添加物に特に注意！
+							</h2>
+						</a>
+					</dl>
+				<!--2位のタイトルここまで-->
+					<a id="syncer-acdn-fooddiet-ranking-2" style="display:none;">
+						<!--ここから個別内容-->
+						<p class="skincare-meal-ranking-p">
+							活性酸素は、エネルギーを生み出す時だけではなく、体外から入り込んだ細菌やウイルスなどの異物を排除する時にも作られます。この異物の中には、人工甘味料や合成着色料などの食品添加物や残留農薬も含まれます。<br />食品を選ぶ際にはできるだけ食品添加物が少ないものを選ぶように気をつけましょう。<br />特にお肌トラブルが気になる場合は、化粧品やサプリメントだけで対策するのではなく、食品添加物を避けることを心がけると良いでしょう。
+						</p>
+
+						<img src="images/
+							food_ad_b2
+						.png" class="shokuji-ranking-img">
+
+					</a>
+				</div><!--main_pink_inner-->
+				<!--2位全体ここまで-->
+
+				<!--3位全体ここから-->
+				<div id="main_pink_inner">
+				<!--3位のタイトルここから-->
+					<dl class="main_pink serif">
+						<a class="syncer-acdn ranking" data-target="syncer-acdn-fooddiet-ranking-3">
+							<div class="ranking-wrapper-a-imgwrapper">
+							 <img src="images/ranking_3.png" class="ranking-image-3 ranking-wrapper-a-imgwrapper-img3">
+							</div>
+							<h2 class="adviceranking-underline ranking-wrapper-a-h2-3">
+							できるだけ脂質を減らしましょう！
+							</h2>
+						</a>
+					</dl>
+				<!--3位のタイトルここまで-->
+					<a id="syncer-acdn-fooddiet-ranking-3" style="display:none;">
+						<!--ここから個別内容-->
+						<p class="skincare-meal-ranking-p">
+							${target1}は、脂質が酸化しやすく、過酸化脂質によって老化が進んだり、肌トラブルが引き起こされたりしやすい遺伝的体質です。<br />過酸化脂質は、摂りすぎた脂質が酸化することでうまれ、シミやシワなどのお肌トラブルを引き起こしますので、脂質の摂りすぎを避けることが大切です！
+						</p>
+
+						<img src="images/
+							food_ad_c1
+						.png" class="shokuji-ranking-img">
+
+					</a>
+				</div><!--main_pink_inner-->
+				<!--3位全体ここまで-->
+
+				<!--4位全体ここから-->
+				<div id="main_pink_inner">
+				<!--4位のタイトルここから-->
+					<dl class="main_pink serif">
+						<a class="syncer-acdn ranking" data-target="syncer-acdn-fooddiet-ranking-4">
+							<div class="ranking-wrapper-a-imgwrapper">
+							 <img src="images/ranking_4.png" class="ranking-image-other ranking-wrapper-a-imgwrapper-imgother">
+							</div>
+							<h2 class="adviceranking-underline ranking-wrapper-a-h2-other">
+							脂質の吸収を抑える工夫を！
+							</h2>
+						</a>
+					</dl>
+				<!--4位のタイトルここまで-->
+					<a id="syncer-acdn-fooddiet-ranking-4" style="display:none;">
+						<!--ここから個別内容-->
+						<p class="skincare-meal-ranking-p">
+							${target1}は脂質が酸化しやすい遺伝的体質ですので、脂質の摂取を避けるだけではなく、脂質の吸収を抑えることも、美と健康を守るために特に効果的な生活習慣と言えます。<br />肉やバターなどの動物性脂肪や飽和脂肪酸の多い加工食品にはコレステロールが多く含まれています。<br />動物性脂肪を多く含む食品を食べる時は摂取量に気をつけ、野菜やきのこ、海藻などの食物繊維を多く含む食品を一緒に食べるよう心がけましょう。
+						</p>
+
+						<img src="images/
+							food_ad_c2
+						.png" class="shokuji-ranking-img">
+
+					</a>
+				</div><!--main_pink_inner-->
+				<!--4位全体ここまで-->
+
+				<!--5位全体ここから-->
+				<div id="main_pink_inner">
+				<!--5位のタイトルここから-->
+					<dl class="main_pink serif">
+						<a class="syncer-acdn ranking" data-target="syncer-acdn-fooddiet-ranking-5">
+							<div class="ranking-wrapper-a-imgwrapper">
+							 <img src="images/ranking_5.png" class="ranking-image-other ranking-wrapper-a-imgwrapper-imgother">
+							</div>
+							<h2 class="adviceranking-underline ranking-wrapper-a-h2-other">
+							糖質を控えめにしましょう！
+							</h2>
+						</a>
+					</dl>
+				<!--5位のタイトルここまで-->
+					<a id="syncer-acdn-fooddiet-ranking-5" style="display:none;">
+						<!--ここから個別内容-->
+						<p class="skincare-meal-ranking-p">
+							${target1}は、糖化が進みやすい遺伝的体質ですので、お肌を美しく保つためには、糖化対策を行うことが効果的です。<br />過剰に摂りすぎた糖質が糖化を進める原因になりますので、最も簡単な糖化リスク対策である「糖質を摂りすぎない」ことを毎日の生活の中で意識しましょう！
+						</p>
+					</a>
+				</div><!--main_pink_inner-->
+				<!--5位全体ここまで-->
+
+
+				<!--6位全体ここから-->
+				<div id="main_pink_inner">
+				<!--6位のタイトルここから-->
+					<dl class="main_pink serif">
+						<a class="syncer-acdn ranking" data-target="syncer-acdn-fooddiet-ranking-6">
+							<div class="ranking-wrapper-a-imgwrapper">
+							 <img src="images/ranking_6.png" class="ranking-image-other ranking-wrapper-a-imgwrapper-imgother">
+							</div>
+							<h2 class="adviceranking-underline ranking-wrapper-a-h2-other">
+							最初はＧＩ値の低いものから！
+							</h2>
+						</a>
+					</dl>
+				<!--6位のタイトルここまで-->
+					<a id="syncer-acdn-fooddiet-ranking-6" style="display:none;">
+						<!--ここから個別内容-->
+						<p class="skincare-meal-ranking-p">
+							血糖値の上がりやすさを示すＧＩ値が低い「低ＧＩ食品」から食べることを意識しましょう。<br />血糖値が上がりにくい食品を選ぶことで糖化の影響を減らすことができると言われています。<br />${target1}は、糖化が進みやすい遺伝的体質ですので、糖質の摂取を減らしたり、低ＧＩ食品を選ぶことがお肌の透明感やハリを守り、若々しくあり続けるために特に大切です。<br />※主な食品のＧＩ値をアドバイスブックにまとめていますので参考にしてください。
+						</p>
+					</a>
+				</div><!--main_pink_inner-->
+				<!--6位全体ここまで-->
+
+
+				<!--7位全体ここから-->
+				<div id="main_pink_inner">
+				<!--7位のタイトルここから-->
+					<dl class="main_pink serif">
+						<a class="syncer-acdn ranking" data-target="syncer-acdn-fooddiet-ranking-7">
+							<div class="ranking-wrapper-a-imgwrapper">
+							 <img src="images/ranking_7.png" class="ranking-image-other ranking-wrapper-a-imgwrapper-imgother">
+							</div>
+							<h2 class="adviceranking-underline ranking-wrapper-a-h2-other">
+							お酒の飲み過ぎは要注意！
+							</h2>
+						</a>
+					</dl>
+				<!--7位のタイトルここまで-->
+					<a id="syncer-acdn-fooddiet-ranking-7" style="display:none;">
+						<!--ここから個別内容-->
+						<p class="skincare-meal-ranking-p">
+							お酒だけではなく、炭酸飲料などからでも活性酸素は作られますが、お酒が発生させる活性酸素は他の飲み物よりも多く、飲み過ぎには注意が必要です。アルコールが肝臓で分解される際に活性酸素が生じるため、お酒を飲み過ぎると活性酸素の発生量も増えてしまいます。<br />${target1}は、活性酸素がたまりやすい遺伝的体質ですので、お酒を飲み過ぎないようにしましょう。<br />しかし、適度な飲酒は全く飲まないよりも美と健康に良いと考えられるようになってきました。ポリフェノールを多く含む赤ワインは抗酸化力が高く、また、ビールにも高い抗酸化力があると言われています。<br />ストレスによっても酸化は進みますので、お酒が好きな方は、我慢して禁酒するのではなく、赤ワインなど抗酸化力が高いお酒を選ぶと良いでしょう。
+						</p>
+					</a>
+				</div><!--main_pink_inner-->
+				<!--7位全体ここまで-->
+
+
+				<!--8位全体ここから-->
+				<div id="main_pink_inner">
+				<!--8位のタイトルここから-->
+					<dl class="main_pink serif">
+						<a class="syncer-acdn ranking" data-target="syncer-acdn-fooddiet-ranking-8">
+							<div class="ranking-wrapper-a-imgwrapper">
+							 <img src="images/ranking_8.png" class="ranking-image-other ranking-wrapper-a-imgwrapper-imgother">
+							</div>
+							<h2 class="adviceranking-underline ranking-wrapper-a-h2-other">
+							よく噛んでゆっくりと食べましょう！
+							</h2>
+						</a>
+					</dl>
+				<!--8位のタイトルここまで-->
+					<a id="syncer-acdn-fooddiet-ranking-8" style="display:none;">
+						<!--ここから個別内容-->
+						<p class="skincare-meal-ranking-p">
+							ゆっくりよく噛むことで唾液の分泌量は増加していきます。この唾液に含まれる酵素であるカタラーゼ・ペルオキシダーゼ・スーパーオキシダーゼなどは抗酸化作用があり、活性酸素を除去してくれます。<br />食事のメニューを工夫したり、抗酸化物質を摂り入れることも大切ですが、毎回の食事をゆっくりとよく噛んで食べるだけでも十分に活性酸素リスク対策になります。<br />また、よく噛むことは、食べ過ぎを防いだり、脳細胞の働きを活発にしたりと良いことがたくさんあります。<br />簡単に、今すぐに取り入れることができますので、一口３０回程度を目安に今から取り入れましょう！
+						</p>
+					</a>
+				</div><!--main_pink_inner-->
+				<!--8位全体ここまで-->
+
+
+				<!--9位全体ここから-->
+				<div id="main_pink_inner">
+				<!--9位のタイトルここから-->
+					<dl class="main_pink serif">
+						<a class="syncer-acdn ranking" data-target="syncer-acdn-fooddiet-ranking-9">
+							<div class="ranking-wrapper-a-imgwrapper">
+							 <img src="images/ranking_9.png" class="ranking-image-other ranking-wrapper-a-imgwrapper-imgother">
+							</div>
+							<h2 class="adviceranking-underline ranking-wrapper-a-h2-other">
+							卵を積極的に取り入れましょう！
+							</h2>
+						</a>
+					</dl>
+				<!--9位のタイトルここまで-->
+					<a id="syncer-acdn-fooddiet-ranking-9" style="display:none;">
+						<!--ここから個別内容-->
+						<p class="skincare-meal-ranking-p">
+							脂質が酸化しやすい${target1}におすすめの食品は卵です。<br />卵はビタミンＥとビタミンＢ２をセットで摂ることができます。<br />ビタミンＥは、体の中で不飽和脂肪酸と結びついて酸化を防ぎ、過酸化脂質ができるのを防止すると考えられています。<br />ビタミンＢ２は、できてしまった過酸化脂質を壊す働きがあります。これらのコンビで過酸化脂質を上手にコントロールしましょう。<br />また、ビタミンＢ２は多くの食品にみられますが、わずかしか含まれませんので、不足しがちな栄養素でもあります。
+						</p>
+					</a>
+				</div><!--main_pink_inner-->
+				<!--9位全体ここまで-->
+
+
+				<!--10位全体ここから-->
+				<div id="main_pink_inner">
+				<!--10位のタイトルここから-->
+					<dl class="main_pink serif">
+						<a class="syncer-acdn ranking" data-target="syncer-acdn-fooddiet-ranking-10">
+							<div class="ranking-wrapper-a-imgwrapper">
+							 <img src="images/ranking_10.png" class="ranking-image-other ranking-wrapper-a-imgwrapper-imgother">
+							</div>
+							<h2 class="adviceranking-underline ranking-wrapper-a-h2-other">
+							脂質が酸化しにくい調理法を！
+							</h2>
+						</a>
+					</dl>
+				<!--10位のタイトルここまで-->
+					<a id="syncer-acdn-fooddiet-ranking-10" style="display:none;">
+						<!--ここから個別内容-->
+						<p class="skincare-meal-ranking-p">
+							過酸化脂質ができにくい調理法を取り入れましょう。<br />調理による過酸化脂質の発生をできるだけ抑えるために、炒めたり揚げたりする代わりに、焼く、煮る、蒸すなどの調理法を選ぶことをおすすめします。<br />油炒めや揚げものを作る時には酸化しにくい油（オリーブオイルやごま油など）を使うか、油を少なめにし、加熱時間を短くすることを心がけましょう。また、酸化を防ぐため、油を保存する際には、冷暗所で、空気を通さないスチール缶やビンで保存し、古くなった油は使わないようにしましょう。
+						</p>
+					</a>
+				</div><!--main_pink_inner-->
+				<!--10位全体ここまで-->
+
+
+				<!--11位全体ここから-->
+				<div id="main_pink_inner">
+				<!--11位のタイトルここから-->
+					<dl class="main_pink serif">
+						<a class="syncer-acdn ranking" data-target="syncer-acdn-fooddiet-ranking-11">
+							<div class="ranking-wrapper-a-imgwrapper">
+							 <img src="images/ranking_11.png" class="ranking-image-other ranking-wrapper-a-imgwrapper-imgother">
+							</div>
+							<h2 class="adviceranking-underline ranking-wrapper-a-h2-other">
+							糖化しているお菓子や加工食品に注意！
+							</h2>
+						</a>
+					</dl>
+				<!--11位のタイトルここまで-->
+					<a id="syncer-acdn-fooddiet-ranking-11" style="display:none;">
+						<!--ここから個別内容-->
+						<p class="skincare-meal-ranking-p">
+							糖化した食品を食べ過ぎないことも大切です。<br />糖化は、体内でたんぱく質と糖が結びついて起こりますが、それだけではなく、食品を調理する過程でも、たんぱく質やアミノ酸に糖を混ぜて加熱することでＡＧＥｓが作られます。<br />ＡＧＥｓを多く含む身近な食品は、揚げたり焼いたりしたお菓子や調理の過程で高温で加熱した加工食品です。<br />家庭でつくる食事のＡＧＥｓを心配する必要はあまりありませんが、お菓子や加工食品を選ぶ時は注意が必要です。ＡＧＥｓが多く含まれているものもありますので、あまり食べ過ぎないようにしましょう。
+						</p>
+					</a>
+				</div><!--main_pink_inner-->
+				<!--11位全体ここまで-->
+
+
+				<!--12位全体ここから-->
+				<div id="main_pink_inner">
+				<!--12位のタイトルここから-->
+					<dl class="main_pink serif">
+						<a class="syncer-acdn ranking" data-target="syncer-acdn-fooddiet-ranking-12">
+							<div class="ranking-wrapper-a-imgwrapper">
+							 <img src="images/ranking_12.png" class="ranking-image-other ranking-wrapper-a-imgwrapper-imgother">
+							</div>
+							<h2 class="adviceranking-underline ranking-wrapper-a-h2-other">
+							糖化しにくい調理法を！
+							</h2>
+						</a>
+					</dl>
+				<!--12位のタイトルここまで-->
+					<a id="syncer-acdn-fooddiet-ranking-12" style="display:none;">
+						<!--ここから個別内容-->
+						<p class="skincare-meal-ranking-p">
+							調理法によって発生するＡＧＥｓの量が異なります。${target1}は、糖化が進みやすい遺伝的体質ですので、ＡＧＥｓが発生しやすい調理法を避けることが大切です。<br />揚げる、直火で焼く、グリル、レンジでチンなどの調理法は極力避け、蒸す、ゆでる、煮込む、手早く炒める、マリネにするなどの調理法をおすすめします。<br />発生するＡＧＥｓの量は、「生→蒸す・煮る・炊く→焼く→炒める→揚げる」の順に多くなります。<br />また、低温で短時間で調理した方がＡＧＥｓは増えにくく、油を使わずに野菜などを炒めた方が油を使ったときよりＡＧＥｓが少ないと言われています。
+						</p>
+					</a>
+				</div><!--main_pink_inner-->
+				<!--12位全体ここまで-->
+
+
+				<!--13位全体ここから-->
+				<div id="main_pink_inner">
+				<!--13位のタイトルここから-->
+					<dl class="main_pink serif">
+						<a class="syncer-acdn ranking" data-target="syncer-acdn-fooddiet-ranking-13">
+							<div class="ranking-wrapper-a-imgwrapper">
+							 <img src="images/ranking_13.png" class="ranking-image-other ranking-wrapper-a-imgwrapper-imgother">
+							</div>
+							<h2 class="adviceranking-underline ranking-wrapper-a-h2-other">
+							ネバネバした食品を一緒に！
+							</h2>
+						</a>
+					</dl>
+				<!--13位のタイトルここまで-->
+					<a id="syncer-acdn-fooddiet-ranking-13" style="display:none;">
+						<!--ここから個別内容-->
+						<p class="skincare-meal-ranking-p">
+							ご飯などの炭水化物と一緒に、オクラや納豆、とろろなどのネバネバした食べ物を一緒に食べることもおすすめです。<br />ネバネバした食べ物は、胃の中で糖を包んで消化を遅らせると言われています。消化にかかる時間が遅れることで、糖の吸収が抑えられ、糖化を防ぐことにつながります。<br />また、ネバネバのもとである水溶性食物繊維はＡＧＥｓを体内に取り込まず、排除する働きがあります。<br />糖化が進みやすい遺伝的体質ですので、炭水化物などの糖質が多いメニューの時はネバネバした食品を一緒に食べるようにしましょう。
+						</p>
+					</a>
+				</div><!--main_pink_inner-->
+				<!--13位全体ここまで-->
+
+
+				<!--14位全体ここから-->
+				<div id="main_pink_inner">
+				<!--14位のタイトルここから-->
+					<dl class="main_pink serif">
+						<a class="syncer-acdn ranking" data-target="syncer-acdn-fooddiet-ranking-14">
+							<div class="ranking-wrapper-a-imgwrapper">
+							 <img src="images/ranking_14.png" class="ranking-image-other ranking-wrapper-a-imgwrapper-imgother">
+							</div>
+							<h2 class="adviceranking-underline ranking-wrapper-a-h2-other">
+							お酢やオリーブオイルを使いましょう！
+							</h2>
+						</a>
+					</dl>
+				<!--14位のタイトルここまで-->
+					<a id="syncer-acdn-fooddiet-ranking-14" style="display:none;">
+						<!--ここから個別内容-->
+						<p class="skincare-meal-ranking-p">
+							お酢やオリーブオイルを使った料理は、糖の吸収をゆるやかにし、糖化リスク対策に効果的です。<br />お酢やオリーブオイルには、食べ物を胃から小腸に送り出すスピードをゆっくりにする働きがあります。特に、オリーブオイルは小腸下部で血糖値をコントロールするホルモンの分泌を促します。<br />料理の際にお酢やオリーブオイルを活用したり、お酢やオリーブオイルを使った料理を積極的に食べましょう。<br />また、最近では飲みやすいものも多くありますので、黒酢やリンゴ酢などのフルーツビネガーのドリンクを飲むこともおすすめです。
+						</p>
+					</a>
+				</div><!--main_pink_inner-->
+				<!--14位全体ここまで-->
+
+				</div><!--main_pink-->
+			  </div><!--slidetoggle-->
+			</div><!--main_inner-->
+		</div><!--dna_main shokuji-->
+</section>
+<!-- 食事ダイエットランキングここまで -->
+<!-- おすすめ栄養素ここから -->
+<section>
+	<div class="dna_main shokuji">
+		<div id="main_inner">
+			<h1 class="ttl_h1 syncer-acdn shokuji-contents-name" data-target="syncer-acdn-food-arrange" data-name="+">おすすめ栄養素</h1>
+			<div class="slidetoggle" id="syncer-acdn-food-arrange" style="display:none;">
+				<div id="main_orange">
+				<div id="main_orange_inner">
+
+	<!-- 糖化リスク対策ここから -->
+				<div id="main_orange_inner">
+					<dl class="main_orange serif">
+						<a class="syncer-acdn ranking" data-target="syncer-acdn-food-arrange-1">		<img src="images/eiyouso-type-img_01.png" class="eiyouso-type-img">
+							<h2 class="skincare-eiyouso-h2">糖化リスク対策</h2>
+						</a>
+					</dl>
+					<a class="food-arrange-a" id="syncer-acdn-food-arrange-1" style="display:none;">			<div>
+							<p class="border-image-green skincare-Recommended-nutrient">
+								アルギニン
+							</p>
+							<p class="skincare-Recommended-nutrient-p">
+								糖とたんぱく質が反応して糖化が起こる前に、糖と反応するアルギニンを加えると、たんぱく質の代わりにアルギニンが反応を起こして、糖化を抑えることができます。また、アルギニンは成長ホルモンの分泌なども促進しますので、活性酸素除去にも役立つ成分です。
+							</p>
+							<img src="images/eiyouso-arginin.png" class="shokuji-eiyouso-img">
+						</div>
+
+						<div>
+							<p class="border-image-green skincare-Recommended-nutrient">
+								コラーゲンの生成を助ける栄養素
+							</p>
+							<p class="skincare-Recommended-nutrient-p">
+								糖化はコラーゲンを破壊し、硬くします。糖化はコラーゲン不足につながります。コラーゲンはビタミンやミネラルと違い、体内でアミノ酸を原料に作られますので、コラーゲン生成に必要なこれらの栄養素をしっかりと摂取しましょう。
+							</p>
+							<img src="images/eiyouso-koragen.png" class="shokuji-eiyouso-img">
+						</div>
+					</a>
+				</div>
+	<!-- 糖化リスク対策ここまで -->
+
+
+	<!-- 活性酸素リスク対策ここから -->
+				<div id="main_orange_inner">
+					<dl class="main_orange serif">
+						<a class="syncer-acdn ranking" data-target="syncer-acdn-food-arrange-2">		<img src="images/eiyouso-type-img_02.png" class="eiyouso-type-img">
+							<h2 class="skincare-eiyouso-h2">活性酸素リスク対策</h2>
+						</a>
+					</dl>
+					<a class="food-arrange-a" id="syncer-acdn-food-arrange-2" style="display:none;">				<div>
+							<p class="border-image-green skincare-Recommended-nutrient">
+								ビタミンＥ
+							</p>
+							<p class="skincare-Recommended-nutrient-p">
+								活性酸素を抑え込む働きを持ちます。<br>
+								活性酸素に与えた電子をビタミンＣによって再び手に入れる事ができるため、抗酸化力を高めるにはビタミンＣと一緒に摂取すると良いでしょう。<br>
+								<br>
+								【ビタミンEを多く含む食べ物】<br>
+								アーモンド、ひまわり油、唐辛子、抹茶、小麦胚芽　など
+							</p>
+							<img src="images/eiyouso-be.png" class="shokuji-eiyouso-img">
+						</div>
+
+						<div>
+							<p class="border-image-green skincare-Recommended-nutrient">
+								ビタミンC
+							</p>
+							<p class="skincare-Recommended-nutrient-p">
+								高い抗酸化力を持ちます。水溶性のビタミンですので、特に血液中など水分の多い場所で抗酸化力を発揮します。<br>
+								<br>
+								【ビタミンＣを多く含む食べ物】<br>
+								グレープフルーツ・いちご・レモン・キウイ・オレンジなどの果物類、キャベツ・パセリ・ピーマン・ブロッコリー・ほうれん草などの野菜類　など
+							</p>
+						</div>
+
+						<div>
+							<p class="border-image-green skincare-Recommended-nutrient">
+								ビタミンＡ・カロテン
+							</p>
+							<p class="skincare-Recommended-nutrient-p">
+								眼に栄養を与え、皮膚や粘膜を丈夫にする働きを持ちます。カロテンは高い抗酸化力を持ちます。
+								<br>
+								【ビタミンＡ・カロテンを多く含む食べ物】<br>
+								ウナギ、卵黄、レバー、にんじん、かぼちゃ、春菊、にら、青しそ　など
+							</p>
+						</div>
+
+						<div>
+							<p class="border-image-green skincare-Recommended-nutrient">
+								セレン
+							</p>
+							<p class="skincare-Recommended-nutrient-p">
+								抗酸化力のあるミネラルで、ビタミンＥの働きを助けます。細胞の酸化を予防する働きを持ちますが、サプリメントなどの過剰摂取には注意が必要です。魚介類や穀類に含まれておりますので、正しく食生活を身につけ、食事から補うようにしましょう！<br>
+								<br>
+								【セレンを多く含む食べ物】<br>
+								ワカサギ・イワシ・ホタテなどの魚介類、玉ねぎ、ねぎ、穀類　など
+							</p>
+							<img src="images/eiyouso-seren.png" class="shokuji-eiyouso-img">
+						</div>
+
+						<div>
+							<p class="border-image-green skincare-Recommended-nutrient">
+								ビタミンＢ２
+							</p>
+							<p class="skincare-Recommended-nutrient-p">
+								脂肪の代謝を助け、成長を促します。ビタミンＥの抗酸化作用を高める働きを持っています。<br>
+								<br>
+								【ビタミンＢ２を多く含む食べ物】<br>
+								レバー、うなぎ、納豆、チーズ、牛乳、干ししいたけ、きくらげ　など
+							</p>
+							<img src="images/eiyouso-b2.png" class="shokuji-eiyouso-img">
+						</div>
+
+						<div>
+							<p class="border-image-green skincare-Recommended-nutrient">
+								ポリフェノール
+							</p>
+							<p class="skincare-Recommended-nutrient-p">
+								ほとんどの植物に含まれ、５０００種類以上あると言われています。種類ごとにそれぞれ異なる働きを持っていますが、共通して高い抗酸化力を持ち、活性酸素を除去します。
+								<br>
+								【ポリフェノールを多く含む食べ物】<br>
+								赤ワイン（プロアントシアニジン）、ウコン（クルクミン）、大豆（イソフラボン）、<br>
+								コーヒー（クロロゲン酸）、玉ねぎ（ケルセチン）、お茶（カテキン）、そば（ルチン）　など
+							</p>
+							<img src="images/eiyouso-porife.png" class="shokuji-eiyouso-img">
+						</div>
+
+					</a>
+				</div>
+	<!-- 活性酸素リスク対策ここまで -->
+
+
+	<!-- 過酸化脂質リスク対策ここから -->
+				<div id="main_orange_inner">
+					<dl class="main_orange serif">
+						<a class="syncer-acdn ranking" data-target="syncer-acdn-food-arrange-3">		<img src="images/eiyouso-type-img_03.png" class="eiyouso-type-img">
+							<h2 class="skincare-eiyouso-h2">過酸化脂質リスク対策</h2>
+						</a>
+					</dl>
+					<a class="food-arrange-a" id="syncer-acdn-food-arrange-3" style="display:none;">			<div>
+							<p class="border-image-green skincare-Recommended-nutrient">
+								ビタミンB2
+							</p>
+							<p class="skincare-Recommended-nutrient-p">
+								ビタミンB2は、グルタチオンペルオキシダーゼという酵素と一緒に働いて、過酸化脂質の分解を促進する効果があります。<br>
+								ビタミンB2は水溶性のビタミンですので、野菜などを水で洗う場合は手際よく素早く洗うようにしましょう。<br>
+								また、水に長時間浸けていると溶け出します。煮物料理などをの場合は汁も一緒に食べると無駄なくビタミンB2を摂る事ができます。
+							</p>
+							<img src="images/eiyouso-b2.png" class="shokuji-eiyouso-img">
+						</div>
+
+						<div>
+							<p class="border-image-green skincare-Recommended-nutrient">
+								ビタミンE
+							</p>
+							<p class="skincare-Recommended-nutrient-p">
+								ビタミンEは、不飽和脂肪酸を酸化から守る抗酸化作用、つまり、過酸化脂質ができるのを防ぐ働きを持っています。<br>
+								植物油や種実類をはじめとする多くの食品に含まれており、油と一緒に調理をすることでより吸収率が高まりますが、加熱や劣化で減少します。
+							</p>
+							<img src="images/eiyouso-be.png" class="shokuji-eiyouso-img">
+						</div>
+					</a>
+				</div>
+	<!-- 過酸化脂質リスク対策ここまで -->
+
+				</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- おすすめ栄養素ここまで -->
+<!-- 運動アドバイスここから -->
+<section>
+	<div class="ad">
+		<h1 class="ttl_h1 your_dna" style="background: #6666ff; border-bottom: 7px solid #9999ff; padding: 25px; border-radius: 2px; font-size: 1.8em; color: #FFFFFF; font-weight: bold;">運動アドバイス</h1>
+	</div>
+</section>
+<!-- アドバイスランキングここから -->
+<section>
+	<div class="dna_main undou">
+		<div id="main_inner">
+			<h1 class="ttl_h1 syncer-acdn undou-contents-name" data-target="syncer-acdn-undodiet-ranking" data-name="+">アドバイスランキング
+			</h1>
+			<div class="slidetoggle" id="syncer-acdn-undodiet-ranking" style="display:none;"><br />
+				<div id="main_pink">
+				<!--1位全体ここから-->
+				<div id="main_pink_inner">
+				<!--1位のタイトルここから-->
+					<dl class="main_pink serif">
+						<a class="syncer-acdn ranking" data-target="syncer-acdn-undodiet-ranking-1">
+							<div class="ranking-wrapper-a-imgwrapper">
+							 <img src="images/ranking_1.png" class="ranking-image-1 ranking-wrapper-a-imgwrapper-img1">
+							</div>
+							<h2 class="undou-diet-underline ranking-wrapper-a-h2-1">
+							激しい運動は活性酸素を増やします！
+							</h2>
+						</a>
+					</dl>
+				<!--1位のタイトルここまで-->
+					<a id="syncer-acdn-undodiet-ranking-1" style="display:none;">
+						<!--ここから個別内容-->
+						<p class="skincare-undo-ranking-p">
+							激しい運動によって体内に活性酸素が増えることが分かっています。<br />${target1}は活性酸素が溜まりやすい遺伝的体質ですので、息切れする程の激しい運動には注意が必要です。<br />運動を全くしないことはおすすめできませんが、激しい運動よりも軽い運動をおすすめします。<br />運動が好きな人は、抗酸化物質を多めに摂ったり、その他のライフスタイルを見直したりして酸化を進めないように気をつけましょう。<br />程よい筋肉トレーニングは成長ホルモンを分泌させ、活性酸素の除去能力を高めることにつながりますのでおすすめです。
+						</p>
+					</a>
+				</div><!--main_pink_inner-->
+				<!--1位全体ここまで-->
+
+				<!--2位全体ここから-->
+				<div id="main_pink_inner">
+				<!--2位のタイトルここから-->
+					<dl class="main_pink serif">
+						<a class="syncer-acdn ranking" data-target="syncer-acdn-undodiet-ranking-2">
+							<div class="ranking-wrapper-a-imgwrapper">
+							 <img src="images/ranking_2.png" class="ranking-image-2 ranking-wrapper-a-imgwrapper-img2">
+							</div>
+							<h2 class="undou-diet-underline ranking-wrapper-a-h2-2">
+							適度な運動で過酸化脂質リスク対策を！
+							</h2>
+						</a>
+					</dl>
+				<!--2位のタイトルここまで-->
+					<a id="syncer-acdn-undodiet-ranking-2" style="display:none;">
+						<!--ここから個別内容-->
+						<p class="skincare-undo-ranking-p">
+							${target1}は過酸化脂質ができやすい遺伝的体質です。<br />適度な運動は過酸化脂質リスク対策に効果的ですので取り入れましょう！息切れしない程度の運動によってＨＤＬ―コレステロールが増えることが分かっています。ＨＤＬ―コレステロールは、血管の内側についたコレステロールや血液中の余分なコレステロールを取り除く効果があります。<br />しかし、激しい運動は活性酸素を増やし、過酸化脂質が増えるのでおすすめできません。ヨガやウォーキング、軽い負荷でのジョギングなどを毎日の生活の中に取り入れると良いでしょう。
+						</p>
+
+					</a>
+				</div><!--main_pink_inner-->
+				<!--2位全体ここまで-->
+
+
+				<!--3位全体ここから-->
+				<div id="main_pink_inner">
+				<!--3位のタイトルここから-->
+					<dl class="main_pink serif">
+						<a class="syncer-acdn ranking" data-target="syncer-acdn-undodiet-ranking-3">
+							<div class="ranking-wrapper-a-imgwrapper">
+							 <img src="images/ranking_3.png" class="ranking-image-3 ranking-wrapper-a-imgwrapper-img3">
+							</div>
+							<h2 class="undou-diet-underline ranking-wrapper-a-h2-3">
+							食後に軽くからだを動かしましょう！
+							</h2>
+						</a>
+					</dl>
+				<!--3位のタイトルここまで-->
+					<a id="syncer-acdn-undodiet-ranking-3" style="display:none;">
+						<!--ここから個別内容-->
+						<p class="skincare-undo-ranking-p">
+							${target1}は、糖化が進みやすい遺伝的体質ですので、食事の内容だけではなく、食後の行動にも工夫をすることが大切です。<br />食べた後すぐに横になったり、仕ことに戻ったりしていませんか？<br />食後すぐにからだを休めてしまうことは、糖の吸収を進め、糖化を加速させてしまいます。<br />食後１時間に、ストレッチやウォーキング、軽い筋肉トレーニングなどでからだを動かしましょう。糖の吸収を抑えることができ、糖化を抑えることにつながります。<br />ただし、あまり激しい運動を行うと消化を妨げますので、軽くからだを動かす程度に留めることが大切です。
+						</p>
+					</a>
+				</div><!--main_pink_inner-->
+				<!--3位全体ここまで-->
+
+				</div><!--main_pink-->
+			  </div><!--slidetoggle-->
+			</div><!--main_inner-->
+		</div><!--dna_main shokuji-->
+</section>
+<!-- アドバイスランキングここまで -->
+<!-- 運動アドバイスここまで -->
+
+<!-- その他のアドバイスここから -->
+<section>
+	<div class="ad">
+		<h1 class="ttl_h1 your_dna" style="background: #ff9933; border-bottom: 7px solid #ffcc66; padding: 25px; border-radius: 2px; font-size: 1.8em; color: #FFFFFF; font-weight: bold;">その他のアドバイス</h1>
+	</div>
+</section>
+<!-- アドバイスここから -->
+<section>
+	<div class="dna_main sonota">
+		<div id="main_inner">
+			<h1 class="ttl_h1 syncer-acdn sonota-contents-name" data-target="syncer-acdn-sonota-ranking" data-name="+">ライフスタイルアドバイス
+			</h1>
+			<div class="slidetoggle" id="syncer-acdn-sonota-ranking" style="display:none;"><br />
+				<div id="main_pink">
+				<!--1位全体ここから-->
+				<div id="main_pink_inner">
+				<!--1位のタイトルここから-->
+					<dl class="main_pink serif">
+						<a class="syncer-acdn ranking" data-target="syncer-acdn-sonota-ranking-1">
+							<div class="ranking-wrapper-a-imgwrapper">
+							 <img src="images/ranking_1.png" class="ranking-image-1 ranking-wrapper-a-imgwrapper-img1">
+							</div>
+							<h2 class="undou-sonota-underline ranking-wrapper-a-h2-1">
+							人並み以上に入念な紫外線対策を！
+							</h2>
+						</a>
+					</dl>
+				<!--1位のタイトルここまで-->
+					<a id="syncer-acdn-sonota-ranking-1" style="display:none;">
+						<!--ここから個別内容-->
+						<p class="skincare-sonota-ranking-p">
+							紫外線は活性酸素を発生させたり、過酸化脂質を増やす反応を加速させたりし、多くのお肌トラブルを引き起こします。<br />　・ 皮脂を酸化させ、毛穴つまりや黒ずみができる。<br />　・ 肌にダメージを与える「スクワレン過酸化物質」を作る。<br />　・ アクネ菌と結びつき、ニキビの原因となる。<br />　・ メラニン色素を作り、シミができてしまう。<br />${target1}は活性酸素、過酸化脂質ともに注意が必要で、酸化が進みやすい遺伝的体質ですので、日焼け止めや日傘を活用するなど、紫外線対策を十分に行いましょう。また、紫外線を受けた後のケアも入念に行うことが必要です。肌の鎮静を目的としたスキンケアや傷ついた肌の角質層に必要な成分で保護するようにしましょう。
+						</p>
+					</a>
+				</div><!--main_pink_inner-->
+				<!--1位全体ここまで-->
+				<!--2位全体ここから-->
+				<div id="main_pink_inner">
+				<!--2位のタイトルここから-->
+					<dl class="main_pink serif">
+						<a class="syncer-acdn ranking" data-target="syncer-acdn-sonota-ranking-2">
+							<div class="ranking-wrapper-a-imgwrapper">
+							 <img src="images/ranking_2.png" class="ranking-image-2 ranking-wrapper-a-imgwrapper-img2">
+							</div>
+							<h2 class="undou-sonota-underline ranking-wrapper-a-h2-2">
+							活性酸素を増やすものを避けましょう！
+							</h2>
+						</a>
+					</dl>
+				<!--2位のタイトルここまで-->
+					<a id="syncer-acdn-sonota-ranking-2" style="display:none;">
+						<!--ここから個別内容-->
+						<p class="skincare-sonota-ranking-p">
+							活性酸素はお肌のターンオーバーの周期を乱したり、メラニンを過剰に生成したり、真皮層へダメージを与えたりと、さまざまなお肌トラブルの原因を作ります。<br />${target1}は活性酸素が溜まりやすい遺伝的体質ですので、活性酸素ができにくいライフスタイルを送ったり、抗酸化物質を積極的に摂取するなどの活性酸素リスク対策を行うことを意識しましょう！<br />これらは活性酸素を増やしてしまうので、避けるようにしましょう。<br /><br />　・たばこの煙　　・ストレス　　・排気ガス　　・紫外線<br />　・食品添加物　　・睡眠不足　　・電磁波　　　・激しい運動
+						</p>
+
+					</a>
+				</div><!--main_pink_inner-->
+				<!--2位全体ここまで-->
+
+				<!--3位全体ここから-->
+				<div id="main_pink_inner">
+				<!--3位のタイトルここから-->
+					<dl class="main_pink serif">
+						<a class="syncer-acdn ranking" data-target="syncer-acdn-sonota-ranking-3">
+							<div class="ranking-wrapper-a-imgwrapper">
+							 <img src="images/ranking_3.png" class="ranking-image-3 ranking-wrapper-a-imgwrapper-img3">
+							</div>
+							<h2 class="undou-sonota-underline ranking-wrapper-a-h2-3">
+							副交感神経を優位にしましょう！
+							</h2>
+						</a>
+					</dl>
+				<!--3位のタイトルここまで-->
+					<a id="syncer-acdn-sonota-ranking-3" style="display:none;">
+						<!--ここから個別内容-->
+						<p class="skincare-sonota-ranking-p">
+							活性酸素の発生を防ぐだけではなく、体内に備わっている活性酸素を除去する力＝抗酸化力を高めることも大切です。<br />交感神経が優位になると血液中の白血球の顆粒球が増え、活性酸素の発生を促します。活性酸素の害を防ぐには、副交感神経を優位にし、リンパ球を増やせば良いと言われています。<br />腹式呼吸による瞑想で副交感神経が優位になります。５分程度の短時間でも良いので、毎日瞑想を取り入れることで活性酸素が溜まりにくい体質を目指しましょう。<br />瞑想の他にも、38～40度程度のぬるめのお湯につかることや、ウォーキングなどの自分のペースで楽しめる運動、３食決まった時間によく噛んで食べることもおすすめです。
+						</p>
+
+					</a>
+				</div><!--main_pink_inner-->
+				<!--3位全体ここまで-->
+
+				<!--4位全体ここから-->
+				<div id="main_pink_inner">
+				<!--4位のタイトルここから-->
+					<dl class="main_pink serif">
+						<a class="syncer-acdn ranking" data-target="syncer-acdn-sonota-ranking-4">
+							<div class="ranking-wrapper-a-imgwrapper">
+							 <img src="images/ranking_4.png" class="ranking-image-other ranking-wrapper-a-imgwrapper-imgother">
+							</div>
+							<h2 class="undou-sonota-underline ranking-wrapper-a-h2-other">
+							洗顔は、こまめに、丁寧に！
+							</h2>
+						</a>
+					</dl>
+				<!--4位のタイトルここまで-->
+					<a id="syncer-acdn-sonota-ranking-4" style="display:none;">
+						<!--ここから個別内容-->
+						<p class="skincare-sonota-ranking-p">
+							${target1}は過酸化脂質ができやすい遺伝的体質ですので、洗顔をこまめに、丁寧に行い、お肌の表面に脂質を残さないように心がけましょう。<br />他の遺伝子タイプの方と比べて、お肌に残った皮脂が酸化しやすく、色素沈着＝シミを作りやすいです。また、真皮にある弾力線維を破壊し、シワの原因となります。<br />化粧品などに含まれるオイルや皮脂を丁寧な洗顔でしっかりと取り除きましょう。<br />脂質は紫外線によって酸化しますので、洗顔後には日焼け止めを塗ることを忘れないようにしましょう。
+						</p>
+
+					</a>
+				</div><!--main_pink_inner-->
+				<!--4位全体ここまで-->
+
+
+				<!--5位全体ここから-->
+				<div id="main_pink_inner">
+				<!--5位のタイトルここから-->
+					<dl class="main_pink serif">
+						<a class="syncer-acdn ranking" data-target="syncer-acdn-sonota-ranking-5">
+							<div class="ranking-wrapper-a-imgwrapper">
+							 <img src="images/ranking_5.png" class="ranking-image-other ranking-wrapper-a-imgwrapper-imgother">
+							</div>
+							<h2 class="undou-sonota-underline ranking-wrapper-a-h2-other">
+							加齢臭対策も行いましょう！
+							</h2>
+						</a>
+					</dl>
+				<!--5位のタイトルここまで-->
+					<a id="syncer-acdn-sonota-ranking-5" style="display:none;">
+						<!--ここから個別内容-->
+						<p class="skincare-sonota-ranking-p">
+							${target1}は、過酸化脂質ができやすく、加齢臭に注意が必要な遺伝的体質です。<br />加齢臭と体臭は原因が違います。体臭は汗腺から分泌された分泌液に細菌が繁殖することが大きな原因ですので、汗をかいたら着替えたり、からだを清潔に保つことで防ぐことができます。しかし、加齢臭は、皮脂腺から発生するノネナールという物質が原因で発生します。いくら清潔にしていてもそれだけでは防ぐことができません。汗や雑菌のケアなどの対策と同時に、過酸化脂質ができにくいライフスタイルを目指しましょう。
+						</p>
+
+					</a>
+				</div><!--main_pink_inner-->
+				<!--5位全体ここまで-->
+
+
+				<!--6位全体ここから-->
+				<div id="main_pink_inner">
+				<!--6位のタイトルここから-->
+					<dl class="main_pink serif">
+						<a class="syncer-acdn ranking" data-target="syncer-acdn-sonota-ranking-6">
+							<div class="ranking-wrapper-a-imgwrapper">
+							 <img src="images/ranking_6.png" class="ranking-image-6 ranking-wrapper-a-imgwrapper-imgother">
+							</div>
+							<h2 class="undou-sonota-underline ranking-wrapper-a-h2-other">
+							糖化の進む習慣を避けましょう！
+							</h2>
+						</a>
+					</dl>
+				<!--6位のタイトルここまで-->
+					<a id="syncer-acdn-sonota-ranking-6" style="display:none;">
+						<!--ここから個別内容-->
+						<p class="skincare-sonota-ranking-p">
+							糖化の進む習慣を減らしていくことが、内面から美を保つためには必要です。<br />${target1}は、スキンケアを行うだけではなく、糖化が進みやすいライフスタイルを避けることが特に大切です。<br />これらは糖化を進めますので、改善するようにしましょう。<br /><br />　・ パンや麺類などの炭水化物が大好き。<br />　・ 甘いジュースや炭酸飲料をよく飲む。<br />　・ あまり噛まずに、つい早食いしてしまう。<br />　・ 日常生活の中でほとんど運動をしない。
+						</p>
+
+					</a>
+				</div><!--main_pink_inner-->
+				<!--6位全体ここまで-->
+
+
+				<!--7位全体ここから-->
+				<div id="main_pink_inner">
+				<!--7位のタイトルここから-->
+					<dl class="main_pink serif">
+						<a class="syncer-acdn ranking" data-target="syncer-acdn-sonota-ranking-7">
+							<div class="ranking-wrapper-a-imgwrapper">
+							 <img src="images/ranking_7.png" class="ranking-image-other ranking-wrapper-a-imgwrapper-imgother">
+							</div>
+							<h2 class="undou-sonota-underline ranking-wrapper-a-h2-other">
+							睡眠の質を高めましょう！
+							</h2>
+						</a>
+					</dl>
+				<!--7位のタイトルここまで-->
+					<a id="syncer-acdn-sonota-ranking-7" style="display:none;">
+						<!--ここから個別内容-->
+						<p class="skincare-sonota-ranking-p">
+							糖化の進行には、ホルモンバランスの乱れが関係しています。<br />${target1}は、糖化が進みやすい遺伝的体質ですので、糖化が進みにくい食事、運動にプラスして、ホルモンバランスを正常に保つことも大切です。質の良いホルモンは、睡眠中に分泌されます。<br />以下のことに注意し、睡眠の質を高めることが糖化を抑えることにつながります。<br />　・ お風呂をぬるめの温度にする。<br />　・ 毎日同じ時刻に起きて光を浴びる。<br />　・ 体内時計に影響を与える明るい光を避ける。 <br />　・ 昼寝は午後３時前の20分～30分に。
+						</p>
+
+					</a>
+				</div><!--main_pink_inner-->
+				<!--7位全体ここまで-->
+
+
+				<!--8位全体ここから-->
+				<div id="main_pink_inner">
+				<!--8位のタイトルここから-->
+					<dl class="main_pink serif">
+						<a class="syncer-acdn ranking" data-target="syncer-acdn-sonota-ranking-8">
+							<div class="ranking-wrapper-a-imgwrapper">
+							 <img src="images/ranking_8.png" class="ranking-image-other ranking-wrapper-a-imgwrapper-imgother">
+							</div>
+							<h2 class="undou-sonota-underline ranking-wrapper-a-h2-other">
+							空腹に注意しましょう！
+							</h2>
+						</a>
+					</dl>
+				<!--8位のタイトルここまで-->
+					<a id="syncer-acdn-sonota-ranking-8" style="display:none;">
+						<!--ここから個別内容-->
+						<p class="skincare-sonota-ranking-p">
+							空腹時に糖分の高いものを食べないようにしましょう。血糖値が上がり、インスリン濃度も急激に上昇します。このようなことを繰り返していると、インスリンが効きにくくなり、血糖値が下がりにくい＝糖化が進みやすい状態になってしまいます。<br />食べ物だけではなく、飲み物にも注意が必要です。喉が渇いたからと言って空腹時に甘い清涼飲料水や甘みのある炭酸飲料を一気に飲むような行為は避けましょう。<br />また、空腹が長時間続いた後に食事をすると血糖値が急激に上がりやすくなります。<br />お腹が空いたと感じた時はそのままにせずに、グレープフルーツなどの食物繊維やビタミンを多く含む果物（糖質が少ないもの）、ナッツなどを食べるようにしましょう。
+						</p>
+
+					</a>
+				</div><!--main_pink_inner-->
+				<!--8位全体ここまで-->
+
+				</div><!--main_pink-->
+			  </div><!--slidetoggle-->
+			</div><!--main_inner-->
+		</div><!--dna_main shokuji-->
+</section>
+<!-- アドバイスここまで -->
+<!-- 解析結果ここから -->
+<section>
+	<div class="dna_main sonota">
+		<div id="main_inner">
+			<h1 class="ttl_h1 syncer-acdn sonota-contents-name" data-target="syncer-acdn-01" data-name="+">解析結果</h1>
+			<div class="main_box slidetoggle" id="syncer-acdn-01" style="display:none;">
+				<div id="main_pink">
+				<div id="main_pink_inner">
+				<div class="fl">
+					<h2 class="serif" style="font-size: 1.5em; margin-top: 20px;">ＡＲ<a style="font-size:65%;">（アルドース還元酵素）</a><br />
+					<p style="margin-top: .5em;">
+					G / G（ワイルド）
+					</p>
+					</h2>
+					<br />
+					<hr />
+					<h2 class="serif" style="font-size: 1.5em; margin-top: 20px;">Ｍｎ－ＳＯＤ<a style="font-size:65%;">（マンガンＳＯＤ）</a><br />
+					<p style="margin-top: .5em;">
+					Val / Val（ホモ）
+					</p>
+					</h2>
+					<br />
+					<hr />
+					<h2 class="serif" style="font-size: 1.5em; margin-top: 20px;">ＰＯＮ１<a style="font-size:65%;">（パワオキソナーゼ１）</a><br />
+					<p style="margin-top: .5em;">
+					Gln / Arg（ヘテロ）
+					</p>
+					</h2>
+					<br />
+					<hr />
+					<br />
+				</div><!--.fl-->
+				</div><!--.main_pink_inner-->
+				</div><!--main_pink-->
+			</div><!--.main_box slidetoggle-->
+		</div><!--.main_inner-->
+	</div><!--.dna_main sonota-->
+</section>
+<!-- 解析結果ここまで -->
+<!-- その他のアドバイスここまで -->
+<section>
+	<div class="ad">
+		<h1 class="ttl_h1 your_dna" style="cursor: auto;">一生変わらない<br>「あなただけ」へのアドバイス</h1>
+	</div>
+</section>
+<p id="pagetop" style="text-align: right; margin: 10px;"><a href="#top_visual" style="display: inline-block; text-align: center; line-height: 1; padding: 10px; background: #ffcccc; border-radius: 5px; color: #ff6666;">▲<br>TOP</a></p>
+<!-- JavaScriptの読み込み -->
+<script src="{% static 'js/accordion.js' %}"></script>
+<script src="{% static 'js/transform.js' %}"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+{% endblock %}

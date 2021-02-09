@@ -1,0 +1,26 @@
+{% extends "register/base.html" %}
+{% load static %}
+
+{% block header %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1>SkinDNA</h1>
+
+    <p>検体IDと検体パスワードを入力してください。</p>
+
+    {% if object.skinansno == None %}
+    <form action="{% url 'logetapp:skinmypage' object.pk %}" method="post">
+    {% csrf_token %}
+    {{ form }}
+    <tr><td></td><td><input type="submit" value="取得"></td></tr>
+    </form>
+    {% endif %}
+
+</div>
+
+
+{% endblock %}
