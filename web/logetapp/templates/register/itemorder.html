@@ -1,0 +1,233 @@
+{% extends "register/base_store.html" %}
+{% load static %}
+
+{% block header %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/mystyle.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/mdb.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/mdb.lite.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/mdb.lite.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/mdb.min.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="container" id="form">
+    <button class="btn btn-primary" style="width:100%; font-size:150%; margin-bottom:1em;">資材発注</button>
+    <div><center><a href="#image">商品の内容はこちら＞＞</a></center></div>
+    <form action="{% url 'logetapp:itemorder' user.pk %}" method="POST" style="width:95%; margin:auto;">
+        {% csrf_token %}
+        <table class="table">
+        {{ form.as_table }}
+        </table>
+        <center><button class="btn btn-outline-primary waves-effect" type="submit" style="width:50%;">送信</button></center>
+    </form>
+</div>
+<hr>
+<div class="container" id="image">
+    <button class="btn btn-primary" style="width:100%; font-size:150%; margin-bottom:1em;">資材発注</button>
+    <div><center><a href="#form">発注フォームはこちら＞＞</a></center></div>
+    <div class="card-deck mb-3 text-center">
+        <div class="card mb-6 shadow-sm">
+          <div class="card-body">
+            <p class="btn btn-outline-default" style="width:100%;margin-bottom:1em; font-size:120%;">遺伝子サンプル採取セット（箱無し）</p>
+              <center>
+              <div class="card-text">
+                  <img src="{% static 'images/1-1-1kit_no_box.png'%}" style="width:50%;"><br>
+                  採取用の綿棒、申込用紙、採取の仕方、補足説明書と採取済綿棒の返送用封筒の5点セットです。
+              </div>
+              </center>
+          </div>
+        </div>
+        <div class="card mb-6 shadow-sm">
+          <div class="card-body">
+            <p class="btn btn-outline-default" style="width:100%;margin-bottom:1em; font-size:120%;">遺伝子サンプル採取セット（箱有り）</p>
+              <center>
+              <div class="card-text">
+                  <img src="{% static 'images/1-1-2kit_box.png'%}" style="width:70%;"><br>
+                  採取用の綿棒、申込用紙、採取の仕方、補足説明書と採取済綿棒の返送用封筒の5点セットと、綿棒などを入れる箱のセットです。
+              </div>
+              </center>
+          </div>
+        </div>
+    </div>
+
+    <div class="card-deck mb-3 text-center">
+        <div class="card mb-6 shadow-sm">
+          <div class="card-body">
+            <p class="btn btn-outline-default" style="width:100%;margin-bottom:1em; font-size:120%;">【A4ポップ】遺伝子BODY革命</p>
+              <center>
+              <div class="card-text">
+                  <img src="{% static 'images/1-2-1pop_diet.png'%}" style="width:50%;"><br>
+                  １セット10枚です。大き目の写真とキャッチコピーでお客様の目を引き、興味を持っていただけるポップです。
+              </div>
+              </center>
+          </div>
+        </div>
+        <div class="card mb-6 shadow-sm">
+          <div class="card-body">
+            <p class="btn btn-outline-default" style="width:100%;margin-bottom:1em; font-size:120%;">【A4ポップ】遺伝子FACIAL革命</p>
+              <center>
+              <div class="card-text">
+                  <img src="{% static 'images/1-2-2pop_skincare.png'%}" style="width:50%;"><br>
+                  １セット10枚です。大き目の写真とキャッチコピーでお客様の目を引き、興味を持っていただけるポップです。
+              </div>
+              </center>
+          </div>
+        </div>
+    </div>
+
+    <div class="card-deck mb-3 text-center">
+        <div class="card mb-6 shadow-sm">
+          <div class="card-body">
+            <p class="btn btn-outline-default" style="width:100%;margin-bottom:1em; font-size:120%;">【A4ポップ】DNAタイプチェック</p>
+              <center>
+              <div class="card-text">
+                  <img src="{% static 'images/1-3-1pop_typecheck.png'%}" style="width:50%;"><br>
+                  １セット10枚です。３つの遺伝的リスクの紹介とDNAタイプチェックへの誘導のQRコードを記載しております。
+              </div>
+              </center>
+          </div>
+        </div>
+        <div class="card mb-6 shadow-sm">
+          <div class="card-body">
+            <p class="btn btn-outline-default" style="width:100%;margin-bottom:1em; font-size:120%;">【A4ポップ】各種遺伝的リスク</p>
+              <center>
+              <div class="card-text">
+                  <img src="{% static 'images/1-3-2pop_risk_c.png'%}" style="width:50%;"><br>
+                  １セット10枚です。それぞれの遺伝的リスクの解説と高い方の特徴をまとめています。結果説明の時にもご活用いただけます。
+              </div>
+              </center>
+          </div>
+        </div>
+    </div>
+
+    <div><center><a href="#form">発注フォームはこちら＞＞</a></center></div>
+
+    <div class="card-deck mb-3 text-center">
+        <div class="card mb-6 shadow-sm">
+          <div class="card-body">
+            <p class="btn btn-outline-default" style="width:100%;margin-bottom:1em; font-size:120%;">【二次商品紹介A4ポップ】各種商品①</p>
+              <center>
+              <div class="card-text">
+                  <img src="{% static 'images/1-4-1pop_supplement_1.png'%}" style="width:50%;"><br>
+                  １セット10枚です。それぞれの商品について詳しく解説しています。お客様への提案の際にもご活用いただけます。
+              </div>
+              </center>
+          </div>
+        </div>
+        <div class="card mb-6 shadow-sm">
+          <div class="card-body">
+            <p class="btn btn-outline-default" style="width:100%;margin-bottom:1em; font-size:120%;">【二次商品紹介A4ポップ】各種商品②</p>
+              <center>
+              <div class="card-text">
+                  <img src="{% static 'images/1-5-1pop_supplement_2.png'%}" style="width:50%;"><br>
+                  １セット10枚です。大き目の写真とキャッチコピーでお客様の目を引き、興味を持っていただけるポップです。
+              </div>
+              </center>
+          </div>
+        </div>
+    </div>
+
+    <div class="card-deck mb-3 text-center">
+        <div class="card mb-6 shadow-sm">
+          <div class="card-body">
+            <p class="btn btn-outline-default" style="width:100%;margin-bottom:1em; font-size:120%;">【小冊子】遺伝子革命商品紹介</p>
+              <center>
+              <div class="card-text">
+                  <img src="{% static 'images/mini_book_1.png'%}" style="width:50%;"><br>
+                  １セット5冊です。遺伝子革命の商品が一目で分かるものです。
+              </div>
+              </center>
+          </div>
+        </div>
+        <div class="card mb-6 shadow-sm">
+          <div class="card-body">
+            <p class="btn btn-outline-default" style="width:100%;margin-bottom:1em; font-size:120%;">【小冊子】遺伝子検査の説明</p>
+              <center>
+              <div class="card-text">
+                  <img src="{% static 'images/mini_book_2.png'%}" style="width:50%;"><br>
+                  １セット5冊です。遺伝子そのものや遺伝子検査、遺伝子検査を受ける価値が分かるものです。
+              </div>
+              </center>
+          </div>
+        </div>
+    </div>
+
+    <div class="card-deck mb-3 text-center">
+        <div class="card mb-6 shadow-sm">
+          <div class="card-body">
+            <p class="btn btn-outline-default" style="width:100%;margin-bottom:1em; font-size:120%;">【３つ折りリーフレット】遺伝子革命</p>
+              <center>
+              <div class="card-text">
+                  <img src="{% static 'images/1-1-3leaflet_with23.jpg'%}" style="width:50%;"><br>
+                  １セット10枚です。A4の3つ折りサイズでお客様にもお持ち帰りいただける使い勝手の良いものです。
+              </div>
+              </center>
+          </div>
+        </div>
+        <div class="card mb-6 shadow-sm">
+          <div class="card-body">
+            <p class="btn btn-outline-default" style="width:100%;margin-bottom:1em; font-size:120%;">【３つ折りリーフレット】美腸革命</p>
+              <center>
+              <div class="card-text">
+                  <img src="{% static 'images/1-1-4leaflet_withflora.png'%}" style="width:50%;"><br>
+                  １セット10枚です。A4の3つ折りサイズでお客様にもお持ち帰りいただける使い勝手の良いものです。
+              </div>
+              </center>
+          </div>
+        </div>
+    </div>
+
+    <div class="card-deck mb-3 text-center">
+        <div class="card mb-6 shadow-sm">
+          <div class="card-body">
+            <p class="btn btn-outline-default" style="width:100%;margin-bottom:1em; font-size:120%;">【お客様の声】記入用白紙</p>
+              <center>
+              <div class="card-text">
+                  <img src="{% static 'images/voice_paper.png'%}" style="width:50%;"><br>
+                  １セット10枚です。お客様にご記入いただき、ご提出されますと店舗様、お客様、双方に特典もご用意しております。
+              </div>
+              </center>
+          </div>
+        </div>
+        <div class="card mb-6 shadow-sm">
+          <div class="card-body">
+            <p class="btn btn-outline-default" style="width:100%;margin-bottom:1em; font-size:120%;">【お客様の声】記入済冊子</p>
+              <center>
+              <div class="card-text">
+                  <img src="{% static 'images/voice_book.png'%}" style="width:50%;"><br>
+                  お客様の手書きの感想をまとめた冊子です。100名近くのお声が集まっております。
+              </div>
+              </center>
+          </div>
+        </div>
+    </div>
+
+    <div class="card-deck mb-3 text-center">
+        <div class="card mb-6 shadow-sm">
+          <div class="card-body">
+            <p class="btn btn-outline-default" style="width:100%;margin-bottom:1em; font-size:120%;">各種サンプルブック</p>
+              <center>
+              <div class="card-text">
+                  <img src="{% static 'images/2-1-1samplebook.png'%}" style="width:65%;"><br>
+                  レポートブックとアドバイスブックの2冊1組のセットです。
+              </div>
+              </center>
+          </div>
+        </div>
+        <div class="card mb-6 shadow-sm">
+          <div class="card-body">
+            <p class="btn btn-outline-default" style="width:100%;margin-bottom:1em; font-size:120%;">ポップスタンド</p>
+              <center>
+              <div class="card-text">
+                  <img src="{% static 'images/2-3-4stand.png'%}" style="width:30%;"><br>
+                  ３つ折りリーフレットを立てて飾ることができるスタンドです。
+              </div>
+              </center>
+          </div>
+        </div>
+    </div>
+    <div><center><a href="#form">発注フォームはこちら＞＞</a></center></div>
+</div>
+
+{% endblock %}

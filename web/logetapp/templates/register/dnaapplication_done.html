@@ -1,0 +1,22 @@
+{% extends "register/base_store.html" %}
+{% load static %}
+
+{% block header %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/mystyle.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/mdb.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/mdb.lite.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/mdb.lite.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/mdb.min.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="container" style="aligh:center;">
+        検査申込が完了しました。<br>
+        当社にて遺伝子検査の検体を受領しましたら改めてご連絡いたします。<br>
+        検体の到着が13時以降となった場合は次営業日受領扱いとなりますので予めご了承ください。<br>
+        <a href="{% url 'logetapp:storedetail' user.pk %}">店舗ページへ戻る</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

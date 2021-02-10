@@ -1,0 +1,29 @@
+{% extends "register/base_no_message.html" %}
+{% load static %}
+
+{% block header %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/mystyle.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/mdb.css' %}">
+{% endblock %}
+
+{% block content %}
+<div style="width:80%; margin-left:auto; margin-right:auto;">
+    <button class="btn btn-outline-primary" style="width:100%; font-size:150%; margin-bottom:1em;">新規登録</button>
+    以下にメールアドレスと任意のパスワード（8文字以上、数字のみは不可）を入力してください。
+    <hr>
+<form action="" method="POST">
+    {{ form.non_field_errors }}
+    {% for field in form %}
+    <div class="form-group">
+        <label for="{{ field.id_for_label }}">{{ field.label_tag }}</label>
+        {{ field }}
+        {{ field.errors }}
+    </div>
+    {% endfor %}
+    {% csrf_token %}
+    <center><button type="submit" class="btn btn-primary btn-lg">送信</button></center>
+</form>
+送信後、すぐに登録完了となりますので、メールアドレスとパスワードをご確認の上送信ボタンを押してください。
+</div>
+{% endblock %}

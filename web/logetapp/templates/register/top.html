@@ -1,0 +1,41 @@
+{% extends "register/base_no_message.html" %}
+{% load static %}
+
+{% block header %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/mystyle.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/mdb.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/default.css' %}">
+{% endblock %}
+
+{% block content %}
+
+{% if user.email in allstoreemail_list %}
+<div class="container"  align="center">
+  <a href="{% url 'logetapp:storedetail' user.pk %}" class="btn btn-peach-gradient" style="width:100%; font-size:150%; margin-bottom:2em; margin-right:auto; margin-left:auto;">店舗ページはこちら　＞＞</a>
+</div>
+{% endif %}
+
+<div class="container">
+
+     <div class="card-deck mb-3 text-center">
+    <div class="card mb-6 shadow-sm">
+      <div class="card-header">
+        <div class="my-0 font-weight-normal" style="font-size:150%; padding:1em;"><img src="{% static 'images/logo_body.png'%}" style="width:40%;"></div>
+      </div>
+      <div class="card-body">
+        <!--<h1 class="card-title pricing-card-title"><small class="text-muted">ダイエットに関するDNA</small></h1>-->
+        {% if user.styleansno == None %}
+          <a href="{% url 'logetapp:styledetail' user.pk  %}" class="btn btn-outline-amber" style="width:100%;margin-bottom:1em;font-size:130%;">結果を取得する</a>
+        {% else %}
+          <a href="{% url 'logetapp:stylemytest' user.pk %}" class="btn btn-outline-amber" style="width:100%;margin-bottom:1em;font-size:130%;">結果を見る</a><br>
+          <a href="{% url 'logetapp:stylerepo' user.pk %}" class="btn btn-outline-amber" style="width:100%;margin-bottom:1em;font-size:130%;">レポートブック</a><br>
+          <a href="{% url 'logetapp:stylead' user.pk %}" class="btn btn-outline-amber" style="width:100%;margin-bottom:1em;font-size:130%;">アドバイスブック</a><br>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+
+</div>
+
+{% endblock %}

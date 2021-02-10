@@ -1,0 +1,33 @@
+{% extends "register/base_store.html" %}
+{% load static %}
+
+{% block header %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/mystyle.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/mdb.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <p><center><img src="{% static 'images/h_expert_logo.png' %}" style="max-width:100%;"></center></p>
+
+    <table class="table table-bordered" style="margin:auto;">
+{% for item in targetfloraexpert reversed %}
+    <tbody>
+    <tr align="center">
+        <th><button type="button" class="btn btn-link"><b>{{ item.floraexpertname }}</b></button></th>
+        <td>
+            <a href="{% url 'logetapp:floraexpertmyteststore' item.pk %}"><button type="button" class="btn btn-outline-danger" style="width:11em; padding:1em;">webページ</button></a>
+            <a href="{% url 'logetapp:storefloraexpertrepo' item.pk %}"><button type="button" class="btn btn-outline-warning" style="width:11em; padding:1em;">レポートブック</button></a>
+            <a href="{% url 'logetapp:storefloraexpertad' item.pk %}"><button type="button" class="btn btn-outline-success" style="width:11em; padding:1em;">アドバイスブック</button></a>
+            <a href="{% url 'logetapp:floraexpertweb' item.pk %}"><button type="button" class="btn btn-outline-primary" style="width:11em; padding:1em;">ログイン用紙</button></a>
+            <a href="{% url 'logetapp:floraexpertpaper' item.pk %}"><button type="button" class="btn btn-outline-secondary" style="width:11em; padding:1em;">カンペ</button></a>
+        </td>
+    </tr>
+    </tbody>
+{% endfor %}
+
+    </table>
+<p><center><a href="{% url 'logetapp:storedetail' user.pk  %}">一覧へ戻る</a></center></p>
+</div>
+{% endblock %}

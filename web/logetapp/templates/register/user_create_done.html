@@ -1,0 +1,18 @@
+{% extends "register/base_no_message.html" %}
+{% load static %}
+
+{% block header %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/mystyle.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/mdb.css' %}">
+{% endblock %}
+
+{% block content %}
+<p>
+    会員登録が完了しました。<br>
+    ご入力いただいたメールアドレスとパスワードでログインしてください。<br>
+    ログインできない場合、ご入力いただいたメールアドレスが間違っている可能性がございます。その場合は、お手数ですが、再度ご登録ください。<br>
+    ログイン・新規登録は<a href="{% url 'logetapp:login' %}">こちら</a>からお願いします。
+
+</p>
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends "register/base_no_message.html" %}
+{% load static %}
+
+{% block header %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/mystyle.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/mdb.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+  <div class="card-deck mb-3 text-center">
+    <div class="card mb-6 shadow-sm">
+      <div class="card-header">
+        <h4 class="my-0 font-weight-normal" style="font-size:150%; padding:1em;">diet&bodymake JDB</h4>
+      </div>
+      <div class="card-body">
+        <form action="{% url 'logetapp:stylemypage' object.pk %}" method="POST">
+            {% csrf_token %}
+            <table class="table" style="width:50%; margin:2em auto;">
+            {{ form.as_table }}
+            </table>
+            <button type="submit" class="btn btn-lg btn-block btn-outline-primary" style="width:50%; margin:auto;">結果を取得</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

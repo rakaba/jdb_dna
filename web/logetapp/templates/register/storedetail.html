@@ -1,0 +1,131 @@
+{% extends "register/base_store.html" %}
+{% load static %}
+
+{% block header %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/mystyle.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/mdb.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/default.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+  <div class="card-deck mb-3 text-center">
+    <div class="card mb-6 shadow-sm">
+      <div class="card-body">
+          <a href="{% url 'logetapp:dnaapplication' user.pk  %}" class="btn btn-outline-default" style="width:100%;margin-bottom:1em;font-size:130%;">検査申込 ＞＞</a>
+          <div style="font-size:100%;">遺伝子検査の検体をご郵送いただく際に、確認のため、こちらから検査の申し込みをお願いします。</div>
+      </div>
+    </div>
+    <div class="card mb-6 shadow-sm">
+      <div class="card-body">
+          <a href="{% url 'logetapp:itemorder' user.pk  %}" class="btn btn-outline-default" style="width:100%;margin-bottom:1em;font-size:130%;">資材発注 ＞＞</a>
+          <div style="font-size:100%;">検査キットやチラシ、二次商品などの発注はこちらからお願いします。</div>
+      </div>
+    </div>
+    <div class="card mb-6 shadow-sm">
+      <div class="card-body">
+          <a href="https://www.arr-works.com/salon_web/salon.html" class="btn btn-outline-default" style="width:100%;margin-bottom:1em;font-size:130%;">運用管理 ＞＞</a>
+          <div style="font-size:100%;">マニュアルや最新のニュースなどはこちらからご覧になれます。</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+
+  <p><center><img class="pc" src="{% static 'images/logo_dnatest.png' %}" style="max-width:100%;"><img class="sp" src="{% static 'images/logo_dnatest_sp.png' %}" style="max-width:100%;"></center></p>
+
+  <div class="card-deck mb-3 text-center">
+    <div class="card mb-6 shadow-sm">
+      <div class="card-header">
+        <div class="my-0 font-weight-normal" style="font-size:150%; padding:1em;">遺伝子BODY革命</div>
+      </div>
+      <div class="card-body">
+        <center><img src="{% static 'images/logo_body.png'%}" style="width:40%;"></center>
+          <a href="{% url 'logetapp:storedetailbody' user.pk  %}" class="btn btn-outline-amber" style="width:100%;margin-bottom:1em;font-size:130%;">受検者一覧を見る</a>
+      </div>
+    </div>
+    <div class="card mb-6 shadow-sm">
+      <div class="card-header">
+        <div class="my-0 font-weight-normal" style="font-size:150%; padding:1em;">遺伝子FACIAL革命</div>
+      </div>
+      <div class="card-body">
+        <center><img src="{% static 'images/logo_facial.png'%}" style="width:40%;"></center>
+          <a href="{% url 'logetapp:storedetailskin' user.pk %}" class="btn btn-outline-pink" style="width:100%;margin-bottom:1em;font-size:130%;">受検者一覧を見る</a>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="card-deck mb-3 text-center">
+    <div class="card mb-6 shadow-sm">
+      <div class="card-header">
+        <div class="my-0 font-weight-normal" style="font-size:150%; padding:1em;">遺伝子MUSCLE革命</div>
+      </div>
+      <div class="card-body">
+        <center><img src="{% static 'images/logo_muscle.png'%}" style="width:40%;"></center>
+          <a href="{% url 'logetapp:storedetailmuscle' user.pk  %}" class="btn btn-outline-cyan" style="width:100%;margin-bottom:1em;font-size:130%;">受検者一覧を見る</a>
+      </div>
+    </div>
+    <div class="card mb-6 shadow-sm">
+      <div class="card-header">
+        <div class="my-0 font-weight-normal" style="font-size:150%; padding:1em;">遺伝子HEAD革命</div>
+      </div>
+      <div class="card-body">
+        <center><img src="{% static 'images/logo_head.png'%}" style="width:40%;"></center>
+          <a href="{% url 'logetapp:storedetailhead' user.pk %}" class="btn btn-outline-green" style="width:100%;margin-bottom:1em;font-size:130%;">受検者一覧を見る</a>
+      </div>
+    </div>
+  </div>
+
+  <p><center><img class="pc" src="{% static 'images/logo_floratest.png' %}" style="max-width:100%;"><img class="sp" src="{% static 'images/logo_floratest_sp.png' %}" style="max-width:100%;"></center></p>
+
+  <div class="card-deck mb-3 text-center">
+    <div class="card mb-6 shadow-sm">
+      <div class="card-header">
+        <div class="my-0 font-weight-normal" style="font-size:150%; padding:1em;">美腸革命light</div>
+      </div>
+      <div class="card-body">
+        <center><img src="{% static 'images/logo_flora_light.png'%}" style="width:40%;"></center>
+          <a href="{% url 'logetapp:storedetailfloralight' user.pk  %}" class="btn btn-outline-unique" style="width:100%;margin-bottom:1em;font-size:130%;">受検者一覧を見る</a>
+      </div>
+    </div>
+    <div class="card mb-6 shadow-sm">
+      <div class="card-header">
+        <div class="my-0 font-weight-normal" style="font-size:150%; padding:1em;">美腸革命EXPERT</div>
+      </div>
+      <div class="card-body">
+        <center><img src="{% static 'images/logo_flora_expert.png'%}" style="width:40%;"></center>
+          <a href="{% url 'logetapp:storedetailfloraexpert' user.pk %}" class="btn btn-outline-deep-purple" style="width:100%;margin-bottom:1em;font-size:130%;">受検者一覧を見る</a>
+      </div>
+    </div>
+  </div>
+
+  <p><center><img class="pc" src="{% static 'images/logo_othertest.png' %}" style="max-width:100%;"><img class="sp" src="{% static 'images/logo_othertest_sp.png' %}" style="max-width:100%;"></center></p>
+
+  <div class="card-deck mb-3 text-center">
+    <div class="card mb-6 shadow-sm">
+      <div class="card-header">
+        <div class="my-0 font-weight-normal" style="font-size:150%; padding:1em;">食事革命タンパク質</div>
+      </div>
+      <div class="card-body">
+        <center><img src="{% static 'images/logo_protein.png'%}" style="width:40%;"></center>
+          <a href="{% url 'logetapp:storedetailfoodprotein' user.pk  %}" class="btn btn-outline-orange" style="width:100%;margin-bottom:1em;font-size:130%;">受検者一覧を見る</a>
+      </div>
+    </div>
+    <div class="card mb-6 shadow-sm">
+      <div class="card-header">
+        <div class="my-0 font-weight-normal" style="font-size:150%; padding:1em;">その他の検査</div>
+      </div>
+      <div class="card-body">
+        <center><img src="{% static 'images/logo_rose.png'%}" style="width:40%;"></center>
+          <a href="{% url 'logetapp:storedetailother' user.pk %}" class="btn btn-outline-deep-orange lighten-2" style="width:100%;margin-bottom:1em;font-size:130%;">受検者一覧を見る</a>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,37 @@
+{% extends "register/base.html" %}
+{% load static %}
+
+{% block header %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/mystyle.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/mdb.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="container">
+{{ params.ansno }}
+    <h1>受検者一覧</h1>
+    <table class="type1">
+        <thead>
+        <tr>
+            <th>氏名</th>
+            <th>Style検体ID</th>
+            <th>Style結果</th>
+            <th>Skin検体ID</th>
+            <th>Skin結果</th>
+        </tr>
+        </thead>
+    {% for item in object %}
+        <tbody>
+        <tr>
+            <td>{{ item.username }}</td>
+            <td>{{ item.styletestid }}</td>
+            <td>{{ item.styleansno }}</td>
+            <td>{{ item.skintestid }}</td>
+            <td>{{ item.skinansno }}</td>
+        </tr>
+        </tbody>
+    {% endfor %}
+    </table>
+</div>
+{% endblock %}

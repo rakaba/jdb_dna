@@ -1,0 +1,69 @@
+{{ storename }} 様
+
+平素よりお世話になっております。
+株式会社アール・ワークスです。
+以下の内容で資材発注を承りました。
+
+発送の準備ができましたら改めてご連絡いたします。
+引き続きよろしくお願いいたします。
+
+---------------------------------------
+
+{% if kit_no_box != '0' %}【with23】遺伝子サンプル採取セット（箱無し）｜{{ kit_no_box }}セット
+{% endif %}{% if kit_box != '0' %}【with23】遺伝子サンプル採取セット（箱有り）｜{{ kit_box }}セット
+{% endif %}{% if kit_flora_light != '0' %}【withflora】light：1個｜{{ kit_flora_light }}セット
+{% endif %}{% if kit_flora_light_2set != '0' %}【withflora】light：同一受検者2個セット｜{{ kit_flora_light_2set }}セット
+{% endif %}{% if kit_flora_light_3set != '0' %}【withflora】light：同一受検者3個セット｜{{ kit_flora_light_3set }}セット
+{% endif %}{% if dhs_c != '0' %}DHS-LOCK-　糖代謝リスク対策サプリメント｜{{ dhs_c }}セット
+{% endif %}{% if dhs_p != '0' %}DHS-PLUS-　たんぱく質リスク対策サプリメント｜{{ dhs_p }}セット
+{% endif %}{% if dhs_f != '0' %}DHS-CUT-　脂質代謝リスク対策サプリメント｜{{ dhs_f }}セット
+{% endif %}{% if dhp_c != '0' %}DHP-LOCK-　糖代謝リスク対策プロテイン｜{{ dhp_c }}セット
+{% endif %}{% if dhp_p != '0' %}DHP-PLUS-　たんぱく質リスク対策プロテイン｜{{ dhp_p }}セット
+{% endif %}{% if dhp_f != '0' %}DHP-CUT-　脂質代謝リスク対策プロテイン｜{{ dhp_f }}セット
+{% endif %}{% if shampoo_1 != '0' %}SCALP SELEB01　活性酸素リスク対策シャンプー｜{{ shampoo_1 }}セット
+{% endif %}{% if shampoo_2 != '0' %}SCALP SELEB02　糖化リスク対策シャンプー｜{{ shampoo_2 }}セット
+{% endif %}{% if shampoo_3 != '0' %}SCALP SELEB03　過酸化脂質リスク対策シャンプー｜{{ shampoo_3 }}セット
+{% endif %}{% if biyoueki_1 != '0' %}美肌博士01　活性酸素リスク対策美容液｜{{ biyoueki_1 }}セット
+{% endif %}{% if biyoueki_2 != '0' %}美肌博士02　糖化リスク対策美容液｜{{ biyoueki_2 }}セット
+{% endif %}{% if biyoueki_3 != '0' %}美肌博士03　過酸化脂質リスク対策美容液｜{{ biyoueki_3 }}セット
+{% endif %}{% if minibook_1 != '0' %}【小冊子】遺伝子革命商品紹介｜{{ minibook_1 }}セット
+{% endif %}{% if minibook_2 != '0' %}【小冊子】遺伝子検査の説明｜{{ minibook_2 }}セット
+{% endif %}{% if pop_diet != '0' %}【with23商品紹介A4ポップ】diet&bodymake：10枚セット｜{{ pop_diet }}セット
+{% endif %}{% if pop_skincare != '0' %}【with23商品紹介A4ポップ】skincare&anti-aging：10枚セット｜{{ pop_skincare }}セット
+{% endif %}{% if pop_typecheck != '0' %}【with23検査説明A4ポップ】DNAタイプチェック：10枚セット｜{{ pop_typecheck }}セット
+{% endif %}{% if pop_risk_c != '0' %}【with23検査説明A4ポップ】糖代謝リスク：10枚セット｜{{ pop_risk_c }}セット
+{% endif %}{% if pop_risk_p != '0' %}【with23検査説明A4ポップ】たんぱく質リスク：10枚セット｜{{ pop_risk_p }}セット
+{% endif %}{% if pop_risk_f != '0' %}【with23検査説明A4ポップ】脂質代謝リスク：10枚セット｜{{ pop_risk_f }}セット
+{% endif %}{% if pop_supplement_1 != '0' %}【二次商品紹介A4ポップ】リスク別サプリメント①：10枚セット｜{{ pop_supplement_1 }}セット
+{% endif %}{% if pop_supplement_2 != '0' %}【二次商品紹介A4ポップ】リスク別サプリメント②：10枚セット｜{{ pop_supplement_2 }}セット
+{% endif %}{% if pop_protein_1 != '0' %}【二次商品紹介A4ポップ】リスク別プロテイン①：10枚セット｜{{ pop_protein_1 }}セット
+{% endif %}{% if pop_protein_2 != '0' %}【二次商品紹介A4ポップ】リスク別プロテイン②：10枚セット｜{{ pop_protein_2 }}セット
+{% endif %}{% if pop_shampoo_1 != '0' %}【二次商品紹介A4ポップ】リスク別シャンプー①：10枚セット｜{{ pop_shampoo_1 }}セット
+{% endif %}{% if pop_shampoo_2 != '0' %}【二次商品紹介A4ポップ】リスク別シャンプー②：10枚セット｜{{ pop_shampoo_2 }}セット
+{% endif %}{% if pop_biyoueki_1 != '0' %}【二次商品紹介A4ポップ】リスク別美容液①：10枚セット｜{{ pop_biyoueki_1 }}セット
+{% endif %}{% if pop_biyoueki_2 != '0' %}【二次商品紹介A4ポップ】リスク別美容液②：10枚セット｜{{ pop_biyoueki_2 }}セット
+{% endif %}{% if leaflet_with23 != '0' %}【３つ折りリーフレット】with23：10枚セット｜{{ leaflet_with23 }}セット
+{% endif %}{% if leaflet_withflora != '0' %}【３つ折りリーフレット】withflora：10枚セット｜{{ leaflet_withflora }}セット
+{% endif %}{% if voice_paper != '0' %}【お客様の声】記入用白紙：10枚セット｜{{ voice_paper }}セット
+{% endif %}{% if voice_note != '0' %}【お客様の声】記入済冊子：1冊｜{{ voice_note }}セット
+{% endif %}{% if poster_body != '0' %}【ポスター】BODY-diet&bodymake-｜{{ poster_body }}セット
+{% endif %}{% if poster_facial != '0' %}【ポスター】FACIAL-skincare&anti-aging-｜{{ poster_facial }}セット
+{% endif %}{% if book_body != '0' %}【サンプルブック】diet&bodymake with23：2冊1組｜{{ book_body }}セット
+{% endif %}{% if book_facial != '0' %}【サンプルブック】skincare&anti-aging with23：2冊1組｜{{ book_facial }}セット
+{% endif %}{% if book_muscle != '0' %}【サンプルブック】training with23：2冊1組｜{{ book_muscle }}セット
+{% endif %}{% if book_head != '0' %}【サンプルブック】hair&scalpcare with23：2冊1組｜{{ book_head }}セット
+{% endif %}{% if pop_stand != '0' %}ポップスタンド：1個｜{{ pop_stand }}セット
+{% endif %}{% if price_card != '0' %}料金カード：10枚セット｜{{ price_card }}セット
+{% endif %}
+
+---------------------------------------
+
+※こちらのメールは送信専用のシステムからお送りしており、ご返信いただけません。
+何かございましたら、salon@arr-works.comまでご連絡をいただけますようお願い致します。
+---------------------------------------
+iffu/検査革命
+https://iffu.info/
+
+運営会社
+株式会社アール・ワークス
+---------------------------------------
