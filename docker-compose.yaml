@@ -16,6 +16,8 @@ services:
       - web
     ports:
       - "80:80"
+    volumes:
+      - ./web/static:/static
   
  
 
