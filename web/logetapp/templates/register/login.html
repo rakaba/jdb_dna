@@ -26,8 +26,7 @@
             <button type="submit" class="btn btn-lg btn-block btn-outline-primary" >ログイン</button>
             <input type="hidden" name="next" value="{{ next }}" />
             {% csrf_token %}
-        </form><hr>
-            パスワードを忘れた方は<a href="{% url 'logetapp:password_reset' %}">こちら</a>
+        </form>
       </div>
     </div>
     <div class="card mb-6 shadow-sm">
